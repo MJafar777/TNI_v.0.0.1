@@ -1,7 +1,15 @@
+import { Suspense } from "react";
+import { Outlet } from "react-router-dom";
+import { Header, Footer } from "./layouts";
+
 function App() {
   return (
     <>
-      <h1>TNI-ASIA</h1>
+      <Suspense fallback={<h1>Loading</h1>}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </Suspense>
     </>
   );
 }
