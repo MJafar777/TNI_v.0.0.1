@@ -61,7 +61,7 @@ const MainSection = () => {
             dimension for your site
           </MainSectionDesc>
 
-          <ButtonComp />
+          <ButtonComp buttonText={"Read more"} />
         </MainSectionLeft>
 
         <MainSectionNumbers>

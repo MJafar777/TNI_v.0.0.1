@@ -7,10 +7,16 @@ import {
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const ButtonComp = () => {
+interface ButtonCompProps {
+  buttonText: string;
+}
+
+const ButtonComp: React.FC<ButtonCompProps> = ({ buttonText }) => {
   return (
     <ButtonCompWrapper>
-      <ButtonCompText className="leftButtonCompText">Read More</ButtonCompText>
+      <ButtonCompText className="leftButtonCompText">
+        {buttonText}
+      </ButtonCompText>
 
       <ButtonCompItem className="buttonCompItem">
         <ArrowForwardIcon className="buttonArrow" />
@@ -18,7 +24,9 @@ const ButtonComp = () => {
         <img className="linerArrow" src={linerArrow} alt="linerArrow" />
       </ButtonCompItem>
 
-      <ButtonCompText className="rightButtonCompText">Read More</ButtonCompText>
+      <ButtonCompText className="rightButtonCompText">
+        {buttonText}
+      </ButtonCompText>
     </ButtonCompWrapper>
   );
 };

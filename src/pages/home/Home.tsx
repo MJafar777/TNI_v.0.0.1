@@ -1,10 +1,12 @@
 import MainSection from "./components/mainSection/MainSection";
+import UniversalPolymer from "./components/universalPolymer/UniversalPolymer";
 
 const Home = () => {
   return (
     <>
       <MainSection />
-      <div style={{ height: "5000px" }}></div>
+
+      <UniversalPolymer />
     </>
   );
 };

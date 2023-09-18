@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { whiteLogo } from "../../assets/images";
-import { Section } from "../../styles";
 
 import {
   NavbarItem,
