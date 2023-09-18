@@ -1,4 +1,5 @@
 export { default as logo } from "./logo.svg";
+export { default as whiteLogo } from "./whiteLogo.svg";
 export { default as mainBack } from "./mainBack.jpg";
 export { default as telegram } from "./icons/telegram.svg";
 export { default as facebook } from "./icons/facebook.svg";
