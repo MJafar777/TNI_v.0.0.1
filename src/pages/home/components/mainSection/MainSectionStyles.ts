@@ -111,9 +111,14 @@ export const MainSectionShareItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid white;
   border-radius: 50%;
+  border: 2px solid #fff;
+
   cursor: pointer;
+
+  &:hover {
+    border: 2px solid #27d0a5;
+  }
 `;
 
 export const MainSectionNumbers = styled.div`
