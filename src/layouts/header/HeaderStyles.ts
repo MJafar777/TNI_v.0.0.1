@@ -1,18 +1,25 @@
 import { styled, keyframes } from "styled-components";
 
-export const HeaderWrapper = styled.header`
+export const HeaderWrapperSection = styled.header`
   position: fixed;
   z-index: 999;
+  background-color: #040b1a;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid #029ecf;
+`;
+
+export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #040b1a;
 
   width: 100%;
+  max-width: 1366px;
   height: 60px;
   margin: 0px auto;
   padding: 0 20px;
-  border-bottom: 2px solid #029ecf;
 `;
 
 export const MainHeaderLogo = styled.div``;

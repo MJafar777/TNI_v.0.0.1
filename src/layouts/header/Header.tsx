@@ -11,6 +11,7 @@ import {
   HeaderWrapper,
   MainHeaderLogo,
   MainHeaderFeatures,
+  HeaderWrapperSection,
 } from "./HeaderStyles";
 
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -34,63 +35,65 @@ const Header = () => {
   console.log(scrolling);
 
   return (
-    <HeaderWrapper
-      style={{
-        display: `${scrolling ? "flex" : "none"}`,
-      }}
-    >
-      <Link to={"/"}>
-        <MainHeaderLogo>
-          <img src={whiteLogo} alt="logo" />
-        </MainHeaderLogo>
-      </Link>
+    <HeaderWrapperSection>
+      <HeaderWrapper
+        style={{
+          display: `${scrolling ? "flex" : "none"}`,
+        }}
+      >
+        <Link to={"/"}>
+          <MainHeaderLogo>
+            <img src={whiteLogo} alt="logo" />
+          </MainHeaderLogo>
+        </Link>
 
-      <NavbarWrapper>
-        <NavbarItemBox>
-          <Link to={"/"}>
-            <NavbarItem>Home</NavbarItem>
-          </Link>
-        </NavbarItemBox>
+        <NavbarWrapper>
+          <NavbarItemBox>
+            <Link to={"/"}>
+              <NavbarItem>Home</NavbarItem>
+            </Link>
+          </NavbarItemBox>
 
-        <NavbarItemBox>
-          <Link to={"/about-us"}>
-            <NavbarItem>About Us</NavbarItem>
-          </Link>
-        </NavbarItemBox>
+          <NavbarItemBox>
+            <Link to={"/about-us"}>
+              <NavbarItem>About Us</NavbarItem>
+            </Link>
+          </NavbarItemBox>
 
-        <NavbarItemBox className="navbarItemBoz-popower">
-          <Link to={"/prodacts"}>
-            <NavbarItem>Our Products</NavbarItem>
-          </Link>
+          <NavbarItemBox className="navbarItemBoz-popower">
+            <Link to={"/prodacts"}>
+              <NavbarItem>Our Products</NavbarItem>
+            </Link>
 
-          <KeyboardArrowDownIcon className="keyboardArrowDownIcon" />
-        </NavbarItemBox>
+            <KeyboardArrowDownIcon className="keyboardArrowDownIcon" />
+          </NavbarItemBox>
 
-        <NavbarItemBox>
-          <Link to={"/contact-us"}>
-            <NavbarItem>Contact Us</NavbarItem>
-          </Link>
-        </NavbarItemBox>
-      </NavbarWrapper>
+          <NavbarItemBox>
+            <Link to={"/contact-us"}>
+              <NavbarItem>Contact Us</NavbarItem>
+            </Link>
+          </NavbarItemBox>
+        </NavbarWrapper>
 
-      <MainHeaderFeatures>
-        <NavbarItemBox>
-          <Link to={"/login"}>
-            <NavbarItem>Login</NavbarItem>
-          </Link>
-        </NavbarItemBox>
+        <MainHeaderFeatures>
+          <NavbarItemBox>
+            <Link to={"/login"}>
+              <NavbarItem>Login</NavbarItem>
+            </Link>
+          </NavbarItemBox>
 
-        <RequestBtn>Request Quote</RequestBtn>
+          <RequestBtn>Request Quote</RequestBtn>
 
-        <SearchInput>
-          <input type="text" placeholder="Search" />
+          <SearchInput>
+            <input type="text" placeholder="Search" />
 
-          <SearchIconBox>
-            <SearchIcon className="headerSearchIcon" />
-          </SearchIconBox>
-        </SearchInput>
-      </MainHeaderFeatures>
-    </HeaderWrapper>
+            <SearchIconBox>
+              <SearchIcon className="headerSearchIcon" />
+            </SearchIconBox>
+          </SearchInput>
+        </MainHeaderFeatures>
+      </HeaderWrapper>
+    </HeaderWrapperSection>
   );
 };
 
