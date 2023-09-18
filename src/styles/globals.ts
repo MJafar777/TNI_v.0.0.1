@@ -4,7 +4,7 @@ import MazzardMRegular from "../assets/fonts/MazzardM-Regular.ttf";
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
-  font-family: "MazzardM-Regular";
+  font-family: Mazzard;
   src: url(${MazzardMRegular}) format("truetype");
 }
 

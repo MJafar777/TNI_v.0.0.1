@@ -44,7 +44,7 @@ export const NavbarItemBox = styled.div`
 
 export const NavbarItem = styled.p`
   font-size: 1.6em;
-  font-family: "MazzardM-Regular";
+  font-family: Mazzard;
   color: #1e1e1e;
   font-style: normal;
   font-weight: 500;

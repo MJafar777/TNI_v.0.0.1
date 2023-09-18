@@ -41,7 +41,7 @@ export const RequestBtn = styled.div`
   color: white;
 
   font-size: 16px;
-  font-family: "MazzardM-Regular";
+  font-family: Mazzard;
   cursor: pointer;
   font-style: normal;
   font-weight: 500;
@@ -69,6 +69,7 @@ export const SearchInput = styled.div`
   overflow: hidden;
   transition: width 1s ease-in-out, background-color 1s ease-in-out,
     border-radius 1s ease-in-out;
+
   input {
     position: absolute;
     width: calc(100% - 70px);
