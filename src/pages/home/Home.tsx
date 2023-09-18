@@ -1,5 +1,7 @@
+import { HomePageContainer } from "./HomeStyles";
+
 const Home = () => {
-  return <div>Home</div>;
+  return <HomePageContainer>Home</HomePageContainer>;
 };
 
 export default Home;
