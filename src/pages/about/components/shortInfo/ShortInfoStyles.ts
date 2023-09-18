@@ -12,6 +12,18 @@ export const Container = styled.div`
   margin: 0 auto;
   justify-content: center;
   gap: 25px;
+
+  @media screen and (max-width:992px){
+    padding: 0 80px;
+  } 
+
+  @media screen and (max-width:768px){
+    padding: 0 60px;
+  } 
+
+  @media screen and (max-width:576px){
+    padding: 0 40px;
+  } 
 `;
 
 export const Title = styled.p`

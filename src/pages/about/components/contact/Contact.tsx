@@ -1,5 +1,4 @@
 import { Arrow, contactImg } from "../../../../assets/images/about";
-import { Container } from "../shortInfo/ShortInfoStyles";
 import {
   Button,
   ContactWrapper,
@@ -21,7 +20,7 @@ const Contact = () => {
       <FormContainer>
         <TopOfForm>
           <TopTitle>
-            <span></span> Contact Us
+            <span></span> Contact Us <span className="rightBorder"></span>
           </TopTitle>
           <Title>Get In Touch</Title>
           <SubTitle>

@@ -10,16 +10,33 @@ export const ContactWrapper = styled.div`
   justify-content: start;
   background-image: url(${bgContact});
   background-size: cover;
-  @media screen and (max-width: 992px) {
+  /* @media screen and (max-width: 992px) {
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 0 135px;
+  } */
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 80px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 60px;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 0 40px;
   }
 `;
 
 export const Img = styled.img`
   width: 50%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -28,12 +45,31 @@ export const FormContainer = styled.div`
   align-items: start;
   justify-content: start;
   gap: 25px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
 `;
 
-export const TopOfForm = styled.div``;
+export const TopOfForm = styled.div`
+  .rightBorder {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .rightBorder {
+      display: block;
+    }
+  }
+`;
 
 export const TopTitle = styled.div`
-  background: linear-gradient(180deg, #029ecf 0%, #27d0a5 100%);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #029ecf -0.96%, #27d0a5 99.04%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -43,6 +79,13 @@ export const TopTitle = styled.div`
   font-weight: 400;
   line-height: normal;
   letter-spacing: 4.24px;
+  span {
+    height: 1px;
+    width: 36px;
+    margin: 0 12px;
+    background: linear-gradient(90deg, #029ecf -0.96%, #27d0a5 99.04%);
+    background-clip: text;
+  }
 `;
 
 export const Title = styled.div`
