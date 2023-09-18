@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-
+import MazzardMBold from '../assets/fonts/MazzardM-Bold.ttf'
+import MazzardMRegular from '../assets/fonts/MazzardM-Regular.ttf'
 const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
@@ -15,6 +16,16 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-size: 10px;
     cursor: default;
+  }
+
+  @font-face {
+    font-family: "MazzardM-Bold";
+    src: url(${MazzardMBold});
+  }
+
+  @font-face {
+    font-family:'MazzardM-Regular' ;
+    src: url(${MazzardMRegular});
   }
 
   a {
