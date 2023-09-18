@@ -1,12 +1,12 @@
 import { AboutWrapper } from "./AboutStyles";
-import { Header,Contact, ShortInfo } from "./components";
+import { Header, Contact, ShortInfo } from "./components";
 
 const About = () => {
   return (
     <AboutWrapper>
       <Header />
-      <ShortInfo/>
-      <Contact/>
+      <ShortInfo />
+      <Contact />
     </AboutWrapper>
   );
 };

@@ -1,3 +1,4 @@
+// import MainHeader from "../../../../layouts/header/mainHeader/MainHeader";
 import {
   BorderBottom,
   Content,
@@ -10,6 +11,8 @@ import {
 const Header = () => {
   return (
     <HeaderWrapper>
+
+      {/* <MainHeader /> */}
       <Content>
         <TopTitle>
           <span></span>

@@ -9,8 +9,9 @@ export const HeaderWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   padding-bottom: 50px;
   clip-path: polygon(
     0 0,

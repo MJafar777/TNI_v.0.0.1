@@ -1,4 +1,5 @@
 import { Arrow, contactImg } from "../../../../assets/images/about";
+import { Container } from "../shortInfo/ShortInfoStyles";
 import {
   Button,
   ContactWrapper,
@@ -7,8 +8,10 @@ import {
   Img,
   SubTitle,
   Title,
+  TopOfForm,
   TopTitle,
   WrapperInput,
+  WrapperTextarea,
 } from "./ContactStyles";
 
 const Contact = () => {
@@ -16,14 +19,16 @@ const Contact = () => {
     <ContactWrapper>
       <Img src={contactImg} />
       <FormContainer>
-        <TopTitle>
-          <span></span> Contact Us
-        </TopTitle>
-        <Title>Get In Touch</Title>
-        <SubTitle>
-          The standard webpage maximum width dimensions for desktop screens are
-          1440 pixels. It's a common
-        </SubTitle>
+        <TopOfForm>
+          <TopTitle>
+            <span></span> Contact Us
+          </TopTitle>
+          <Title>Get In Touch</Title>
+          <SubTitle>
+            The standard webpage maximum width dimensions for desktop screens
+            are 1440 pixels. It's a common
+          </SubTitle>
+        </TopOfForm>
         <Form>
           <WrapperInput>
             <label htmlFor="name">First Name</label>
@@ -41,12 +46,15 @@ const Contact = () => {
             <label htmlFor="address">Address</label>
             <input type="text" />
           </WrapperInput>
-          <textarea name="" id=""></textarea>
+          <WrapperTextarea>
+            <label htmlFor="message">Message</label>
+            <textarea name="message" id=""></textarea>
+          </WrapperTextarea>
           <Button>
-            Submit Now{" "}
+            Submit Now
             <div>
               <img src={Arrow} alt="" />
-            </div>{" "}
+            </div>
           </Button>
         </Form>
       </FormContainer>

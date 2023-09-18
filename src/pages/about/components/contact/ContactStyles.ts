@@ -1,9 +1,21 @@
 import styled from "styled-components";
+import { bgContact } from "../../../../assets/images/about";
 
 export const ContactWrapper = styled.div`
+  width: 100%;
+  height: fit-content;
+  padding: 30px 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: start;
+  background-image: url(${bgContact});
+  background-size: cover;
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 135px;
+  }
 `;
 
 export const Img = styled.img`
@@ -11,38 +23,31 @@ export const Img = styled.img`
 `;
 
 export const FormContainer = styled.div`
-  width: 60%;
-  margin-right: 100px;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
+  gap: 25px;
 `;
 
+export const TopOfForm = styled.div``;
+
 export const TopTitle = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 4.24px;
   background: linear-gradient(180deg, #029ecf 0%, #27d0a5 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "MazzardM-Regular";
-  span {
-    width: 30px;
-    height: 1px;
-    background: linear-gradient(180deg, #029ecf 0%, #27d0a5 100%);
-  }
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.24px;
 `;
 
 export const Title = styled.div`
   color: #000;
-  font-family: "MazzardM-Bold";
+  font-family: Mazzard;
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
@@ -52,7 +57,7 @@ export const Title = styled.div`
 
 export const SubTitle = styled.div`
   color: #000;
-  font-family: "MazzardM-Regular";
+  font-family: Mazzard;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -63,51 +68,65 @@ export const SubTitle = styled.div`
 export const Form = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 25px;
-  textarea {
-    width: 40vw;
-    border-radius: 22px;
-    height: 200px;
-    background: #eaeaea;
-    border: none;
-    outline: none;
-    padding: 8px 12px;
-    font-size: 14px;
-    resize: none;
+  @media screen and (max-width: 992px) {
+    justify-content: space-between;
+    margin: 0 auto;
   }
 `;
 
 export const WrapperInput = styled.div`
+  width: 45%;
   display: flex;
   flex-direction: column;
-  width: 45%;
-  label {
-    color: #000;
-    font-family: Mazzard;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 108%; /* 15.12px */
-    letter-spacing: 0.98px;
-    margin-bottom: 8px;
-  }
+  align-items: start;
+  margin: 10px 0;
   input {
+    outline: none;
+    border: none;
     border-radius: 22px;
+    background: #eaeaea;
+    padding: 12px 20px;
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 992px) {
+    input {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+`;
+
+export const WrapperTextarea = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  resize: none;
+  textarea {
+    margin-top: 10px;
+    width: 80%;
+    resize: none;
+    height: 200px;
+    border-radius: 15px;
     background: #eaeaea;
     border: none;
     outline: none;
-    padding: 15px 12px;
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 992px) {
+    textarea {
+      width: 100%;
+    }
   }
 `;
 
 export const Button = styled.button`
   border-radius: 27px;
+  background: linear-gradient(270deg, #029ecf 0%, #27d0a5 100%);
   outline: none;
-  display: flex;
-  align-items: center;
-  gap: 12px;
   border: none;
+  margin-top: 10px;
   color: #fff;
   font-family: Mazzard;
   font-size: 16px;
@@ -115,15 +134,18 @@ export const Button = styled.button`
   font-weight: 500;
   line-height: normal;
   padding: 4px 4px 4px 20px;
-  cursor: pointer;
-  background: linear-gradient(270deg, #029ecf 0%, #27d0a5 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
   div {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     background-color: #fff;
+    border-radius: 50%;
   }
 `;
