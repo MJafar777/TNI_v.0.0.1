@@ -1,7 +1,7 @@
-import { HomePageContainer } from "./HomeStyles";
+import MainSection from "./components/mainSection/MainSection";
 
 const Home = () => {
-  return <HomePageContainer>Home</HomePageContainer>;
+  return <MainSection />;
 };
 
 export default Home;

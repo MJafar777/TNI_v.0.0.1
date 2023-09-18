@@ -1,6 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
+import MazzardMRegular from "../assets/fonts/MazzardM-Regular.ttf";
+
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+  font-family: "MazzardM-Regular";
+  src: url(${MazzardMRegular}) format("truetype");
+}
+
   * {
     margin: 0;
     padding: 0;
