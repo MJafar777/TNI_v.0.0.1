@@ -99,7 +99,7 @@ export const SearchInput = styled.div`
     transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out,
       border-radius 0.4s ease-in-out;
 
-    width: 220px;
+    width: 205px;
 
     input {
       opacity: 1;
