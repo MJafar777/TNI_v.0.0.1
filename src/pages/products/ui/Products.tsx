@@ -1,5 +1,5 @@
 import React from "react";
-import { Contact } from "../../../components";
+import { Contact, HeaderTop } from "../../../components";
 import dataCurd from "../../../api/curds/cardsInfo";
 import { Paragraph } from "../../../components/Paragraph";
 import { Container } from "../../../components/container";
@@ -32,77 +32,80 @@ type DataType = {
 
 const Products: React.FC = () => {
   return (
-    <Container>
-      <ProductsWrapper>
-        <MiniTitle textTitle={"Choose the product you need"} fontSize={56} />
-        <FlexProduct>
+    <>
+      <HeaderTop TitleHeader={"Products"} SubTitleHeader={"Our Products"} />
+      <Container>
+        <ProductsWrapper>
+          <MiniTitle textTitle={"Choose the product you need"} fontSize={56} />
+          <FlexProduct>
+            <Paragraph
+              width={""}
+              margin={""}
+              fontSize={24}
+              fontWeight={400}
+              color={"#1A1E26"}
+              lineHeight={"150%"}
+              fontFamily={"Mazzard"}
+              letterSpacing={"-0.5px"}
+              text={"Filter by Interest"}
+            />
+            <FilterProducts marginTop={22} dataFilter={dataFilter} />
+          </FlexProduct>
+
+          <BrLine />
+          <GridsCards>
+            {dataCurd.map((e: DataType) => {
+              return (
+                <CardProducts
+                  id={e.id}
+                  key={e.id}
+                  img={e.img}
+                  star={e.star}
+                  price={e.price}
+                  productName={e.productName}
+                  descriptions={e.descriptions}
+                />
+              );
+            })}
+          </GridsCards>
+
+          <BrLine />
+
           <Paragraph
             width={""}
-            margin={""}
-            fontSize={24}
-            fontWeight={400}
+            fontSize={"24"}
+            fontWeight={"400"}
             color={"#1A1E26"}
             lineHeight={"150%"}
-            fontFamily={"Mazzard"}
+            fontFamily={"Lexend"}
             letterSpacing={"-0.5px"}
-            text={"Filter by Interest"}
+            text={"Featured Product"}
+            margin={"70px auto 50px auto"}
           />
-          <FilterProducts marginTop={22} dataFilter={dataFilter} />
-        </FlexProduct>
+          <GridsCards>
+            {dataCurd.map((e: DataType) => {
+              return e.id < 4 ? (
+                <CardProducts
+                  id={e.id}
+                  key={e.id}
+                  img={e.img}
+                  star={e.star}
+                  price={e.price}
+                  productName={e.productName}
+                  descriptions={e.descriptions}
+                />
+              ) : (
+                ""
+              );
+            })}
+          </GridsCards>
 
-        <BrLine />
-        <GridsCards>
-          {dataCurd.map((e: DataType) => {
-            return (
-              <CardProducts
-                id={e.id}
-                key={e.id}
-                img={e.img}
-                star={e.star}
-                price={e.price}
-                productName={e.productName}
-                descriptions={e.descriptions}
-              />
-            );
-          })}
-        </GridsCards>
+          <MarginBottom />
 
-        <BrLine />
-
-        <Paragraph
-          width={""}
-          fontSize={"24"}
-          fontWeight={"400"}
-          color={"#1A1E26"}
-          lineHeight={"150%"}
-          fontFamily={"Lexend"}
-          letterSpacing={"-0.5px"}
-          text={"Featured Product"}
-          margin={"70px auto 50px auto"}
-        />
-        <GridsCards>
-          {dataCurd.map((e: DataType) => {
-            return e.id < 4 ? (
-              <CardProducts
-                id={e.id}
-                key={e.id}
-                img={e.img}
-                star={e.star}
-                price={e.price}
-                productName={e.productName}
-                descriptions={e.descriptions}
-              />
-            ) : (
-              ""
-            );
-          })}
-        </GridsCards>
-
-        <MarginBottom />
-
-        <Contact />
-      </ProductsWrapper>
-    </Container>
+          <Contact />
+        </ProductsWrapper>
+      </Container>
+    </>
   );
 };
 
