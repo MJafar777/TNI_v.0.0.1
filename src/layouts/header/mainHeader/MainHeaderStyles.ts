@@ -58,6 +58,7 @@ export const SearchInput = styled.div`
   border-radius: 50px;
   border: 2px solid #029ecf;
   height: 56px;
+  width: 56px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -67,8 +68,8 @@ export const SearchInput = styled.div`
   right: 0;
   z-index: 2;
   overflow: hidden;
-  transition: width 1s ease-in-out, background-color 1s ease-in-out,
-    border-radius 1s ease-in-out;
+  transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out,
+    border-radius 0.4s ease-in-out;
 
   input {
     position: absolute;
@@ -87,8 +88,8 @@ export const SearchInput = styled.div`
   }
 
   &:hover {
-    transition: width 1s ease-in-out, background-color 1s ease-in-out,
-      border-radius 1s ease-in-out;
+    transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out,
+      border-radius 0.4s ease-in-out;
 
     width: 220px;
 
