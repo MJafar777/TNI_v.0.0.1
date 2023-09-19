@@ -7,6 +7,7 @@ export { default as facebook } from "./icons/facebook.svg";
 export { default as PolymerBack } from "./polymerBack.svg";
 export { default as instagram } from "./icons/instagram.svg";
 export { default as PolymerBack2 } from "./polymerBack2.svg";
+export { default as section2Back } from "./section2-back.svg";
 export { default as linerArrow } from "./icons/linerArrow.svg";
 export { default as buyCard } from "./components/curdBtn/buyCurd.svg";
 export { default as arrowRight } from "./components/curdBtn/arrowRight.svg";

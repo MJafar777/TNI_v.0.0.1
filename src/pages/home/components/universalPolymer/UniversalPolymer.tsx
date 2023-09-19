@@ -1,6 +1,13 @@
-import { Ellipse, PolymerBack, PolymerBack2 } from "../../../../assets/images";
-import ButtonComp from "../../../../components/buttons/ButtonComp";
+import {
+  Ellipse,
+  PolymerBack,
+  PolymerBack2,
+  section2Back,
+} from "../../../../assets/images";
+
 import { Section } from "../../../../styles";
+import ButtonComp from "../../../../components/buttons/ButtonComp";
+
 import {
   UniversalPolymerDesc,
   UniversalPolymerLeft,
@@ -19,8 +26,10 @@ const UniversalPolymer = () => {
   return (
     <Section>
       <UniversalPolymerWrapper>
+        <img src={section2Back} alt="section2Back" className="section2Back" />
+
         <UniversalPolymerLeft>
-          <img src={PolymerBack} alt="PolymerBack" />
+          <img src={PolymerBack} alt="polymerBack" />
 
           <img className="polymerBack2" src={PolymerBack2} alt="PolymerBack2" />
         </UniversalPolymerLeft>

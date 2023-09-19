@@ -61,7 +61,7 @@ const Header = () => {
           </NavbarItemBox>
 
           <NavbarItemBox className="navbarItemBoz-popower">
-            <Link to={"/prodacts"}>
+            <Link to={"/products"}>
               <NavbarItem>Our Products</NavbarItem>
             </Link>
 

@@ -11,6 +11,13 @@ export const UniversalPolymerWrapper = styled.section`
   .universalPolymerButtonComp {
     margin-top: 30px;
   }
+
+  .section2Back {
+    position: absolute;
+    left: 0;
+    top: -80px;
+    z-index: -10;
+  }
 `;
 
 export const UniversalPolymerLeft = styled.section`
