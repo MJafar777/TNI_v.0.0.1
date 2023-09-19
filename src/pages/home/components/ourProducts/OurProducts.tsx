@@ -1,7 +1,6 @@
 import { ourProductsBack } from "../../../../assets/images";
 import { CardProducts } from "../../../../components/curdProduct";
 import { Section } from "../../../../styles";
-import { GridsCards } from "../../../products/ui/products";
 import {
   OurProductsCards,
   OurProductsDesc,

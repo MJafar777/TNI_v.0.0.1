@@ -1,11 +1,13 @@
 import { styled } from "styled-components";
 
 export const OurProductsWrapper = styled.section`
-  position: relative;
+  margin: 0 auto;
   padding: 0;
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
+
   margin-top: 50px;
 
   .ourProductsBack {
@@ -70,4 +72,6 @@ export const OurProductsCards = styled.div`
   gap: 30px;
   align-items: center;
   margin: 20px auto;
+  max-width: 1100px;
+  width: 100%;
 `;

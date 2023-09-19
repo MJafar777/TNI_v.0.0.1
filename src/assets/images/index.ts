@@ -5,6 +5,7 @@ export { default as whiteLogo } from "./whiteLogo.svg";
 export { default as telegram } from "./icons/telegram.svg";
 export { default as facebook } from "./icons/facebook.svg";
 export { default as PolymerBack } from "./polymerBack.svg";
+export { default as WhatWeDoBack } from "./whatWeDoBack.svg";
 export { default as instagram } from "./icons/instagram.svg";
 export { default as PolymerBack2 } from "./polymerBack2.svg";
 export { default as section2Back } from "./section2-back.svg";
