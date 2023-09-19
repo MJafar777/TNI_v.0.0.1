@@ -20,6 +20,23 @@ const Contact = () => {
 
   return (
     <ContactWrapper>
+      {/* {sendMessage ? (
+            <>
+              <Alert severity="warning">
+                This is a warning alert — check it out!
+              </Alert>
+              <Alert severity="info">
+                This is an info alert — check it out!
+              </Alert>
+              <Alert severity="success">
+                This is a success alert — check it out!
+              </Alert>
+            </>
+          ) : (
+            ""
+          )} */}
+
+          
       <Img src={contactImg} />
       <FormContainer>
         <TopOfForm>
@@ -61,22 +78,6 @@ const Contact = () => {
               <img src={Arrow} alt="" />
             </div>
           </Button>
-
-          {/* {sendMessage ? (
-            <>
-              <Alert severity="warning">
-                This is a warning alert — check it out!
-              </Alert>
-              <Alert severity="info">
-                This is an info alert — check it out!
-              </Alert>
-              <Alert severity="success">
-                This is a success alert — check it out!
-              </Alert>
-            </>
-          ) : (
-            ""
-          )} */}
         </Form>
       </FormContainer>
     </ContactWrapper>
