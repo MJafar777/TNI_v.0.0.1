@@ -1,5 +1,5 @@
 import ButtonComp from "../../../../components/buttons/ButtonComp";
-import { Section } from "../../../../styles";
+
 import {
   WhatWeDoDesc,
   WhatWeDoLeft,
