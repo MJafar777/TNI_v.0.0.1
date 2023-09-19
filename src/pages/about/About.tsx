@@ -1,12 +1,7 @@
 import { AboutWrapper } from "./AboutStyles";
 
 const About = () => {
-  return <AboutWrapper>
-
-
-
-    
-  </AboutWrapper>;
+  return <AboutWrapper></AboutWrapper>;
 };
 
 export default About;

@@ -16,6 +16,11 @@ export const BrLine = styled.div`
   margin-top: 32px;
   border-bottom: 1px solid #f4f4f4;
 `;
+
+export const MarginBottom = styled.div`
+  margin-bottom: 100px;
+`;
+
 export const GridsCards = styled.div`
   width: 100%;
   gap: 30px;

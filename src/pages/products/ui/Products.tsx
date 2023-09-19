@@ -4,8 +4,15 @@ import { Paragraph } from "../../../components/Paragraph";
 import { Container } from "../../../components/container";
 import { CardProducts } from "../../../components/curdProduct";
 import { MiniTitle } from "../../../components/miniTitle";
-import { ProductsWrapper, FlexProduct, BrLine, GridsCards } from "./products";
+import {
+  ProductsWrapper,
+  FlexProduct,
+  BrLine,
+  GridsCards,
+  MarginBottom,
+} from "./products";
 import dataCurd from "../../../api/curds/cardsInfo";
+import { Contact } from "../../../components";
 
 const dataFilter = [
   { id: 1, value: "Polypropylenes" },
@@ -90,6 +97,8 @@ const Products: React.FC = () => {
             );
           })}
         </GridsCards>
+        <MarginBottom />
+        <Contact />
       </ProductsWrapper>
     </Container>
   );
