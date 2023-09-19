@@ -1,3 +1,4 @@
+import { Delivery, OurAchievements } from "./components";
 import MainSection from "./components/mainSection/MainSection";
 import UniversalPolymer from "./components/universalPolymer/UniversalPolymer";
 
@@ -7,6 +8,10 @@ const Home = () => {
       <MainSection />
 
       <UniversalPolymer />
+
+      <Delivery/>
+
+      <OurAchievements/>
     </>
   );
 };
