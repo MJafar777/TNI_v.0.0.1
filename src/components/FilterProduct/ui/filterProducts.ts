@@ -17,8 +17,8 @@ export const FilterAllProjectsWrapper = styled.div<Props>`
     height: 50px;
   }
   @media ${(props) => props.theme.breakpoints.lg} {
-    display: block;
     height: auto;
+    display: block;
   }
 `;
 export const ButtonsFilter = styled.div`
@@ -48,11 +48,11 @@ export const ButtonsFilter = styled.div`
 `;
 
 export const IconFilter = styled.img`
-  width: 30px;
-  margin-left: 95%;
-  cursor: pointer;
-  position: relative;
   top: -60px;
+  width: 30px;
+  cursor: pointer;
+  margin-left: 95%;
+  position: relative;
 
   @media screen and (min-width: 993px) {
     display: none;

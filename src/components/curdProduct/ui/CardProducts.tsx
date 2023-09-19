@@ -16,9 +16,9 @@ import {
 import { BtnCurd } from "../../BtnCurd";
 
 interface Props {
-  id: number | string;
   img: string;
   price: string;
+  id: number | string;
   productName: string;
   descriptions: string;
   star: number; // maximum star numbers "5"

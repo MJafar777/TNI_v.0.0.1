@@ -11,6 +11,7 @@ export const FlexProduct = styled.div`
   align-items: center;
   justify-content: left;
 `;
+
 export const BrLine = styled.div`
   width: 100%;
   margin-top: 32px;

@@ -1,18 +1,18 @@
 import React from "react";
-import { FilterProducts } from "../../../components/FilterProduct";
+import { Contact } from "../../../components";
+import dataCurd from "../../../api/curds/cardsInfo";
 import { Paragraph } from "../../../components/Paragraph";
 import { Container } from "../../../components/container";
-import { CardProducts } from "../../../components/curdProduct";
 import { MiniTitle } from "../../../components/miniTitle";
+import { CardProducts } from "../../../components/curdProduct";
+import { FilterProducts } from "../../../components/FilterProduct";
 import {
-  ProductsWrapper,
-  FlexProduct,
   BrLine,
   GridsCards,
+  FlexProduct,
   MarginBottom,
+  ProductsWrapper,
 } from "./products";
-import dataCurd from "../../../api/curds/cardsInfo";
-import { Contact } from "../../../components";
 
 const dataFilter = [
   { id: 1, value: "Polypropylenes" },
@@ -24,10 +24,10 @@ const dataFilter = [
 type DataType = {
   id: number;
   img: string;
-  productName: string;
   star: number; // maximum star numbers "5"
-  descriptions: string;
   price: string;
+  productName: string;
+  descriptions: string;
 };
 
 const Products: React.FC = () => {
@@ -70,15 +70,15 @@ const Products: React.FC = () => {
         <BrLine />
 
         <Paragraph
-          text={"Featured Product"}
-          color={"#1A1E26"}
           width={""}
-          margin={"70px auto 50px auto"}
           fontSize={"24"}
-          fontFamily={"Lexend"}
           fontWeight={"400"}
+          color={"#1A1E26"}
           lineHeight={"150%"}
+          fontFamily={"Lexend"}
           letterSpacing={"-0.5px"}
+          text={"Featured Product"}
+          margin={"70px auto 50px auto"}
         />
         <GridsCards>
           {dataCurd.map((e: DataType) => {
@@ -97,7 +97,9 @@ const Products: React.FC = () => {
             );
           })}
         </GridsCards>
+
         <MarginBottom />
+
         <Contact />
       </ProductsWrapper>
     </Container>

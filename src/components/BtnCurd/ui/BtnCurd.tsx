@@ -1,13 +1,12 @@
 import { FC, useState } from "react";
-
-import { Img, BtnBuy, Circle, TextBtn, BtnRacktangle } from "./btn";
 import { arrowRight, buyCard } from "../../../assets/images";
+import { Img, BtnBuy, Circle, TextBtn, BtnRacktangle } from "./btn";
 
 interface Props {
-  id: string | number;
   icon: string;
-  iconParent: boolean;
   btnName: string;
+  id: string | number;
+  iconParent: boolean;
 }
 
 const BtnCurd: FC<Props> = (props) => {

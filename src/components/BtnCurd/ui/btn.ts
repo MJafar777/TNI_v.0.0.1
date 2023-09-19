@@ -45,19 +45,19 @@ export const BtnRacktangle = styled.div<Props>`
 `;
 
 export const TextBtn = styled.p<Props>`
-  font-family: Mazzard;
   font-size: 12px;
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
   line-height: normal;
   background: #029fcf;
-  background: linear-gradient(to right, #029fcf 0%, #24cca8 100%);
+  font-family: Mazzard;
   background-clip: padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #029fcf 0%, #24cca8 100%);
 
-  user-select: none;
   margin: 0 3px;
+  user-select: none;
 
   background-image: ${(e) =>
     e.handleBtnCurd
@@ -77,13 +77,12 @@ export const Circle = styled.div<Props>`
       ? "linear-gradient(180deg, #fff 0%, #fff 100%)"
       : "linear-gradient(180deg, #029ecf 0%, #27d0a5 100%)"};
 
-  transform: ${(e) => (e.handleBtnCurd ? "translateX(215%)" : "none")};
-
-  background-color: ${(e) => (e.handleBtnCurd ? "#fff" : "transparent")};
-  user-select: none;
-  display: flex;
   z-index: 2;
+  display: flex;
+  user-select: none;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out;
+  transform: ${(e) => (e.handleBtnCurd ? "translateX(215%)" : "none")};
+  background-color: ${(e) => (e.handleBtnCurd ? "#fff" : "transparent")};
 `;

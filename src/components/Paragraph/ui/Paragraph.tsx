@@ -6,12 +6,12 @@ interface Props {
   text: string;
   color: string;
   fontFamily: string;
+  lineHeight: string;
+  letterSpacing: string;
   width: number | string;
   margin: number | string;
   fontSize: number | string;
   fontWeight: string | number;
-  lineHeight: string;
-  letterSpacing: string;
 }
 
 const Paragraph: FC<Props> = (props) => {
@@ -26,6 +26,7 @@ const Paragraph: FC<Props> = (props) => {
     lineHeight,
     letterSpacing,
   } = props;
+
   return (
     <ParagraphWrapper
       color={color}
@@ -33,9 +34,9 @@ const Paragraph: FC<Props> = (props) => {
       margin={margin}
       fontSize={fontSize}
       lineHeight={lineHeight}
-      letterSpacing={letterSpacing}
       fontWeight={fontWeight}
       fontFamily={fontFamily}
+      letterSpacing={letterSpacing}
     >
       {text}
     </ParagraphWrapper>

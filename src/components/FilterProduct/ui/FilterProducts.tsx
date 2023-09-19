@@ -19,6 +19,7 @@ const FilterProducts: FC<Props> = (props) => {
   const FilterButtonClicked = (id: number) => {
     setIdFilterValue(id);
   };
+  
   const activeButton = {
     border: "1px solid #27D0A5",
     backgroundColor: "#eafffa",
