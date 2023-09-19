@@ -1,7 +1,7 @@
 // import { useState } from "react";
-import { Arrow, contactImg } from "../../../../assets/images/about";
+import { contactImg } from "../../../../assets/images/about";
+import ButtonComp from "../../../../components/buttons/ButtonComp";
 import {
-  Button,
   ContactWrapper,
   Form,
   FormContainer,
@@ -20,6 +20,7 @@ const Contact = () => {
 
   return (
     <ContactWrapper>
+      
       {/* {sendMessage ? (
             <>
               <Alert severity="warning">
@@ -36,7 +37,6 @@ const Contact = () => {
             ""
           )} */}
 
-          
       <Img src={contactImg} />
       <FormContainer>
         <TopOfForm>
@@ -52,32 +52,31 @@ const Contact = () => {
         <Form>
           <WrapperInput>
             <label htmlFor="name">First Name</label>
-            <input type="text" name="name" />
+            <input type="text" name="name" required />
           </WrapperInput>
           <WrapperInput>
             <label htmlFor="surname">Last Name</label>
-            <input type="text" name="surname" />
+            <input type="text" name="surname" required />
           </WrapperInput>
           <WrapperInput>
             <label htmlFor="Email">Email*</label>
-            <input type="email" name="Email" />
+            <input type="email" name="Email" required />
           </WrapperInput>
           <WrapperInput>
             <label htmlFor="address">Address</label>
-            <input type="text" />
+            <input type="text" name="address" required={true} />
           </WrapperInput>
           <WrapperTextarea>
             <label htmlFor="message">Message</label>
             <textarea name="message" id=""></textarea>
           </WrapperTextarea>
-          <Button
-          //  onClick={() => setSendMessage(true)}
-          >
-            Submit Now
-            <div>
-              <img src={Arrow} alt="" />
-            </div>
-          </Button>
+          <div className="my-2">
+            <ButtonComp
+              //  onClick={() => setSendMessage(true)}
+
+              buttonText={"Submit Now"}
+            ></ButtonComp>
+          </div>
         </Form>
       </FormContainer>
     </ContactWrapper>

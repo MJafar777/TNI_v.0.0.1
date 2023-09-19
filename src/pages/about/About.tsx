@@ -5,7 +5,9 @@ const About = () => {
   return (
     <AboutWrapper>
       <Header />
+
       <ShortInfo />
+
       <Contact />
     </AboutWrapper>
   );
