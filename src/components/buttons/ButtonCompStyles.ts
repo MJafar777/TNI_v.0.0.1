@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const ButtonCompWrapper = styled.div`
+export const ButtonCompWrapper = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,6 +12,8 @@ export const ButtonCompWrapper = styled.div`
   cursor: pointer;
   transition: all 1s;
   overflow: hidden;
+  outline: none;
+  background: none;
 
   .buttonArrow {
     color: white;

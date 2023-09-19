@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const UniversalPolymerWrapper = styled.section`
   position: relative;
-  padding: 100px 0;
+  padding-top: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +20,7 @@ export const UniversalPolymerWrapper = styled.section`
   }
 `;
 
-export const UniversalPolymerLeft = styled.section`
+export const UniversalPolymerLeft = styled.div`
   width: 50%;
   position: relative;
   padding-bottom: 80px;
@@ -36,7 +36,7 @@ export const UniversalPolymerLeft = styled.section`
   }
 `;
 
-export const UniversalPolymerRight = styled.section`
+export const UniversalPolymerRight = styled.div`
   width: 50%;
 `;
 
@@ -63,7 +63,7 @@ export const UniversalPolymerWelcomeText = styled.p`
   -webkit-text-fill-color: transparent;
 `;
 
-export const UniversalPolymerTitle = styled.section`
+export const UniversalPolymerTitle = styled.h2`
   color: #000;
   font-family: Mazzard;
   font-size: 56px;
@@ -71,7 +71,7 @@ export const UniversalPolymerTitle = styled.section`
   letter-spacing: 1.12px;
 `;
 
-export const UniversalPolymerDesc = styled.section`
+export const UniversalPolymerDesc = styled.p`
   color: #000;
   font-family: Mazzard;
   font-size: 16px;
@@ -82,14 +82,14 @@ export const UniversalPolymerDesc = styled.section`
   margin-bottom: 70px;
 `;
 
-export const UniversalPolymerTitleHerBox = styled.section`
+export const UniversalPolymerTitleHerBox = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
   margin: 20px 0;
 `;
 
-export const UniversalPolymerTitleHerBoxTitle = styled.section`
+export const UniversalPolymerTitleHerBoxTitle = styled.h3`
   color: #000;
   font-family: Mazzard;
   font-size: 20px;
@@ -97,7 +97,7 @@ export const UniversalPolymerTitleHerBoxTitle = styled.section`
   margin-bottom: 5px;
 `;
 
-export const UniversalPolymerTitleHerBoxDesc = styled.section`
+export const UniversalPolymerTitleHerBoxDesc = styled.p`
   color: #000;
   font-family: Mazzard;
   font-size: 16px;
