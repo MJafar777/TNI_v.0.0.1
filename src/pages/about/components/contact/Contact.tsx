@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Arrow, contactImg } from "../../../../assets/images/about";
 import {
   Button,
@@ -12,8 +13,11 @@ import {
   WrapperInput,
   WrapperTextarea,
 } from "./ContactStyles";
+import { Alert } from "@mui/material";
 
 const Contact = () => {
+  const [sendMessage, setSendMessage] = useState(false);
+
   return (
     <ContactWrapper>
       <Img src={contactImg} />
@@ -49,12 +53,27 @@ const Contact = () => {
             <label htmlFor="message">Message</label>
             <textarea name="message" id=""></textarea>
           </WrapperTextarea>
-          <Button>
+          <Button onClick={() => setSendMessage(true)}>
             Submit Now
             <div>
               <img src={Arrow} alt="" />
             </div>
           </Button>
+          {sendMessage ? (
+            <>
+              <Alert severity="warning">
+                This is a warning alert — check it out!
+              </Alert>
+              <Alert severity="info">
+                This is an info alert — check it out!
+              </Alert>
+              <Alert severity="success">
+                This is a success alert — check it out!
+              </Alert>
+            </>
+          ) : (
+            ""
+          )}
         </Form>
       </FormContainer>
     </ContactWrapper>
