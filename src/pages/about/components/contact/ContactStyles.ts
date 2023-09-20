@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { bgContact } from "../../../../assets/images/about";
 
 export const ContactWrapper = styled.div`
-  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
   height: fit-content;
   padding: 30px 0;
   display: flex;

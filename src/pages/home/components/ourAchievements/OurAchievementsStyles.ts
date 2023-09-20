@@ -12,7 +12,7 @@ export const OurAchievementsWrapper = styled.div`
 
 export const AchievementsContainer = styled.div`
   width: 100%;
-  padding: 40px 0;
+  padding: 40px 50px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -45,7 +45,7 @@ export const EachAchievementsCardTitle = styled.div`
 
 export const EachAchievementsCardContent = styled.div`
   color: #fff;
-  font-family: Mazzard;
+  font-family: "MazzardM-Regular";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;

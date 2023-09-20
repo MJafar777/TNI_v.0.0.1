@@ -38,7 +38,7 @@ export const TopTitle = styled.div`
 export const Title = styled.div`
   color: var(--text-color, #252b42);
   text-align: center;
-  font-size: 40px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 57px; /* 142.5% */
