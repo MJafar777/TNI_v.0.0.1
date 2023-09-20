@@ -3,7 +3,7 @@ import { mainBack } from "../../../../assets/images";
 
 export const MainSectionWrapper = styled.section`
   width: 100%;
-  height: 100vh;
+  height: auto;
   min-height: 793px;
   padding: 0 40px;
 
@@ -14,6 +14,13 @@ export const MainSectionWrapper = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+  }
 `;
 
 export const MainSectionMain = styled.div`
@@ -87,7 +94,7 @@ export const MainSectionShare = styled.div`
 
   position: absolute;
   top: 32%;
-  left: 30px;
+  left: 1%;
 `;
 
 export const MainSectionShareText = styled.div`

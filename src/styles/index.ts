@@ -6,15 +6,11 @@ export const Section = styled.section`
   overflow: hidden;
   position: relative;
 
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    width: 100%;
+    max-width: 994px;
+  }
+
   @media ${(props) => props.theme.breakpoints.xl} {
-  }
-
-  @media ${(props) => props.theme.breakpoints.lg} {
-  }
-
-  @media ${(props) => props.theme.breakpoints.md} {
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
   }
 `;
