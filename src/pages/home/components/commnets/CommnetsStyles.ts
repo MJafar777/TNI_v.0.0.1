@@ -23,3 +23,9 @@ export const Subtitle = styled.div`
   letter-spacing: 1.12px;
   margin-top: 10px;
 `;
+
+export const SliderWrapper = styled.div`
+  max-width: 1366px;
+
+ 
+`;

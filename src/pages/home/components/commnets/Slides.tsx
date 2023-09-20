@@ -1,73 +1,43 @@
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
 
-function Responsive() {
-    
+function AutoPlay() {
   const settings = {
     dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
   };
 
+  const [autoplay, setAutoplay] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAutoplay(true);
+    }, settings.autoplaySpeed);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
-    <div>
-      <h2>Responsive</h2>
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-        <div>
-          <h3>7</h3>
-        </div>
-        <div>
-          <h3>8</h3>
-        </div>
+    <div style={{ display: "flex" }}>
+      <Slider
+        {...settings}
+        autoplay={autoplay}
+        beforeChange={() => setAutoplay(false)}
+        
+      >
+        <div>slaom</div>
+        <div>slaom</div>
       </Slider>
     </div>
   );
 }
 
-export default Responsive;
+export default AutoPlay;
