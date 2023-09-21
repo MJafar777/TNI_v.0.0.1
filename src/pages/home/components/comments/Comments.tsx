@@ -3,8 +3,8 @@ import {
   TopContentOfDelivery,
   TopTitle,
 } from "../delivery/DeliveryStyles";
-import { SliderWrapper, Subtitle } from "./CommnetsStyles";
-import { CommentsWrapper } from "./CommnetsStyles";
+import { SliderWrapper, Subtitle } from "./CommentsStyles";
+import { CommentsWrapper } from "./CommentsStyles";
 // import OneComment from "./OneComment";
 import Slides from "./Slides";
 
