@@ -1,12 +1,12 @@
+import Slides from "./Slides";
+
 import {
   Title,
   TopContentOfDelivery,
   TopTitle,
 } from "../delivery/DeliveryStyles";
-import { SliderWrapper, Subtitle } from "./CommentsStyles";
 import { CommentsWrapper } from "./CommentsStyles";
-// import OneComment from "./OneComment";
-import Slides from "./Slides";
+import { SliderWrapper, Subtitle } from "./CommentsStyles";
 
 const Comments = () => {
   return (
@@ -15,12 +15,15 @@ const Comments = () => {
         <TopTitle>
           <span></span>Our Testimonials <span></span>{" "}
         </TopTitle>
+
         <Title>Our Customer Says About Us</Title>
+
         <Subtitle>
           The standard webpage maximum width dimensions for desktop screens are
           1440 pixels. It's a common
         </Subtitle>
       </TopContentOfDelivery>
+
       <SliderWrapper>
         <Slides />
       </SliderWrapper>

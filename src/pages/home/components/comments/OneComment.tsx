@@ -1,4 +1,7 @@
 import React from "react";
+
+import StarIcon from "@mui/icons-material/Star";
+
 import {
   ContainerOfContent,
   ContentOfComment,
@@ -11,8 +14,11 @@ import {
   UserName,
   UserTitle,
 } from "./OneCommentStyles";
-import StarIcon from "@mui/icons-material/Star";
-import { directionOfCommit, jafar, quota } from "../../../../assets/images/components/comments";
+import {
+  directionOfCommit,
+  jafar,
+  quota,
+} from "../../../../assets/images/components/comments";
 interface AppProps {}
 
 const OneComment: React.FC<AppProps> = () => {

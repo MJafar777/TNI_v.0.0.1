@@ -1,16 +1,5 @@
+import { useEffect, useRef } from "react";
 import CountUp from "react-countup";
-import {
-  AchivementImg1,
-  AchivementImg2,
-  AchivementImg3,
-  AchivementImg4,
-} from "../../../../assets/images/components/achivements";
-import {
-  Title,
-  TopContentOfDelivery,
-  TopTitle,
-} from "../delivery/DeliveryStyles";
-
 import {
   AchievementsContainer,
   EachAchievement,
@@ -19,29 +8,29 @@ import {
   EachAchievementsCardTitle,
   OurAchievementsWrapper,
 } from "./OurAchievementsStyles";
-import { useEffect, useState } from "react";
+
+import {
+  Title,
+  TopContentOfDelivery,
+  TopTitle,
+} from "../delivery/DeliveryStyles";
+
+import {
+  AchivementImg1,
+  AchivementImg2,
+  AchivementImg3,
+  AchivementImg4,
+} from "../../../../assets/images/components/achivements";
 
 const OurAchievements = () => {
-  const [start, setStart] = useState(0);
+  const countUpRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      console.log("loko", scrollPosition);
-
-      if (scrollPosition >= 4700) {
-        setStart(1);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    if (countUpRef.current) console.log("sal,sla,");
   }, []);
+
   return (
-    <OurAchievementsWrapper>
+    <OurAchievementsWrapper ref={countUpRef}>
       <TopContentOfDelivery>
         <TopTitle>
           {" "}
@@ -60,7 +49,7 @@ const OurAchievements = () => {
             <CountUp
               end={15}
               duration={5.75}
-              start={start}
+              start={0}
               separator="client"
               decimal=","
               suffix=" +"
@@ -80,7 +69,7 @@ const OurAchievements = () => {
             <CountUp
               end={50}
               duration={5.75}
-              start={start}
+              start={0}
               separator="client"
               decimal=","
               suffix=" +"
@@ -101,7 +90,7 @@ const OurAchievements = () => {
             <CountUp
               end={15}
               duration={5.75}
-              start={start}
+              start={0}
               separator="client"
               decimal=","
               suffix=" +"
@@ -122,7 +111,7 @@ const OurAchievements = () => {
             <CountUp
               end={10}
               duration={5.75}
-              start={start}
+              start={0}
               separator="client"
               decimal=","
               suffix=" +"

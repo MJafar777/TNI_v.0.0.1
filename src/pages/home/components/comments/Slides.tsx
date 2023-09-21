@@ -43,22 +43,20 @@ function AutoPlay() {
   };
 
   return (
-    <div>
-      <Slider {...settings}>
-        <OneComment />
-        <OneComment />
-        <OneComment />
-        <OneComment />
-        <OneComment />
-        <OneComment />
-        <OneComment />
-        <OneComment />
-        <OneComment />
-        <OneComment />
-        <OneComment />
-        <OneComment />
-      </Slider>
-    </div>
+    <Slider {...settings}>
+      <OneComment />
+      <OneComment />
+      <OneComment />
+      <OneComment />
+      <OneComment />
+      <OneComment />
+      <OneComment />
+      <OneComment />
+      <OneComment />
+      <OneComment />
+      <OneComment />
+      <OneComment />
+    </Slider>
   );
 }
 

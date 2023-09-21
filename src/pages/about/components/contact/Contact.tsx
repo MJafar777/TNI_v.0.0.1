@@ -1,6 +1,5 @@
 // import { useState } from "react";
-import { contactImg } from "../../../../assets/images/about";
-import ButtonComp from "../../../../components/buttons/ButtonComp";
+
 import {
   ContactWrapper,
   Form,
@@ -13,6 +12,9 @@ import {
   WrapperInput,
   WrapperTextarea,
 } from "./ContactStyles";
+
+import { contactImg } from "../../../../assets/images/about";
+import ButtonComp from "../../../../components/buttons/ButtonComp";
 // import { Alert } from "@mui/material";
 
 const Contact = () => {

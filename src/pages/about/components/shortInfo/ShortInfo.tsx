@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { banner, videoOfBannerForAbout } from "../../../../assets/images/about";
+
 import {
   Banner,
   Container,
@@ -9,9 +9,13 @@ import {
   Text,
   CardAchievements,
 } from "./ShortInfoStyles";
+
 import CountUp from "react-countup";
 
+import { banner, videoOfBannerForAbout } from "../../../../assets/images/about";
+
 const ShortInfo = () => {
+  
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const handleVideoEnded = () => {

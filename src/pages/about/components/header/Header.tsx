@@ -1,4 +1,3 @@
-// import MainHeader from "../../../../layouts/header/mainHeader/MainHeader";
 import MainHeader from "../../../../layouts/header/mainHeader/MainHeader";
 import {
   BorderBottom,
@@ -23,6 +22,7 @@ const Header = () => {
         <Title>Who we are</Title>
         <BorderBottom></BorderBottom>
       </Content>
+
     </HeaderWrapper>
   );
 };
