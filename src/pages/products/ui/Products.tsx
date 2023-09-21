@@ -13,6 +13,7 @@ import {
   MarginBottom,
   ProductsWrapper,
 } from "./products";
+import { DescriptionProduct } from "../pages/descriptions";
 
 const dataFilter = [
   { id: 1, value: "Polypropylenes" },
@@ -69,6 +70,9 @@ const Products: React.FC = () => {
             })}
           </GridsCards>
 
+          <MarginBottom />
+
+          <DescriptionProduct />
           <BrLine />
 
           <Paragraph
