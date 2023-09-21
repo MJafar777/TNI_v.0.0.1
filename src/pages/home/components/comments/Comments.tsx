@@ -13,7 +13,6 @@ const Comments = () => {
     <CommentsWrapper>
       <TopContentOfDelivery>
         <TopTitle>
-          {" "}
           <span></span>Our Testimonials <span></span>{" "}
         </TopTitle>
         <Title>Our Customer Says About Us</Title>
@@ -23,7 +22,6 @@ const Comments = () => {
         </Subtitle>
       </TopContentOfDelivery>
       <SliderWrapper>
-        {/* <OneComment /> */}
         <Slides />
       </SliderWrapper>
     </CommentsWrapper>
