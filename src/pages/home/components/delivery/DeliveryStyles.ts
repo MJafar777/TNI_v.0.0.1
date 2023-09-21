@@ -104,7 +104,7 @@ export const LeftImg = styled.img`
   top: -20%;
   left: 8%;
   z-index: -1;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     display: none;
   }
 `;
@@ -113,12 +113,26 @@ export const RightImg = styled.img`
   top: -20%;
   right: 8%;
   z-index: -1;
+  @media screen and (max-width: 1200px) {
+    top: -20%;
+    /* left: 20%; */
+    z-index: -1;
+    width: 90%;
+  }
+
   @media screen and (max-width: 768px) {
     top: -20%;
-    left: 0%;
+    left: 10%;
     z-index: -1;
   }
 `;
 export const CarOfDelivery = styled.img`
   margin-top: 128px;
+  ime-mode: auto;
+
+  @media screen and (max-width: 1200px) {
+    width: 400px;
+    height: 40vh;
+    background-size: contain;
+  }
 `;

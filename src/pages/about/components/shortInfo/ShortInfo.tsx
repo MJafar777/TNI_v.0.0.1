@@ -25,7 +25,7 @@ const ShortInfo = () => {
   return (
     <ShortInfoWrapper>
       <Container>
-        <Title>About Our</Title>
+        <Title>About Us</Title>
         <Text>
           The standard webpage maximum width dimensions for desktop screens are
           1440 pixels. It's a common practice restrict the maxium width

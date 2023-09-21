@@ -19,8 +19,27 @@ import {
   EachAchievementsCardTitle,
   OurAchievementsWrapper,
 } from "./OurAchievementsStyles";
+import { useEffect, useState } from "react";
 
 const OurAchievements = () => {
+  const [start, setStart] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      console.log("loko", scrollPosition);
+
+      if (scrollPosition >= 4700) {
+        setStart(1);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <OurAchievementsWrapper>
       <TopContentOfDelivery>
@@ -41,7 +60,7 @@ const OurAchievements = () => {
             <CountUp
               end={15}
               duration={5.75}
-              start={0}
+              start={start}
               separator="client"
               decimal=","
               suffix=" +"
@@ -61,7 +80,7 @@ const OurAchievements = () => {
             <CountUp
               end={50}
               duration={5.75}
-              start={0}
+              start={start}
               separator="client"
               decimal=","
               suffix=" +"
@@ -82,7 +101,7 @@ const OurAchievements = () => {
             <CountUp
               end={15}
               duration={5.75}
-              start={0}
+              start={start}
               separator="client"
               decimal=","
               suffix=" +"
@@ -103,7 +122,7 @@ const OurAchievements = () => {
             <CountUp
               end={10}
               duration={5.75}
-              start={0}
+              start={start}
               separator="client"
               decimal=","
               suffix=" +"

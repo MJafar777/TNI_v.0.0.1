@@ -12,7 +12,7 @@ const ShortInfo = () => {
   return (
     <ShortInfoWrapper>
       <Container>
-        <Title>About Our</Title>
+        <Title>About Us</Title>
 
         <Text>
           The standard webpage maximum width dimensions for desktop screens are

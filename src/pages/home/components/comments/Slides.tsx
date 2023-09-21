@@ -9,7 +9,7 @@ function AutoPlay() {
     infinite: true,
     speed: 2000,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 2000,

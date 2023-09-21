@@ -54,7 +54,6 @@ const Delivery = () => {
             dimension for your site
           </CardText>
         </Card>
-
         <Card data-aos-duration="1000" data-aos="fade-right">
           <CardImg
             data-aos="zoom-in-left"
@@ -85,7 +84,6 @@ const Delivery = () => {
             </CardText>
           </Card>
         </div>
-
         <Card data-aos-duration="1000" data-aos="fade-right">
           <CardImg
             data-aos="zoom-in-left"
