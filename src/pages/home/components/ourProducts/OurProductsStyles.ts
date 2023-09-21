@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const OurProductsWrapper = styled.section`
   margin: 0 auto;
-  padding: 0;
+  padding: 10px;
   position: relative;
   display: flex;
   align-items: center;
