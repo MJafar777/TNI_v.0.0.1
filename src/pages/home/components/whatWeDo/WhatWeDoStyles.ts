@@ -39,7 +39,7 @@ export const WhatWeDoWrapper = styled.section`
 
 export const WhatWeDoLeft = styled.div`
   max-width: 1151px;
-  width: 100%;
+  width: 50%;
   position: relative;
 
   display: flex;
@@ -47,10 +47,19 @@ export const WhatWeDoLeft = styled.div`
   justify-content: flex-start;
   text-align: left;
   margin: 0 auto;
+  padding: 20px;
+  padding-left: 10%;
 `;
 
 export const WhatWeDoRight = styled.div`
-  position: absolute;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  video {
+    clip-path: polygon(46% 0, 77% 0, 48% 100%, 16% 100%);
+  }
 `;
 
 export const WhatWeDoWelcome = styled.div`

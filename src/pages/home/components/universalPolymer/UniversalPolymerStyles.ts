@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 export const UniversalPolymerWrapper = styled.section`
   position: relative;
+
   padding-top: 100px;
   display: flex;
   align-items: center;
