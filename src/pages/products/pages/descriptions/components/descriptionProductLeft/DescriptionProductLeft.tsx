@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Container } from "../../../../../../components/container";
 import {
   sendLink,
@@ -43,15 +43,21 @@ const DescriptionProductLeft: FC<Props> = (props) => {
   const selectedCurd: selectedCurdType | undefined = curdIndormation.find(
     (curd) => curd.id === getIdCurd
   );
-  console.log(selectedCurd);
+
+  const [defaultImage, setDefaultImage] = useState({
+    img: selectedCurd?.imgProduct[0],
+    id: 1,
+  });
 
   return (
     <Container>
       <DescriptionProductLeftWrapper>
         <BgPart>
           <ImgProduct
-            src={imgProductOne}
-            alt={`this image not found ${imgProductOne}`}
+            src={defaultImage?.img ? defaultImage.img : ""}
+            alt={`this image not found ${
+              defaultImage?.img ? defaultImage.img : ""
+            }`}
           />
 
           <CHildPanels>
@@ -72,33 +78,19 @@ const DescriptionProductLeft: FC<Props> = (props) => {
         </BgPart>
 
         <SliderImages>
-          <SliderBtnImages>
-            <ImgMini
-              src={imgProductOne}
-              alt={`this image not found ${imgProductOne}`}
-            />
-          </SliderBtnImages>
-
-          <SliderBtnImages>
-            <ImgMini
-              src={imgProductOne}
-              alt={`this image not found ${imgProductOne}`}
-            />
-          </SliderBtnImages>
-
-          <SliderBtnImages>
-            <ImgMini
-              src={imgProductOne}
-              alt={`this image not found ${imgProductOne}`}
-            />
-          </SliderBtnImages>
-
-          <SliderBtnImages>
-            <ImgMini
-              src={imgProductOne}
-              alt={`this image not found ${imgProductOne}`}
-            />
-          </SliderBtnImages>
+          {selectedCurd?.imgProduct.map((productImage, index) => (
+            <SliderBtnImages
+              onClick={() =>
+                setDefaultImage({ img: productImage, id: index + 1 })
+              }
+              key={index}
+            >
+              <ImgMini
+                src={productImage}
+                alt={`this image not found ${productImage}`}
+              />
+            </SliderBtnImages>
+          ))}
         </SliderImages>
       </DescriptionProductLeftWrapper>
     </Container>
