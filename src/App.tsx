@@ -1,7 +1,7 @@
 import { Suspense } from "react";
+import Theme from "./styles/theme";
 import { Outlet } from "react-router-dom";
 import { Header, Footer } from "./layouts";
-import Theme from "./styles/theme";
 
 function App() {
   return (

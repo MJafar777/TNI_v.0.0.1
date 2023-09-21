@@ -1,5 +1,16 @@
+import { AboutWrapper } from "./AboutStyles";
+import { Header, Contact, ShortInfo } from "./components";
+
 const About = () => {
-  return <div>About</div>;
+  return (
+    <AboutWrapper>
+      <Header />
+
+      <ShortInfo />
+
+      <Contact />
+    </AboutWrapper>
+  );
 };
 
 export default About;
