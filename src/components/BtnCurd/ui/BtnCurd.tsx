@@ -1,35 +1,49 @@
 import { FC, useState } from "react";
-import { arrowRight, buyCard } from "../../../assets/images";
 import { Img, BtnBuy, Circle, TextBtn, BtnRacktangle } from "./btn";
 
 interface Props {
-  icon: string;
   btnName: string;
   id: string | number;
-  iconParent: boolean;
+  iconHover: string;
+  iconDefault: string;
 }
 
 const BtnCurd: FC<Props> = (props) => {
   const [handleBtnCurd, setHandleBtnCurd] = useState(false);
 
-  const { icon, iconParent, id, btnName } = props;
+  const { iconDefault, iconHover, btnName } = props;
+
+  const handleMouseEnter = () => {
+    setHandleBtnCurd(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHandleBtnCurd(false);
+  };
+
   return (
     <>
-      <BtnBuy onClick={() => setHandleBtnCurd(() => !handleBtnCurd)}>
+      <BtnBuy
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={() => setHandleBtnCurd(() => !handleBtnCurd)}
+      >
         <BtnRacktangle handleBtnCurd={handleBtnCurd}>
           <Circle handleBtnCurd={handleBtnCurd}>
             <Img
               src={
-                iconParent === true && id
-                  ? handleBtnCurd === true
-                    ? buyCard
-                    : arrowRight
-                  : icon
+                handleBtnCurd == true
+                  ? iconHover
+                  : handleBtnCurd == false
+                  ? iconDefault
+                  : ""
               }
-              alt={`this image not found ${icon}`}
+              alt={`this image not found ${iconDefault}`}
             />
           </Circle>
-          <TextBtn handleBtnCurd={handleBtnCurd}>{btnName}</TextBtn>
+          <TextBtn handleBtnCurd={handleBtnCurd}>
+            {handleBtnCurd ? "Click here" : btnName}
+          </TextBtn>
         </BtnRacktangle>
       </BtnBuy>
     </>

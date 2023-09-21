@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Paragraph } from "../../Paragraph";
 
-import { arrowRight, bgRactangle } from "../../../assets/images";
+import { arrowRight, bgRactangle, buyCard } from "../../../assets/images";
 
 import {
   ImgProduct,
@@ -37,10 +37,11 @@ const CardProducts: FC<Props> = (props) => {
           <Paragraph
             width={""}
             margin={""}
-            fontSize={"32"}
+            fontSize={"28"}
             color={"#000"}
             fontWeight={"700"}
             text={productName}
+            textDecoration={""}
             lineHeight={"normal"}
             fontFamily={"Mazzard"}
             letterSpacing={"0.64px"}
@@ -55,6 +56,7 @@ const CardProducts: FC<Props> = (props) => {
           color={"#5F5F5F"}
           text={descriptions}
           lineHeight={"150%"}
+          textDecoration={""}
           fontFamily={"Mazzard"}
           letterSpacing={"0.98px"}
         />
@@ -62,9 +64,9 @@ const CardProducts: FC<Props> = (props) => {
         <PriceAndBtn>
           <BtnCurd
             id={id}
-            iconParent={true}
-            icon={arrowRight}
             btnName={"Add to Cart"}
+            iconHover={buyCard}
+            iconDefault={arrowRight}
           />
 
           <Paragraph
@@ -74,6 +76,7 @@ const CardProducts: FC<Props> = (props) => {
             fontSize={"22"}
             color={"#000"}
             fontWeight={"700"}
+            textDecoration={""}
             lineHeight={"normal"}
             fontFamily={"Mazzard"}
             letterSpacing={"0.44px"}
