@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { bgContact } from "../../../../assets/images/about";
 
 export const ContactWrapper = styled.div`
-  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
   height: fit-content;
   padding: 30px 0;
   display: flex;
@@ -10,12 +11,9 @@ export const ContactWrapper = styled.div`
   justify-content: start;
   background-image: url(${bgContact});
   background-size: cover;
-  /* @media screen and (max-width: 992px) {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0 135px;
-  } */
+  .my-2 {
+    margin-top: 20px;
+  }
 
   @media screen and (max-width: 992px) {
     flex-direction: column;
@@ -90,17 +88,18 @@ export const TopTitle = styled.div`
 
 export const Title = styled.div`
   color: #000;
-  font-family: Mazzard;
+  font-family: "MazzardM-Bold";
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.12px;
+  margin: 8px 0;
 `;
 
 export const SubTitle = styled.div`
   color: #000;
-  font-family: Mazzard;
+  font-family: "MazzardM-Regular";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -118,18 +117,24 @@ export const Form = styled.div`
 `;
 
 export const WrapperInput = styled.div`
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: start;
   margin: 10px 0;
+  label {
+    font-size: 14px;
+  }
+
   input {
+    width: 90%;
     outline: none;
     border: none;
     border-radius: 22px;
     background: #eaeaea;
-    padding: 12px 20px;
-    margin-top: 10px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    margin-top: 7px;
   }
 
   @media screen and (max-width: 992px) {
@@ -145,9 +150,12 @@ export const WrapperTextarea = styled.div`
   display: flex;
   flex-direction: column;
   resize: none;
+  label {
+    font-size: 14px;
+  }
   textarea {
     margin-top: 10px;
-    width: 80%;
+    width: 95%;
     resize: none;
     height: 200px;
     border-radius: 15px;

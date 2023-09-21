@@ -13,17 +13,17 @@ export const Container = styled.div`
   justify-content: center;
   gap: 25px;
 
-  @media screen and (max-width:992px){
+  @media screen and (max-width: 992px) {
     padding: 0 80px;
-  } 
+  }
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     padding: 0 60px;
-  } 
+  }
 
-  @media screen and (max-width:576px){
+  @media screen and (max-width: 576px) {
     padding: 0 40px;
-  } 
+  }
 `;
 
 export const Title = styled.p`
@@ -52,11 +52,39 @@ export const Img = styled.img`
 `;
 
 export const Banner = styled.div`
-  background-image: url(${Banner2});
+  /* background-image: url(${Banner2}); */
+  position: relative;
   width: 100%;
-  height: 513px;
+
+  video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;
+  }
+
+  video {
+    width: 100%;
+  }
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 25px 0;
+
+  .contentOfOurAchievements {
+    position: absolute;
+    width: 80%;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+    color: white;
+    font-size: 48px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 `;
+
+export const CardAchievements=styled.div`
+
+
+`

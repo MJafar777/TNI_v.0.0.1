@@ -1,5 +1,14 @@
 export { default as logo } from "./logo.svg";
+export { default as Ellipse } from "./Ellipse.svg";
 export { default as mainBack } from "./mainBack.jpg";
+export { default as whiteLogo } from "./whiteLogo.svg";
+export { default as telegram } from "./icons/telegram.svg";
+export { default as facebook } from "./icons/facebook.svg";
+export { default as PolymerBack } from "./polymerBack.svg";
+export { default as instagram } from "./icons/instagram.svg";
+export { default as PolymerBack2 } from "./polymerBack2.svg";
+export { default as section2Back } from "./section2-back.svg";
+export { default as linerArrow } from "./icons/linerArrow.svg";
 export { default as buyCard } from "./components/curdBtn/buyCurd.svg";
 export { default as arrowRight } from "./components/curdBtn/arrowRight.svg";
 export { default as sendLink } from "./components/descriptionIcons/sendLink.svg";
