@@ -110,6 +110,7 @@ export const SubTitle = styled.div`
 export const Form = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   @media screen and (max-width: 992px) {
     justify-content: space-between;
     margin: 0 auto;
@@ -117,7 +118,7 @@ export const Form = styled.div`
 `;
 
 export const WrapperInput = styled.div`
-  width: 50%;
+  width: 48%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -127,7 +128,7 @@ export const WrapperInput = styled.div`
   }
 
   input {
-    width: 90%;
+    width: 98%;
     outline: none;
     border: none;
     border-radius: 22px;
@@ -140,7 +141,6 @@ export const WrapperInput = styled.div`
   @media screen and (max-width: 992px) {
     input {
       justify-content: center;
-      width: 100%;
     }
   }
 `;
@@ -155,7 +155,7 @@ export const WrapperTextarea = styled.div`
   }
   textarea {
     margin-top: 10px;
-    width: 95%;
+    width: 99%;
     resize: none;
     height: 200px;
     border-radius: 15px;

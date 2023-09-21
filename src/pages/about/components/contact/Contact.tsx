@@ -20,7 +20,6 @@ const Contact = () => {
 
   return (
     <ContactWrapper>
-      
       {/* {sendMessage ? (
             <>
               <Alert severity="warning">

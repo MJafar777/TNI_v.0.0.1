@@ -1,117 +1,52 @@
-import Slider from "react-slick";
-import CommentCard from "./CommentCard";
+import React from "react";
 import {
-  CommentContainer,
-  CommentsWrapper,
-  LeadingBrandsBoxComment,
-  SubTitle,
-  Title,
-} from "./CommentStyles";
-import preIcon from "../../../assets/about/pre.svg";
-import useLocales from "../../../locales/useLocales";
-import nextIcon from "../../../assets/about/next.svg";
-import { ButtonsWrapper } from "../sliderForAbout/LeadingBrandsSectionStyles";
-import { useRef } from "react";
+  ContainerOfContent,
+  ContentOfComment,
+  Img,
+  Img2,
+  OneCommentWrapper,
+  StarsContainer,
+  UserImg,
+  UserInfo,
+  UserName,
+  UserTitle,
+} from "./OneCommentStyles";
+import StarIcon from "@mui/icons-material/Star";
+import { directionOfCommit, jafar, quota } from "../../../../assets/images/components/comments";
+interface AppProps {}
 
-const Comments = () => {
-  const { translate } = useLocales();
-
-  const sliderRef = useRef<Slider | null>(null);
-
-  const next = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
-  };
-
-  const previous = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
-    }
-  };
-
-  const settings = {
-    className: "center",
-    centerMode: false,
-    speed: 1000,
-    dots: true,
-    infinite: true,
-    slidesToShow: 2.5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 2.5,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 786,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
+const OneComment: React.FC<AppProps> = () => {
   return (
-    <CommentsWrapper>
-      <Title>{translate("commentTitle")}</Title>
-      <SubTitle>{translate("commentSubtile")}</SubTitle>
-      <CommentContainer>
-        <LeadingBrandsBoxComment>
-          <Slider ref={(c) => (sliderRef.current = c)} {...settings}>
-            <CommentCard />
-            <CommentCard />
-            <CommentCard />
-            <CommentCard />
-            <CommentCard />
-          </Slider>
-          <ButtonsWrapper style={{ textAlign: "center", marginTop: "50px" }}>
-            <button className="button" onClick={previous}>
-              <img src={preIcon} alt="" />
-            </button>
-            <button className="button" onClick={next}>
-              <img src={nextIcon} alt="" />
-            </button>
-          </ButtonsWrapper>
-        </LeadingBrandsBoxComment>
-      </CommentContainer>
-    </CommentsWrapper>
+    <OneCommentWrapper>
+      <ContainerOfContent>
+        <StarsContainer>
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+        </StarsContainer>
+        <Img src={quota} />
+        <Img2 src={directionOfCommit} />
+        <ContentOfComment>
+          The standard webpage maximum width dimensions for desktop screens are
+          1440 pixels. It's a commonThe standard webpage maximum width
+          dimensions for desktop screens are 1440 pixels. It's a common
+        </ContentOfComment>
+      </ContainerOfContent>
+
+      <UserInfo>
+        <UserImg>
+          <img src={jafar} alt="" />
+        </UserImg>
+        <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+          <UserName>Title Here</UserName>
+          <UserTitle>Your Title Here </UserTitle>
+        </div>
+      </UserInfo>
+    </OneCommentWrapper>
   );
 };
 
-export default Comments;
+export default OneComment;

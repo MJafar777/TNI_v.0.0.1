@@ -32,7 +32,6 @@ const Header = () => {
     });
   }, []);
 
-  console.log(scrolling);
 
   return (
     <HeaderWrapperSection>

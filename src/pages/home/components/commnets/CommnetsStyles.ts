@@ -13,6 +13,7 @@ export const CommentsWrapper = styled.div`
 export const Subtitle = styled.div`
   width: 80%;
   margin: 0 auto;
+  margin-top: 30px;
   color: #000;
   text-align: center;
   font-family: "MazzardM-Regular";
@@ -27,5 +28,26 @@ export const Subtitle = styled.div`
 export const SliderWrapper = styled.div`
   max-width: 1366px;
 
- 
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;

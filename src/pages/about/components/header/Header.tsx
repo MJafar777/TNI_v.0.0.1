@@ -12,8 +12,8 @@ import {
 const Header = () => {
   return (
     <HeaderWrapper>
-
       <MainHeader />
+      
       <Content>
         <TopTitle>
           <span></span>
