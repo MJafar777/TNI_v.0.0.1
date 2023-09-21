@@ -46,6 +46,7 @@ const Products: React.FC = () => {
               fontWeight={400}
               color={"#1A1E26"}
               lineHeight={"150%"}
+              textDecoration={""}
               fontFamily={"Mazzard"}
               letterSpacing={"-0.5px"}
               text={"Filter by Interest"}
@@ -81,6 +82,7 @@ const Products: React.FC = () => {
             fontWeight={"400"}
             color={"#1A1E26"}
             lineHeight={"150%"}
+            textDecoration={""}
             fontFamily={"Lexend"}
             letterSpacing={"-0.5px"}
             text={"Featured Product"}
