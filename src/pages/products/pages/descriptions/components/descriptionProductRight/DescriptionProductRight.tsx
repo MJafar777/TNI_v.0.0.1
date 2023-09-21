@@ -13,6 +13,7 @@ import {
   DescriptionProductRightWrapper,
 } from "./descriptionProductRightStyle";
 import { ButtonDecAndRev } from "../../../../components";
+import { ReviewProduct } from "../../../reviews";
 
 interface DescriptionProductRightProps {}
 
@@ -149,7 +150,7 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = () => {
             descriptionTextTwo={descriptionTextTwo}
           />
         ) : (
-          ""
+          <ReviewProduct />
         )}
       </DescriptionProductRightWrapper>
     </Container>
