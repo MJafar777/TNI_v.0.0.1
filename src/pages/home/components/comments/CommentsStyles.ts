@@ -27,7 +27,7 @@ export const Subtitle = styled.div`
 
 export const SliderWrapper = styled.div`
   max-width: 1366px;
-
+  width: 90%;
   .swiper {
     width: 100%;
     height: 100%;
