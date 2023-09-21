@@ -14,7 +14,7 @@ import {
   HeaderWrapperSection,
 } from "./HeaderStyles";
 
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
@@ -64,7 +64,7 @@ const Header = () => {
               <NavbarItem>Our Products</NavbarItem>
             </Link>
 
-            <KeyboardArrowDownIcon className="keyboardArrowDownIcon" />
+            {/* <KeyboardArrowDownIcon className="keyboardArrowDownIcon" /> */}
           </NavbarItemBox>
 
           <NavbarItemBox>

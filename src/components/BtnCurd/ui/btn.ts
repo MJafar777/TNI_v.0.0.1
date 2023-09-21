@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const BtnBuy = styled.div`
-  width: 115px;
+  width: 125px;
   height: 42px;
   cursor: pointer;
 
@@ -56,7 +56,7 @@ export const TextBtn = styled.p<Props>`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  margin: 0 3px;
+  margin: 0 8px;
   user-select: none;
 
   background-image: ${(e) =>
@@ -83,6 +83,6 @@ export const Circle = styled.div<Props>`
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out;
-  transform: ${(e) => (e.handleBtnCurd ? "translateX(215%)" : "none")};
+  transform: ${(e) => (e.handleBtnCurd ? "translateX(245%)" : "none")};
   background-color: ${(e) => (e.handleBtnCurd ? "#fff" : "transparent")};
 `;

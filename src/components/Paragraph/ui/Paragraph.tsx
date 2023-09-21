@@ -8,6 +8,7 @@ interface Props {
   fontFamily: string;
   lineHeight: string;
   letterSpacing: string;
+  textDecoration: string;
   width: number | string;
   margin: number | string;
   fontSize: number | string;
@@ -25,6 +26,7 @@ const Paragraph: FC<Props> = (props) => {
     fontFamily,
     lineHeight,
     letterSpacing,
+    textDecoration,
   } = props;
 
   return (
@@ -36,6 +38,7 @@ const Paragraph: FC<Props> = (props) => {
       lineHeight={lineHeight}
       fontWeight={fontWeight}
       fontFamily={fontFamily}
+      textDecoration={textDecoration}
       letterSpacing={letterSpacing}
     >
       {text}

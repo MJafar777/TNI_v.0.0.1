@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { NavbarItem, NavbarItemBox, NavbarWrapper } from "./navbarStyles";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Navbar = () => {
   return (
@@ -22,7 +22,7 @@ const Navbar = () => {
           <NavbarItem>Our Products</NavbarItem>
         </Link>
 
-        <KeyboardArrowDownIcon className="keyboardArrowDownIcon" />
+        {/* <KeyboardArrowDownIcon className="keyboardArrowDownIcon" /> */}
       </NavbarItemBox>
 
       <NavbarItemBox>
