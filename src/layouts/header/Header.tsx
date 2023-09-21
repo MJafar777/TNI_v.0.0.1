@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { whiteLogo } from "../../assets/images";
 
 import {
@@ -21,6 +21,8 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
+  const location = useLocation();
+  console.log(location);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -32,67 +34,72 @@ const Header = () => {
     });
   }, []);
 
-
   return (
-    <HeaderWrapperSection>
-      <HeaderWrapper
-        style={{
-          display: `${scrolling ? "flex" : "none"}`,
-        }}
-      >
-        <Link to={"/"}>
-          <MainHeaderLogo>
-            <img src={whiteLogo} alt="logo" />
-          </MainHeaderLogo>
-        </Link>
-
-        <NavbarWrapper>
-          <NavbarItemBox>
+    <>
+      {location.pathname == "/login" ? (
+        ""
+      ) : (
+        <HeaderWrapperSection>
+          <HeaderWrapper
+            style={{
+              display: `${scrolling ? "flex" : "none"}`,
+            }}
+          >
             <Link to={"/"}>
-              <NavbarItem>Home</NavbarItem>
-            </Link>
-          </NavbarItemBox>
-
-          <NavbarItemBox>
-            <Link to={"/about-us"}>
-              <NavbarItem>About Us</NavbarItem>
-            </Link>
-          </NavbarItemBox>
-
-          <NavbarItemBox className="navbarItemBoz-popower">
-            <Link to={"/products"}>
-              <NavbarItem>Our Products</NavbarItem>
+              <MainHeaderLogo>
+                <img src={whiteLogo} alt="logo" />
+              </MainHeaderLogo>
             </Link>
 
-            {/* <KeyboardArrowDownIcon className="keyboardArrowDownIcon" /> */}
-          </NavbarItemBox>
+            <NavbarWrapper>
+              <NavbarItemBox>
+                <Link to={"/"}>
+                  <NavbarItem>Home</NavbarItem>
+                </Link>
+              </NavbarItemBox>
 
-          <NavbarItemBox>
-            <Link to={"/contact-us"}>
-              <NavbarItem>Contact Us</NavbarItem>
-            </Link>
-          </NavbarItemBox>
-        </NavbarWrapper>
+              <NavbarItemBox>
+                <Link to={"/about-us"}>
+                  <NavbarItem>About Us</NavbarItem>
+                </Link>
+              </NavbarItemBox>
 
-        <MainHeaderFeatures>
-          <NavbarItemBox>
-            <Link to={"/login"}>
-              <NavbarItem>Login</NavbarItem>
-            </Link>
-          </NavbarItemBox>
+              <NavbarItemBox className="navbarItemBoz-popower">
+                <Link to={"/products"}>
+                  <NavbarItem>Our Products</NavbarItem>
+                </Link>
 
-          <RequestBtn>Request Quote</RequestBtn>
+                {/* <KeyboardArrowDownIcon className="keyboardArrowDownIcon" /> */}
+              </NavbarItemBox>
 
-          <SearchInput>
-            <input type="text" placeholder="Search" />
+              <NavbarItemBox>
+                <Link to={"/contact-us"}>
+                  <NavbarItem>Contact Us</NavbarItem>
+                </Link>
+              </NavbarItemBox>
+            </NavbarWrapper>
 
-            <SearchIconBox>
-              <SearchIcon className="headerSearchIcon" />
-            </SearchIconBox>
-          </SearchInput>
-        </MainHeaderFeatures>
-      </HeaderWrapper>
-    </HeaderWrapperSection>
+            <MainHeaderFeatures>
+              <NavbarItemBox>
+                <Link to={"/login"}>
+                  <NavbarItem>Login</NavbarItem>
+                </Link>
+              </NavbarItemBox>
+
+              <RequestBtn>Request Quote</RequestBtn>
+
+              <SearchInput>
+                <input type="text" placeholder="Search" />
+
+                <SearchIconBox>
+                  <SearchIcon className="headerSearchIcon" />
+                </SearchIconBox>
+              </SearchInput>
+            </MainHeaderFeatures>
+          </HeaderWrapper>
+        </HeaderWrapperSection>
+      )}
+    </>
   );
 };
 

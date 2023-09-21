@@ -84,7 +84,18 @@ export const Banner = styled.div`
   }
 `;
 
-export const CardAchievements=styled.div`
-
-
-`
+export const CardAchievements = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    p {
+      font-size: 12px;
+    }
+  }
+`;
