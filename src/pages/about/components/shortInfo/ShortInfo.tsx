@@ -15,7 +15,6 @@ import CountUp from "react-countup";
 import { banner, videoOfBannerForAbout } from "../../../../assets/images/about";
 
 const ShortInfo = () => {
-  
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const handleVideoEnded = () => {
@@ -67,7 +66,7 @@ const ShortInfo = () => {
               suffix=" +"
               style={{ fontFamily: "MazzardH-Medium" }}
             />
-            <p style={{ fontSize: "18px" }}>Best Products</p>
+            <p>Best Products</p>
           </CardAchievements>
 
           <CardAchievements>
@@ -80,7 +79,7 @@ const ShortInfo = () => {
               suffix=" +"
               style={{ fontFamily: "MazzardH-Medium" }}
             />
-            <p style={{ fontSize: "18px" }}>Best Products</p>
+            <p>Best Products</p>
           </CardAchievements>
 
           <CardAchievements>
@@ -93,7 +92,7 @@ const ShortInfo = () => {
               suffix=" +"
               style={{ fontFamily: "MazzardH-Medium" }}
             />
-            <p style={{ fontSize: "18px" }}>Best Products</p>
+            <p>Best Products</p>
           </CardAchievements>
 
           <CardAchievements>
@@ -106,7 +105,7 @@ const ShortInfo = () => {
               suffix=" +"
               style={{ fontFamily: "MazzardH-Medium" }}
             />
-            <p style={{ fontSize: "18px" }}>Best Products</p>
+            <p>Best Products</p>
           </CardAchievements>
         </div>
       </Banner>
