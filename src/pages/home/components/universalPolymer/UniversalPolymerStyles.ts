@@ -18,6 +18,9 @@ export const UniversalPolymerWrapper = styled.section`
     top: -80px;
     z-index: -10;
   }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+  }
 `;
 
 export const UniversalPolymerLeft = styled.div`
@@ -28,11 +31,16 @@ export const UniversalPolymerLeft = styled.div`
   display: flex;
   justify-content: flex-end;
 
+  .polymerBack {
+    width: 96%;
+  }
+
   .polymerBack2 {
     position: absolute;
     z-index: -1;
     right: 11px;
     bottom: 91px;
+    width: 96%;
   }
 `;
 
@@ -79,7 +87,7 @@ export const UniversalPolymerDesc = styled.p`
   line-height: 168.2%; /* 26.912px */
   letter-spacing: 1.12px;
   max-width: 480px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 `;
 
 export const UniversalPolymerTitleHerBox = styled.div`
