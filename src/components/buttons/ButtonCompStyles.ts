@@ -57,6 +57,25 @@ export const ButtonCompWrapper = styled.div`
       display: none;
     }
   }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    height: 42px;
+    padding: 3px;
+    border-radius: 50px;
+    border: 1.5px solid #029ecf;
+
+    .buttonArrow,
+    .linerArrow {
+      font-size: 14px;
+    }
+
+    img {
+      width: 10px;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+  }
 `;
 
 export const ButtonCompText = styled.p`
@@ -70,6 +89,14 @@ export const ButtonCompText = styled.p`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 25px;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    margin: 0 18px;
+    font-size: 14px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+  }
 `;
 
 export const ButtonCompItem = styled.div`
@@ -83,5 +110,13 @@ export const ButtonCompItem = styled.div`
 
   .linerArrow {
     display: none;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    width: 34px;
+    height: 34px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
   }
 `;

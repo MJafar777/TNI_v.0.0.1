@@ -11,6 +11,10 @@ export const NavbarWrapper = styled.nav`
     align-items: center;
     gap: 10px;
   }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    display: none;
+  }
 `;
 
 export const NavbarItemBox = styled.div`
@@ -49,4 +53,10 @@ export const NavbarItem = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    font-family: Mazzard;
+    font-size: 12px;
+    font-weight: 500;
+  }
 `;

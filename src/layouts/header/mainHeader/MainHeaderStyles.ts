@@ -1,4 +1,4 @@
-import { styled, keyframes } from "styled-components";
+import { styled } from "styled-components";
 
 export const MainHeaderWrapper = styled.header`
   display: flex;
@@ -7,14 +7,29 @@ export const MainHeaderWrapper = styled.header`
   border-radius: 10px;
   background: #fff;
 
-  width: 1151px;
+  max-width: 1151px;
+  width: 100%;
   height: 91px;
   margin: 36px auto;
   padding: 0 20px;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    width: 100%;
+    height: 69px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+  }
 `;
 
 export const MainHeaderLogo = styled.div`
   margin-bottom: -8px;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    img {
+      height: 99px;
+    }
+  }
 `;
 
 export const MainHeaderFeatures = styled.div`
@@ -23,15 +38,6 @@ export const MainHeaderFeatures = styled.div`
   gap: 20px;
 
   position: relative;
-`;
-
-const colorCycle = keyframes`
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
 `;
 
 export const RequestBtn = styled.div`
@@ -48,9 +54,17 @@ export const RequestBtn = styled.div`
   line-height: normal;
   user-select: none;
 
-  animation: ${colorCycle} 5s infinite alternate;
-
   margin-right: 75px;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 14px 12px;
+    margin-right: 60px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+  }
 `;
 
 export const SearchInput = styled.div`
@@ -58,6 +72,7 @@ export const SearchInput = styled.div`
   border-radius: 50px;
   border: 2px solid #029ecf;
   height: 56px;
+  width: 56px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -67,8 +82,8 @@ export const SearchInput = styled.div`
   right: 0;
   z-index: 2;
   overflow: hidden;
-  transition: width 1s ease-in-out, background-color 1s ease-in-out,
-    border-radius 1s ease-in-out;
+  transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out,
+    border-radius 0.4s ease-in-out;
 
   input {
     position: absolute;
@@ -87,14 +102,22 @@ export const SearchInput = styled.div`
   }
 
   &:hover {
-    transition: width 1s ease-in-out, background-color 1s ease-in-out,
-      border-radius 1s ease-in-out;
+    transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out,
+      border-radius 0.4s ease-in-out;
 
     width: 220px;
 
     input {
       opacity: 1;
     }
+  }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    height: 42px;
+    width: 42px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
   }
 `;
 
@@ -110,5 +133,17 @@ export const SearchIconBox = styled.div`
   .headerSearchIcon {
     color: white;
     font-size: 26px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    width: 32.5px;
+    height: 32.5px;
+
+    .headerSearchIcon {
+      font-size: 18px;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
   }
 `;

@@ -29,7 +29,7 @@ const UniversalPolymer = () => {
         <img src={section2Back} alt="section2Back" className="section2Back" />
 
         <UniversalPolymerLeft>
-          <img src={PolymerBack} alt="polymerBack" />
+          <img src={PolymerBack} alt="polymerBack" className="polymerBack" />
 
           <img className="polymerBack2" src={PolymerBack2} alt="PolymerBack2" />
         </UniversalPolymerLeft>

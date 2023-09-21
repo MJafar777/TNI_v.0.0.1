@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const UniversalPolymerWrapper = styled.section`
   position: relative;
-  padding: 100px 0;
+  padding-top: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,9 +18,12 @@ export const UniversalPolymerWrapper = styled.section`
     top: -80px;
     z-index: -10;
   }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+  }
 `;
 
-export const UniversalPolymerLeft = styled.section`
+export const UniversalPolymerLeft = styled.div`
   width: 50%;
   position: relative;
   padding-bottom: 80px;
@@ -28,15 +31,20 @@ export const UniversalPolymerLeft = styled.section`
   display: flex;
   justify-content: flex-end;
 
+  .polymerBack {
+    width: 96%;
+  }
+
   .polymerBack2 {
     position: absolute;
     z-index: -1;
     right: 11px;
     bottom: 91px;
+    width: 96%;
   }
 `;
 
-export const UniversalPolymerRight = styled.section`
+export const UniversalPolymerRight = styled.div`
   width: 50%;
 `;
 
@@ -63,7 +71,7 @@ export const UniversalPolymerWelcomeText = styled.p`
   -webkit-text-fill-color: transparent;
 `;
 
-export const UniversalPolymerTitle = styled.section`
+export const UniversalPolymerTitle = styled.h2`
   color: #000;
   font-family: Mazzard;
   font-size: 56px;
@@ -71,7 +79,7 @@ export const UniversalPolymerTitle = styled.section`
   letter-spacing: 1.12px;
 `;
 
-export const UniversalPolymerDesc = styled.section`
+export const UniversalPolymerDesc = styled.p`
   color: #000;
   font-family: Mazzard;
   font-size: 16px;
@@ -79,17 +87,17 @@ export const UniversalPolymerDesc = styled.section`
   line-height: 168.2%; /* 26.912px */
   letter-spacing: 1.12px;
   max-width: 480px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 `;
 
-export const UniversalPolymerTitleHerBox = styled.section`
+export const UniversalPolymerTitleHerBox = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
   margin: 20px 0;
 `;
 
-export const UniversalPolymerTitleHerBoxTitle = styled.section`
+export const UniversalPolymerTitleHerBoxTitle = styled.h3`
   color: #000;
   font-family: Mazzard;
   font-size: 20px;
@@ -97,7 +105,7 @@ export const UniversalPolymerTitleHerBoxTitle = styled.section`
   margin-bottom: 5px;
 `;
 
-export const UniversalPolymerTitleHerBoxDesc = styled.section`
+export const UniversalPolymerTitleHerBoxDesc = styled.p`
   color: #000;
   font-family: Mazzard;
   font-size: 16px;
