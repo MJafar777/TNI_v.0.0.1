@@ -1,9 +1,10 @@
 import Slider from "react-slick";
+import OneComment from "./OneComment";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import OneComment from "./OneComment";
 
 function AutoPlay() {
+
   const settings = {
     dots: true,
     infinite: true,
@@ -43,20 +44,20 @@ function AutoPlay() {
   };
 
   return (
-    <Slider {...settings}>
-      <OneComment />
-      <OneComment />
-      <OneComment />
-      <OneComment />
-      <OneComment />
-      <OneComment />
-      <OneComment />
-      <OneComment />
-      <OneComment />
-      <OneComment />
-      <OneComment />
-      <OneComment />
-    </Slider>
+      <Slider {...settings}>
+        <OneComment />
+        <OneComment />
+        <OneComment />
+        <OneComment />
+        <OneComment />
+        <OneComment />
+        <OneComment />
+        <OneComment />
+        <OneComment />
+        <OneComment />
+        <OneComment />
+        <OneComment />
+      </Slider>
   );
 }
 

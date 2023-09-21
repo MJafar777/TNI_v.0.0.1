@@ -8,6 +8,16 @@ export const OneCommentWrapper = styled.div`
   height: fit-content;
   gap: 28px;
   margin-top: 30px;
+  .slick-slide {
+    max-width: 342px;
+    height: 250px;
+    border: red 2px solid !important;
+  }
+
+  .slick-slide {
+    width: 342px;
+    height: 250px;
+  }
 `;
 
 export const ContainerOfContent = styled.div`
