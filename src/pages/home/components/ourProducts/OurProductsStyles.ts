@@ -1,14 +1,13 @@
 import { styled } from "styled-components";
 
 export const OurProductsWrapper = styled.section`
-  margin: 0 auto;
-  padding: 10px;
-  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  position: relative;
+  margin: 0 auto;
   margin-top: 50px;
+  padding: 10px;
 
   .ourProductsBack {
     position: absolute;
@@ -86,7 +85,7 @@ export const OurProductsDesc = styled.p`
   font-family: Mazzard;
   font-size: 16px;
   font-weight: 400;
-  line-height: 168.2%; /* 26.912px */
+  line-height: 26.912px;
   letter-spacing: 1.12px;
   max-width: 720px;
   margin: 15px auto;
@@ -101,24 +100,24 @@ export const OurProductsDesc = styled.p`
 `;
 
 export const OurProductsCards = styled.div`
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   align-items: center;
-  margin: 20px auto;
-  max-width: 1100px;
-  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
 
   @media ${(props) => props.theme.breakpoints.xxl} {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
     width: auto;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
-    grid-template-columns: 1fr;
-    align-items: center;
-    width: auto;
     gap: 20px;
+    width: auto;
+    align-items: center;
+    grid-template-columns: 1fr;
   }
 `;

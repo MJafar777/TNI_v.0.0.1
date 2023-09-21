@@ -6,7 +6,6 @@ export const MainHeaderWrapper = styled.header`
   justify-content: space-between;
   border-radius: 10px;
   background: #fff;
-
   max-width: 1151px;
   width: 100%;
   height: 91px;

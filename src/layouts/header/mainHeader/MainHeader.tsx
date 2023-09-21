@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { burgerIcon, logo } from "../../../assets/images";
 import { logo2 } from "../../../assets/images";
-import Navbar from "../../navbar/Navbar";
-import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
+import { burgerIcon, logo } from "../../../assets/images";
 
 // ---------- Styled Templates ----------
 import {
@@ -16,7 +14,10 @@ import {
 
 // ---------- @MUI ----------
 import SearchIcon from "@mui/icons-material/Search";
+
+import Navbar from "../../navbar/Navbar";
 import { BurgerIcon } from "../HeaderStyles";
+import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
 
 const MainHeader = () => {
   return (

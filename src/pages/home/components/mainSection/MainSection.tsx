@@ -5,21 +5,21 @@ import { Section } from "../../../../styles";
 import {
   MainSectionDesc,
   MainSectionLeft,
-  MainSectionNumbers,
-  MainSectionShare,
-  MainSectionShareItem,
-  MainSectionShareRow,
-  MainSectionShareText,
-  MainSectionSubTitle,
   MainSectionTitle,
+  MainSectionShare,
   MainSectionWelcome,
+  MainSectionNumbers,
+  MainSectionWrapper,
+  MainSectionSubTitle,
+  MainSectionShareRow,
+  MainSectionShareItem,
+  MainSectionShareText,
   MainSectionWelcomeRow,
   MainSectionWelcomeText,
-  MainSectionWrapper,
 } from "./MainSectionStyles";
 
-import MainHeader from "../../../../layouts/header/mainHeader/MainHeader";
 import ButtonComp from "../../../../components/buttons/ButtonComp";
+import MainHeader from "../../../../layouts/header/mainHeader/MainHeader";
 
 const MainSection = () => {
   return (
@@ -49,7 +49,9 @@ const MainSection = () => {
           <div>
             <MainSectionWelcome>
               <MainSectionWelcomeRow />
+
               <MainSectionWelcomeText>Welcome To</MainSectionWelcomeText>
+
               <MainSectionWelcomeRow className="mobileRow" />
             </MainSectionWelcome>
 

@@ -3,6 +3,7 @@ import { whiteLogo } from "../../assets/images";
 
 import {
   NavbarItem,
+  BurgerIcon,
   RequestBtn,
   SearchInput,
   NavbarItemBox,
@@ -12,10 +13,8 @@ import {
   MainHeaderLogo,
   MainHeaderFeatures,
   HeaderWrapperSection,
-  BurgerIcon,
 } from "./HeaderStyles";
 
-// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import burgerIcon from "../../assets/images/icons/burgerIcon.svg";
 
 import SearchIcon from "@mui/icons-material/Search";
@@ -64,8 +63,6 @@ const Header = () => {
             <Link to={"/products"}>
               <NavbarItem>Our Products</NavbarItem>
             </Link>
-
-            {/* <KeyboardArrowDownIcon className="keyboardArrowDownIcon" /> */}
           </NavbarItemBox>
 
           <NavbarItemBox>

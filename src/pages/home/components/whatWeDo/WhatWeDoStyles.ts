@@ -3,24 +3,18 @@ import { styled } from "styled-components";
 import { WhatWeDoBack } from "../../../../assets/images";
 
 export const WhatWeDoWrapper = styled.section`
-  position: relative;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   min-height: 650px;
   margin: 85px auto;
-
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-image: url(${WhatWeDoBack});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  .whatWeDoBtn {
-    margin-top: 40px;
-  }
-
   clip-path: polygon(
     34% 8%,
     18% 8%,
@@ -35,6 +29,10 @@ export const WhatWeDoWrapper = styled.section`
     80% 9%,
     50% 0
   );
+
+  .whatWeDoBtn {
+    margin-top: 40px;
+  }
 
   @media screen and (max-width: 700px) {
     display: flex;

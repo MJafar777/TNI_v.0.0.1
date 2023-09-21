@@ -6,7 +6,6 @@ export const MainSectionWrapper = styled.section`
   height: auto;
   min-height: 793px;
   padding: 0 10px;
-
   display: flex;
   flex-direction: column;
 

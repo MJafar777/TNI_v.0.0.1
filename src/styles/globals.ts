@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import MazzardMBold from "../assets/fonts/MazzardM-Bold.ttf";
 import MazzardMRegular from "../assets/fonts/MazzardM-Regular.ttf";
-import MazzardMMedium from '../assets/fonts/MazzardM-Medium.ttf';
-import MazzardMLightItalic from '../assets/fonts/MazzardM-LightItalic.ttf'
+import MazzardMMedium from "../assets/fonts/MazzardM-Medium.ttf";
+import MazzardMLightItalic from "../assets/fonts/MazzardM-LightItalic.ttf";
 const GlobalStyles = createGlobalStyle`
   @font-face {
   font-family: Mazzard;

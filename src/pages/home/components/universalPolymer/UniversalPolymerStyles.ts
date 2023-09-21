@@ -2,12 +2,11 @@ import { styled } from "styled-components";
 
 export const UniversalPolymerWrapper = styled.section`
   position: relative;
-
   padding-top: 100px;
   display: flex;
+  gap: 35px;
   align-items: center;
   justify-content: space-between;
-  gap: 35px;
 
   .universalPolymerButtonComp {
     margin-top: 30px;
