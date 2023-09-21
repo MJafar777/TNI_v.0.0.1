@@ -3,10 +3,11 @@ import { Outlet } from "react-router-dom";
 
 import Theme from "./styles/theme";
 import { Header, Footer } from "./layouts";
+import { Loader } from "./components";
 
 function App() {
   return (
-    <Suspense fallback={<h1>Loading</h1>}>
+    <Suspense fallback={<Loader />}>
       <Theme>
         <Header />
         <Outlet />
