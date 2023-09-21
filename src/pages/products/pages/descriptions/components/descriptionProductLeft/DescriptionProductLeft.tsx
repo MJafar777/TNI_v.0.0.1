@@ -18,8 +18,33 @@ import {
   SliderBtnImages,
   DescriptionProductLeftWrapper,
 } from "./descriptionProductLeftStyle";
+import curdIndormation from "../../../../../../api/curds/cardsInfo";
 
-const DescriptionProductLeft: FC = () => {
+interface Props {
+  getIdCurd: number;
+}
+
+interface selectedCurdType {
+  id: number;
+  review: number | string;
+  img: string;
+  imgProduct: string[];
+  productName: string;
+  star: string;
+  descriptions: string;
+  descriptionOne: string;
+  descriptionTwo: string;
+  price: string;
+}
+
+const DescriptionProductLeft: FC<Props> = (props) => {
+  const { getIdCurd } = props;
+
+  const selectedCurd: selectedCurdType | undefined = curdIndormation.find(
+    (curd) => curd.id === getIdCurd
+  );
+  console.log(selectedCurd);
+
   return (
     <Container>
       <DescriptionProductLeftWrapper>
@@ -53,18 +78,21 @@ const DescriptionProductLeft: FC = () => {
               alt={`this image not found ${imgProductOne}`}
             />
           </SliderBtnImages>
+
           <SliderBtnImages>
             <ImgMini
               src={imgProductOne}
               alt={`this image not found ${imgProductOne}`}
             />
           </SliderBtnImages>
+
           <SliderBtnImages>
             <ImgMini
               src={imgProductOne}
               alt={`this image not found ${imgProductOne}`}
             />
           </SliderBtnImages>
+
           <SliderBtnImages>
             <ImgMini
               src={imgProductOne}

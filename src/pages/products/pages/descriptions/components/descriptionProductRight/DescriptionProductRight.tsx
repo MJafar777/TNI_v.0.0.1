@@ -15,7 +15,9 @@ import {
 import { ButtonDecAndRev } from "../../../../components";
 import { ReviewProduct } from "../../../reviews";
 
-interface DescriptionProductRightProps {}
+interface DescriptionProductRightProps {
+  getIdCurd: number;
+}
 
 const descriptionTextOne =
   "The defibrillator/monitor is intended for use by a trained junior or mid-career healthcare professional, doctor, nurse or health care professional in emergency medical situations, both outdoors and indoors, including ambulances and aircraft, within specified environmental conditions. The modes of manual and automated external defibrillation, external pacing, and diagnostic electrocardiography are intended for use on adult and pediatric patients.";

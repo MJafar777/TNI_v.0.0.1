@@ -1,19 +1,22 @@
-import React from "react";
-import { Contact, HeaderTop } from "../../../components";
+import React, { useState } from "react";
 import dataCurd from "../../../api/curds/cardsInfo";
+import { Contact, HeaderTop } from "../../../components";
+
 import { Paragraph } from "../../../components/Paragraph";
 import { Container } from "../../../components/container";
 import { MiniTitle } from "../../../components/miniTitle";
+import { DescriptionProduct } from "../pages/descriptions";
 import { CardProducts } from "../../../components/curdProduct";
 import { FilterProducts } from "../../../components/FilterProduct";
+
 import {
   BrLine,
   GridsCards,
   FlexProduct,
   MarginBottom,
+  RemoveContain,
   ProductsWrapper,
 } from "./products";
-import { DescriptionProduct } from "../pages/descriptions";
 
 const dataFilter = [
   { id: 1, value: "Polypropylenes" },
@@ -25,55 +28,77 @@ const dataFilter = [
 type DataType = {
   id: number;
   img: string;
-  star: number; // maximum star numbers "5"
+  star: string; // maximum star numbers "5"
   price: string;
   productName: string;
   descriptions: string;
+  imgProduct: string[];
+  descriptionOne: string;
+  descriptionTwo: string;
+  review: string | number;
 };
 
 const Products: React.FC = () => {
+  const [removeContain, setRemoveContain] = useState<boolean>(false);
+  const [getIdCurd, setGetIdCurd] = useState<number>(1);
+
   return (
     <>
       <HeaderTop TitleHeader={"Products"} SubTitleHeader={"Our Products"} />
+
       <Container>
         <ProductsWrapper>
-          <MiniTitle textTitle={"Choose the product you need"} fontSize={56} />
-          <FlexProduct>
-            <Paragraph
-              width={""}
-              margin={""}
-              fontSize={24}
-              fontWeight={400}
-              color={"#1A1E26"}
-              lineHeight={"150%"}
-              textDecoration={""}
-              fontFamily={"Mazzard"}
-              letterSpacing={"-0.5px"}
-              text={"Filter by Interest"}
-            />
-            <FilterProducts marginTop={22} dataFilter={dataFilter} />
-          </FlexProduct>
+          {removeContain ? (
+            <DescriptionProduct getIdCurd={getIdCurd} />
+          ) : (
+            <RemoveContain>
+              <MiniTitle
+                textTitle={"Choose the product you need"}
+                fontSize={56}
+              />
 
-          <BrLine />
-          <GridsCards>
-            {dataCurd.map((e: DataType) => {
-              return (
-                <CardProducts
-                  id={e.id}
-                  key={e.id}
-                  img={e.img}
-                  star={e.star}
-                  price={e.price}
-                  productName={e.productName}
-                  descriptions={e.descriptions}
+              <FlexProduct>
+                <Paragraph
+                  width={""}
+                  margin={""}
+                  fontSize={24}
+                  fontWeight={400}
+                  color={"#1A1E26"}
+                  lineHeight={"150%"}
+                  textDecoration={""}
+                  fontFamily={"Mazzard"}
+                  letterSpacing={"-0.5px"}
+                  text={"Filter by Interest"}
                 />
-              );
-            })}
-          </GridsCards>
 
-          <MarginBottom />
+                <FilterProducts marginTop={22} dataFilter={dataFilter} />
+              </FlexProduct>
 
-          <DescriptionProduct />
+              <BrLine />
+
+              <GridsCards>
+                {dataCurd.map((e: DataType) => {
+                  return (
+                    <CardProducts
+                      onClick={() => {
+                        setGetIdCurd(e.id);
+                        setRemoveContain(!removeContain);
+                      }}
+                      id={e.id}
+                      key={e.id}
+                      img={e.img}
+                      star={e.star}
+                      price={e.price}
+                      productName={e.productName}
+                      descriptions={e.descriptions}
+                    />
+                  );
+                })}
+              </GridsCards>
+
+              <MarginBottom />
+            </RemoveContain>
+          )}
           <BrLine />
 
           <Paragraph
@@ -99,6 +124,9 @@ const Products: React.FC = () => {
                   price={e.price}
                   productName={e.productName}
                   descriptions={e.descriptions}
+                  onClick={function (): void {
+                    throw new Error("Function not implemented.");
+                  }}
                 />
               ) : (
                 ""

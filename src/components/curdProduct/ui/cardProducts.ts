@@ -42,8 +42,9 @@ export const BgImgProduct = styled.div<Props>`
 `;
 
 export const ImgProduct = styled.img<PropsImg>`
-  width: 320px;
-  height: 320px;
+  width: 220px;
+  height: 220px;
+  transform: scale(0.7);
 `;
 
 export const ProductMain = styled.div`
@@ -63,5 +64,3 @@ export const PriceAndBtn = styled.div`
   justify-content: space-between;
   margin-top: 16px;
 `;
-
-

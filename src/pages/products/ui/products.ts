@@ -29,3 +29,5 @@ export const GridsCards = styled.div`
   grid-template-columns: repeat(3, 1fr);
   margin-top: 17px;
 `;
+
+export const RemoveContain = styled.div``;
