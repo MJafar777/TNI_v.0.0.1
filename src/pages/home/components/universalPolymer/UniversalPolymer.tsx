@@ -38,6 +38,8 @@ const UniversalPolymer = () => {
           <UniversalPolymerWelcome>
             <UniversalPolymerWelcomeRow />
             <UniversalPolymerWelcomeText>About Us</UniversalPolymerWelcomeText>
+
+            <UniversalPolymerWelcomeRow className="mobileRow" />
           </UniversalPolymerWelcome>
 
           <UniversalPolymerTitle>Universal Polymer</UniversalPolymerTitle>

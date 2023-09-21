@@ -50,6 +50,7 @@ const MainSection = () => {
             <MainSectionWelcome>
               <MainSectionWelcomeRow />
               <MainSectionWelcomeText>Welcome To</MainSectionWelcomeText>
+              <MainSectionWelcomeRow className="mobileRow" />
             </MainSectionWelcome>
 
             <MainSectionTitle>Universal Polymer</MainSectionTitle>
@@ -62,7 +63,9 @@ const MainSection = () => {
               dimension for your site
             </MainSectionDesc>
 
-            <ButtonComp buttonText={"Read more"} />
+            <div className="buttonComp">
+              <ButtonComp buttonText={"Read more"} />
+            </div>
           </div>
         </MainSectionLeft>
 

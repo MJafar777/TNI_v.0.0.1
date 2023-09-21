@@ -12,9 +12,11 @@ import {
   MainHeaderLogo,
   MainHeaderFeatures,
   HeaderWrapperSection,
+  BurgerIcon,
 } from "./HeaderStyles";
 
 // import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import burgerIcon from "../../assets/images/icons/burgerIcon.svg";
 
 import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
@@ -31,7 +33,6 @@ const Header = () => {
       }
     });
   }, []);
-
 
   return (
     <HeaderWrapperSection>
@@ -81,7 +82,7 @@ const Header = () => {
             </Link>
           </NavbarItemBox>
 
-          <RequestBtn>Request Quote</RequestBtn>
+          <RequestBtn>Request Quote </RequestBtn>
 
           <SearchInput>
             <input type="text" placeholder="Search" />
@@ -90,6 +91,10 @@ const Header = () => {
               <SearchIcon className="headerSearchIcon" />
             </SearchIconBox>
           </SearchInput>
+
+          <BurgerIcon>
+            <img src={burgerIcon} alt="" />
+          </BurgerIcon>
         </MainHeaderFeatures>
       </HeaderWrapper>
     </HeaderWrapperSection>

@@ -21,6 +21,18 @@ export const UniversalPolymerWrapper = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.xxl} {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 50px;
+
+    .universalPolymerButtonComp {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
   }
 `;
 
@@ -43,22 +55,59 @@ export const UniversalPolymerLeft = styled.div`
     bottom: 91px;
     width: 96%;
   }
+
+  img {
+    max-width: 525px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    width: 60%;
+    max-width: 400px;
+    padding-bottom: 10px;
+
+    .polymerBack2 {
+      bottom: 21px;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    width: 70%;
+    padding-bottom: 1px;
+
+    .polymerBack2 {
+      bottom: 11px;
+    }
+  }
 `;
 
 export const UniversalPolymerRight = styled.div`
   width: 50%;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    width: 90%;
+  }
 `;
 
 export const UniversalPolymerWelcome = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
 `;
 
 export const UniversalPolymerWelcomeRow = styled.div`
   width: 52px;
   height: 1px;
   background: linear-gradient(90deg, #029ecf -0.96%, #27d0a5 99.04%);
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    width: 40px;
+  }
 `;
 
 export const UniversalPolymerWelcomeText = styled.p`
@@ -70,6 +119,12 @@ export const UniversalPolymerWelcomeText = styled.p`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3.18px;
+  }
 `;
 
 export const UniversalPolymerTitle = styled.h2`
@@ -78,6 +133,13 @@ export const UniversalPolymerTitle = styled.h2`
   font-size: 56px;
   font-weight: 700;
   letter-spacing: 1.12px;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+  }
 `;
 
 export const UniversalPolymerDesc = styled.p`
@@ -89,6 +151,16 @@ export const UniversalPolymerDesc = styled.p`
   letter-spacing: 1.12px;
   max-width: 480px;
   margin-bottom: 50px;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.184px;
+    letter-spacing: 0.84px;
+    margin-bottom: 5px;
+    max-width: 100%;
+  }
 `;
 
 export const UniversalPolymerTitleHerBox = styled.div`
@@ -96,6 +168,14 @@ export const UniversalPolymerTitleHerBox = styled.div`
   align-items: center;
   gap: 12px;
   margin: 20px 0;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    gap: 10px;
+
+    img {
+      width: 51px;
+    }
+  }
 `;
 
 export const UniversalPolymerTitleHerBoxTitle = styled.h3`
@@ -104,6 +184,11 @@ export const UniversalPolymerTitleHerBoxTitle = styled.h3`
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 5px;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    font-size: 16px;
+    font-weight: 600;
+  }
 `;
 
 export const UniversalPolymerTitleHerBoxDesc = styled.p`
@@ -111,5 +196,9 @@ export const UniversalPolymerTitleHerBoxDesc = styled.p`
   font-family: Mazzard;
   font-size: 16px;
   font-weight: 400;
-  line-height: 120%; /* 19.2px */
+  line-height: 19.2px;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    font-size: 14px;
+  }
 `;
