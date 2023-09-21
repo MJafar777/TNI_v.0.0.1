@@ -17,13 +17,13 @@ const Home = () => {
 
       <WhatWeDo />
 
-      <Delivery />
+      {/* <Delivery /> */}
 
-      <OurAchievements />
+      {/* <OurAchievements /> */}
 
-      <Comments />
+      {/* <Comments /> */}
 
-      <Contact />
+      {/* <Contact /> */}
 
       {/* <div style={{ height: "1000px" }}></div> */}
     </HomePageContainer>
