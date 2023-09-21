@@ -11,15 +11,6 @@ export const FilterAllProjectsWrapper = styled.div<Props>`
   border-radius: 100px;
 
   margin-top: ${(e) => (e.marginTop ? e.marginTop : 10)}px;
-
-  @media ${(props) => props.theme.breakpoints.xxl} {
-    gap: 17px;
-    height: 50px;
-  }
-  @media ${(props) => props.theme.breakpoints.lg} {
-    height: auto;
-    display: block;
-  }
 `;
 export const ButtonsFilter = styled.div`
   gap: 24px;

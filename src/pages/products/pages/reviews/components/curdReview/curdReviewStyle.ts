@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+interface PropsImg {
+  src: string;
+  alt: string;
+}
+
 export const CurdReviewWrapper = styled.div`
   display: flex;
   width: 100%;
@@ -24,15 +29,4 @@ export const TopProfile = styled.div`
   justify-content: left;
 `;
 
-export const Logo = styled.div``;
-
-export const NameUser = styled.div`
-  color: #1a1e26;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 150%;
-  font-style: normal;
-  font-family: Lexend, sans-serif;
-`;
-
-export const DateSendMessage = styled.div``;
+export const Logo = styled.img<PropsImg>``;
