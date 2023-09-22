@@ -18,8 +18,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import Navbar from "../../navbar/Navbar";
 import { BurgerIcon } from "../HeaderStyles";
 import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
+import { useButtonIsClickedStateContext } from "../../../context/useButtonIsClickedContext";
 
 const MainHeader = () => {
+  const { setRequestOpen } = useButtonIsClickedStateContext();
+
   return (
     <MainHeaderWrapper>
       <MainHeaderLogo>
@@ -36,7 +39,9 @@ const MainHeader = () => {
           </Link>
         </NavbarItemBox>
 
-        <RequestBtn>Request Quote</RequestBtn>
+        <RequestBtn onClick={() => setRequestOpen(true)}>
+          Request Quote
+        </RequestBtn>
 
         <SearchInput>
           <input type="text" placeholder="Search" />

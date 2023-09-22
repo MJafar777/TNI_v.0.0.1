@@ -19,8 +19,11 @@ import burgerIcon from "../../assets/images/icons/burgerIcon.svg";
 
 import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
+import { useButtonIsClickedStateContext } from "../../context/useButtonIsClickedContext";
 
 const Header = () => {
+  const { setRequestOpen } = useButtonIsClickedStateContext();
+
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
@@ -79,7 +82,9 @@ const Header = () => {
             </Link>
           </NavbarItemBox>
 
-          <RequestBtn>Request Quote </RequestBtn>
+          <RequestBtn onClick={() => setRequestOpen(true)}>
+            Request Quote{" "}
+          </RequestBtn>
 
           <SearchInput>
             <input type="text" placeholder="Search" />

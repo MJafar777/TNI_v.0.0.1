@@ -8,14 +8,18 @@ import { Loader } from "./components";
 import "./locales/i18n";
 import ThemeLocalization from "./locales/ThemeLocalization";
 
+import { ButtonContextProvider } from "./context/ButtonContext";
+
 function App() {
   return (
     <Suspense fallback={<Loader />}>
       <Theme>
         <ThemeLocalization>
-          <Header />
-          <Outlet />
-          <Footer />
+          <ButtonContextProvider>
+            <Header />
+            <Outlet />
+            <Footer />
+          </ButtonContextProvider>
         </ThemeLocalization>
       </Theme>
     </Suspense>
