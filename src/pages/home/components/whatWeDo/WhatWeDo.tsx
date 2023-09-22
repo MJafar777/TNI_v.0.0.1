@@ -6,13 +6,13 @@ import {
   WhatWeDoRight,
   WhatWeDoTitle,
   WhatWeDoWelcome,
+  WhatWeDoWrapper,
   WhatWeDoWelcomeRow,
   WhatWeDoWelcomeText,
-  WhatWeDoWrapper,
 } from "./WhatWeDoStyles";
 
-import backVideo from "../../../../assets/v.mp4";
 import { Section } from "../../../../styles";
+import backVideo from "../../../../assets/v.mp4";
 
 const WhatWeDo = () => {
   return (
@@ -37,6 +37,7 @@ const WhatWeDo = () => {
             <ButtonComp buttonText={"Contact With Us"} />
           </div>
         </WhatWeDoLeft>
+
         <WhatWeDoRight>
           <video width="300%" height="auto" loop autoPlay controls>
             <source src={backVideo} />

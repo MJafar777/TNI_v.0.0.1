@@ -6,7 +6,6 @@ export const MainSectionWrapper = styled.section`
   height: auto;
   min-height: 793px;
   padding: 0 10px;
-
   display: flex;
   flex-direction: column;
 
@@ -22,6 +21,7 @@ export const MainSectionWrapper = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    min-height: 330px;
   }
 `;
 
@@ -44,6 +44,18 @@ export const MainSectionLeft = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    padding: 10px 0;
+    margin: 10px auto;
+    gap: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    width: auto;
+
+    .buttonComp {
+      margin: 40px;
+      display: flex;
+      justify-content: center;
+    }
   }
 `;
 
@@ -57,6 +69,8 @@ export const MainSectionWelcome = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    justify-content: center;
+    margin-bottom: 10px;
   }
 `;
 
@@ -126,6 +140,7 @@ export const MainSectionSubTitle = styled.h3`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    font-size: 16px;
   }
 `;
 
@@ -147,6 +162,7 @@ export const MainSectionDesc = styled.p`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
   }
 `;
 
@@ -161,6 +177,7 @@ export const MainSectionShare = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
   }
 `;
 
@@ -274,5 +291,6 @@ export const MainSectionNumbers = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
   }
 `;

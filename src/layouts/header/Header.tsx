@@ -18,10 +18,12 @@ import {
 
 import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
+import Language from "../../components/language/Language";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
   const location = useLocation();
+  console.log(location);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -84,6 +86,8 @@ const Header = () => {
                   <NavbarItem>Login</NavbarItem>
                 </Link>
               </NavbarItemBox>
+
+              <Language/>
 
               <RequestBtn>Request Quote</RequestBtn>
 

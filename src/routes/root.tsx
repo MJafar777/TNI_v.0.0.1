@@ -10,9 +10,9 @@ const router = createBrowserRouter([
     errorElement: <h1>Error</h1>,
     children: [
       { path: "/", element: <HomeAsync /> },
-      { path: "/products", element: <ProductsAsync /> },
-      { path: "/about-us", element: <AboutAsync /> },
       { path: "/login", element: <LoginAsync /> },
+      { path: "/about-us", element: <AboutAsync /> },
+      { path: "/products", element: <ProductsAsync /> },
     ],
   },
 ]);

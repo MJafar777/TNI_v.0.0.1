@@ -6,7 +6,6 @@ export const MainHeaderWrapper = styled.header`
   justify-content: space-between;
   border-radius: 10px;
   background: #fff;
-
   max-width: 1151px;
   width: 100%;
   height: 91px;
@@ -19,15 +18,36 @@ export const MainHeaderWrapper = styled.header`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    margin: 0px auto;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    border-radius: 0;
+    padding: 0 10px;
+    margin-bottom: 20px;
   }
 `;
 
 export const MainHeaderLogo = styled.div`
   margin-bottom: -8px;
 
+  .mobileLogo {
+    display: none;
+  }
+
   @media ${(props) => props.theme.breakpoints.xxl} {
     img {
       height: 99px;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    .mobileLogo {
+      display: inline-block;
+      width: 132px;
+    }
+
+    .desctopLogo {
+      display: none;
     }
   }
 `;
@@ -60,10 +80,15 @@ export const RequestBtn = styled.div`
     font-size: 12px;
     font-weight: 500;
     padding: 14px 12px;
-    margin-right: 60px;
+    margin-right: 50px;
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-right: 0px;
+    text-align: center;
   }
 `;
 
@@ -115,9 +140,18 @@ export const SearchInput = styled.div`
   @media ${(props) => props.theme.breakpoints.xxl} {
     height: 42px;
     width: 42px;
+    margin-right: 40px;
+
+    input {
+      font-size: 14px;
+    }
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+  }
+
+  @media screen and (max-width: 400px) {
+    display: none;
   }
 `;
 

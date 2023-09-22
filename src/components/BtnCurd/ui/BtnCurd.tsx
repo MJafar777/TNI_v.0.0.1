@@ -42,7 +42,7 @@ const BtnCurd: FC<Props> = (props) => {
             />
           </Circle>
           <TextBtn handleBtnCurd={handleBtnCurd}>
-            {handleBtnCurd ? "Click here" : btnName}
+            {handleBtnCurd ? "Add to Card" : btnName}
           </TextBtn>
         </BtnRacktangle>
       </BtnBuy>
