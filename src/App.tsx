@@ -6,18 +6,21 @@ import { Header, Footer } from "./layouts";
 import { Loader } from "./components";
 
 import "./locales/i18n";
-import ThemeLocalization from "./locales/ThemeLocalization";
+import { LanguageContextProvider } from "./context/LanguageContext";
+// import ThemeLocalization from "./locales/ThemeLocalization";
 
 function App() {
   return (
     <Suspense fallback={<Loader />}>
-      <Theme>
-        <ThemeLocalization>
+      <LanguageContextProvider>
+        <Theme>
+          {/* <ThemeLocalization> */}
           <Header />
           <Outlet />
           <Footer />
-        </ThemeLocalization>
-      </Theme>
+          {/* </ThemeLocalization>lineheight */}
+        </Theme>
+      </LanguageContextProvider>
     </Suspense>
   );
 }

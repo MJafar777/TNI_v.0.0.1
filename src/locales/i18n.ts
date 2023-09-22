@@ -6,7 +6,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import uzLocales from "./langs/uz";
 import ruLocales from "./langs/ru";
-import krLocales from "./langs/kr";
+import koLocales from "./langs/ko";
 import engLocales from "./langs/en";
 
 import { defaultLang } from "./config-lang";
@@ -20,7 +20,7 @@ i18n
   .init({
     resources: {
       uz: { translations: uzLocales },
-      kr: { translations: krLocales },
+      ko: { translations: koLocales },
       ru: { translations: ruLocales },
       en: { translations: engLocales },
     },

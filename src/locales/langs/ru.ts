@@ -1,3 +1,5 @@
-const ru = {};
+const ru = {
+  TitleOfHeaderOfAbout: "Кто мы",
+};
 
 export default ru;

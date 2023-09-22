@@ -1,18 +1,18 @@
-import { ReactNode } from "react";
-import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
-import useLocales from "./useLocales";
+// import { ReactNode } from "react";
+// import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
+// import useLocales from "./useLocales";
 
-interface ThemeLocalizationProps {
-  children: ReactNode;
-}
+// interface ThemeLocalizationProps {
+//   children: ReactNode;
+// }
 
-export default function ThemeLocalization({
-  children,
-}: ThemeLocalizationProps) {
-  const outerTheme = useTheme();
-  const { currentLang } = useLocales();
+// export default function ThemeLocalization({
+//   children,
+// }: ThemeLocalizationProps) {
+//   const outerTheme = useTheme();
+//   const { currentLang } = useLocales();
 
-  const theme = createTheme(outerTheme, currentLang.systemValue);
+//   const theme = createTheme(outerTheme, currentLang.systemValue);
 
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
-}
+//   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+// }

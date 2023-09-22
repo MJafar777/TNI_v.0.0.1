@@ -17,13 +17,15 @@ import {
 // import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import SearchIcon from "@mui/icons-material/Search";
+
 import { useEffect, useState } from "react";
-import Language from "../../components/language/Language";
+
+import LanguageForHeader from "../../components/language/LanguageForHeader";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
+
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -34,6 +36,13 @@ const Header = () => {
       }
     });
   }, []);
+
+  const handleClick = () => {
+    const section = document.getElementById("#contact-us");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -74,7 +83,7 @@ const Header = () => {
               </NavbarItemBox>
 
               <NavbarItemBox>
-                <Link to={"/"}>
+                <Link to={"/"} onClick={() => handleClick()}>
                   <NavbarItem>Contact Us</NavbarItem>
                 </Link>
               </NavbarItemBox>
@@ -87,7 +96,7 @@ const Header = () => {
                 </Link>
               </NavbarItemBox>
 
-              <Language/>
+              <LanguageForHeader />
 
               <RequestBtn>Request Quote</RequestBtn>
 

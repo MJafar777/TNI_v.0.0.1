@@ -1,10 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ko, uz, ru } from "../../assets/images/components/language";
 import {
-  CurrentLang,
+  CurrentLang2,
   LangImg,
   LangWrapper,
-  ListOfLang,
+  ListOfLang2,
 } from "./LanguageStyles";
 import { LanguageContext } from "../../context/LanguageContext";
 
@@ -14,7 +14,7 @@ const data = [
   { name: "Ru", img: ru, id: "ru" },
 ];
 
-const Language = () => {
+const LanguageForHeader = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { openListOfLang, setOpenListOfLang, chooseLang, handleGetLang } =
     useContext(LanguageContext);
@@ -25,27 +25,27 @@ const Language = () => {
         .filter((lang) => lang.id === chooseLang)
         .map((lang, index) => {
           return (
-            <CurrentLang key={index} onClick={() => setOpenListOfLang(!openListOfLang)}>
+            <CurrentLang2 key={index} onClick={() => setOpenListOfLang(true)}>
               <LangImg src={lang.img} />
               <p>{lang.name}</p>
-            </CurrentLang>
+            </CurrentLang2>
           );
         })}
       {openListOfLang ? (
-        <ListOfLang>
-          <CurrentLang onClick={() => handleGetLang("uz")}>
+        <ListOfLang2>
+          <CurrentLang2 onClick={() => handleGetLang("uz")}>
             <LangImg src={uz} />
             <p>Uz</p>
-          </CurrentLang>
-          <CurrentLang onClick={() => handleGetLang("ko")}>
+          </CurrentLang2>
+          <CurrentLang2 onClick={() => handleGetLang("ko")}>
             <LangImg src={ko} />
             <p>Ko</p>
-          </CurrentLang>
-          <CurrentLang onClick={() => handleGetLang("ru")}>
+          </CurrentLang2>
+          <CurrentLang2 onClick={() => handleGetLang("ru")}>
             <LangImg src={ru} />
             <p>Ru</p>
-          </CurrentLang>
-        </ListOfLang>
+          </CurrentLang2>
+        </ListOfLang2>
       ) : (
         ""
       )}
@@ -53,4 +53,4 @@ const Language = () => {
   );
 };
 
-export default Language;
+export default LanguageForHeader;

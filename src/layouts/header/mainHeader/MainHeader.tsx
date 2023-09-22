@@ -21,6 +21,7 @@ import { BurgerIcon } from "../HeaderStyles";
 import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
 
 const MainHeader = () => {
+  
   return (
     <MainHeaderWrapper>
       <MainHeaderLogo>
