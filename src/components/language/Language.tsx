@@ -1,16 +1,21 @@
 import { useContext } from "react";
-import { ko, uz, ru } from "../../assets/images/components/language";
+
 import {
   CurrentLang,
   LangImg,
   LangWrapper,
   ListOfLang,
 } from "./LanguageStyles";
+
 import { LanguageContext } from "../../context/LanguageContext";
+
+import { ko, uz, ru } from "../../assets/images/components/language";
 
 const data = [
   { name: "Uz", img: uz, id: "uz" },
+
   { name: "Ko", img: ko, id: "ko" },
+
   { name: "Ru", img: ru, id: "ru" },
 ];
 
@@ -25,7 +30,10 @@ const Language = () => {
         .filter((lang) => lang.id === chooseLang)
         .map((lang, index) => {
           return (
-            <CurrentLang key={index} onClick={() => setOpenListOfLang(!openListOfLang)}>
+            <CurrentLang
+              key={index}
+              onClick={() => setOpenListOfLang(!openListOfLang)}
+            >
               <LangImg src={lang.img} />
               <p>{lang.name}</p>
             </CurrentLang>

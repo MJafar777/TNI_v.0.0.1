@@ -12,7 +12,7 @@ export const CurrentLang = styled.div`
   justify-content: start;
   align-items: center;
   gap: 15px;
-  padding: 6px 12px;
+  padding: 6px 20px 6px 6px;
   p {
     color: #000;
     font-family: Mazzard;
@@ -43,7 +43,7 @@ export const CurrentLang2 = styled.div`
   justify-content: start;
   align-items: center;
   gap: 15px;
-  padding: 6px 12px;
+  padding: 6px 20px 6px 6px;
   p {
     color: white;
     font-family: Mazzard;
