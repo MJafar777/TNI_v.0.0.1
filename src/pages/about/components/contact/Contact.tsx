@@ -21,7 +21,7 @@ const Contact = () => {
   // const [sendMessage, setSendMessage] = useState(false);
 
   return (
-    <ContactWrapper>
+    <ContactWrapper id="#contact-us">
       {/* {sendMessage ? (
             <>
               <Alert severity="warning">

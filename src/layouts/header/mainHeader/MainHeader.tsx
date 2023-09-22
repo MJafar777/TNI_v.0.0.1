@@ -15,6 +15,7 @@ import {
 
 // ---------- @MUI ----------
 import SearchIcon from "@mui/icons-material/Search";
+import Language from "../../../components/language/Language";
 
 const MainHeader = () => {
   return (
@@ -31,6 +32,8 @@ const MainHeader = () => {
             <NavbarItem>Login</NavbarItem>
           </Link>
         </NavbarItemBox>
+        
+        <Language/>
 
         <RequestBtn>Request Quote</RequestBtn>
 

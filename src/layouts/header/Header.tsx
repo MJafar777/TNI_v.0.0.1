@@ -22,7 +22,6 @@ import { useEffect, useState } from "react";
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -73,7 +72,7 @@ const Header = () => {
               </NavbarItemBox>
 
               <NavbarItemBox>
-                <Link to={"/contact-us"}>
+                <Link to={"/"}>
                   <NavbarItem>Contact Us</NavbarItem>
                 </Link>
               </NavbarItemBox>
