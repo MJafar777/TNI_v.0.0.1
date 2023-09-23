@@ -53,26 +53,27 @@ const Footer = () => {
               <img src={logoWord} alt="" />
             </LogoText>
           </LogoWrapper>
+          <ContainerOfLink>
+            <ContententOfLogo>
+              The standard webpage maximum width dimensions for desktop screens
+            </ContententOfLogo>
 
-          <ContententOfLogo>
-            The standard webpage maximum width dimensions for desktop screens
-          </ContententOfLogo>
+            <SocialWrapper>
+              <TextOfSocial>Folllow Us:</TextOfSocial>
 
-          <SocialWrapper>
-            <TextOfSocial>Folllow Us:</TextOfSocial>
-
-            <SocialContainer>
-              <Social>
-                <img src={facebook} alt="" />
-              </Social>
-              <Social>
-                <img src={telegram} alt="" />
-              </Social>
-              <Social>
-                <img src={instagram} alt="" />
-              </Social>
-            </SocialContainer>
-          </SocialWrapper>
+              <SocialContainer>
+                <Social>
+                  <img src={facebook} alt="" />
+                </Social>
+                <Social>
+                  <img src={telegram} alt="" />
+                </Social>
+                <Social>
+                  <img src={instagram} alt="" />
+                </Social>
+              </SocialContainer>
+            </SocialWrapper>
+          </ContainerOfLink>
         </LogoColumn>
         <img src={borderRight} alt="" />
         <NavigationColumn>
@@ -130,7 +131,7 @@ const Footer = () => {
           </ContainerOfLink>
           <LinkOfColumn></LinkOfColumn>
         </ProductColumn>
-        <img src={borderRight} alt="" />
+        <img className="productColumnLine" src={borderRight} alt="" />
 
         <ContactColumn>
           <TitleOfColumn>
