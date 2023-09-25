@@ -42,6 +42,7 @@ export default function SwipeableTemporaryDrawer() {
       <Box
         sx={{
           width: "100vw",
+          background: "linear-gradient(145deg, #27D0A5 9.96%, #029ECF 97.44%)",
         }}
         role="presentation"
         onClick={toggleDrawer(anchor, false)}

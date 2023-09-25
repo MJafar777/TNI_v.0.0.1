@@ -82,7 +82,7 @@ export const RequestBtn = styled.div`
   line-height: normal;
   user-select: none;
 
-  margin-right: 75px;
+  margin-right: 50px;
 
   &:hover {
     background: linear-gradient(270deg, #27d0a5 0%, #029ecf 100%);

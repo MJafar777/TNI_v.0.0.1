@@ -7,6 +7,8 @@ export const BurgerCansel = styled.div`
 `;
 
 export const BurgerWrapper = styled.div`
+  
+
   a {
     color: #fff;
     font-family: Mazzard;
