@@ -22,13 +22,11 @@ export const FooterWrapper = styled.div`
 export const ContainerOfFooter = styled.div`
   max-width: 1366px;
   width: 100%;
-  height: 250px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   padding: 0 40px;
-  margin-bottom: 50px;
 
   @media screen and (max-width: 768px) {
     padding: 0 20px;
@@ -39,7 +37,9 @@ export const ContainerOfFooter = styled.div`
   }
 `;
 
-export const LogoColumn = styled.div``;
+export const LogoColumn = styled.div`
+  margin-bottom: 50px;
+`;
 
 export const LogoWrapper = styled.div`
   display: flex;
@@ -186,7 +186,6 @@ export const TitleOfColumn = styled.div`
   line-height: normal;
   height: 20%;
   margin-bottom: 33px;
-  margin-top: 33px;
   span {
     display: block;
     margin-top: 21px;
