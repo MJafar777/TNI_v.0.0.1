@@ -1,14 +1,20 @@
 import { FC, useState } from "react";
 import { Container } from "../../../../../../components/container";
+import curdIndormation from "../../../../../../api/curds/cardsInfo";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 import {
   sendLink,
   vectorImg,
-  imgProductOne,
+  // imgProductOne,
 } from "../../../../../../assets/images";
 
 import {
   BgPart,
   ImgMini,
+  LeftBtn,
+  RightBtn,
   ChildBtns,
   ImgProduct,
   CHildPanels,
@@ -18,29 +24,30 @@ import {
   SliderBtnImages,
   DescriptionProductLeftWrapper,
 } from "./descriptionProductLeftStyle";
-import curdIndormation from "../../../../../../api/curds/cardsInfo";
 
 interface Props {
   getIdCurd: number;
 }
 
-interface selectedCurdType {
+interface SelectedCurdType {
   id: number;
-  review: number | string;
+
   img: string;
-  imgProduct: string[];
-  productName: string;
   star: string;
+  price: string;
+  productName: string;
+  imgProduct: string[];
+
   descriptions: string;
   descriptionOne: string;
   descriptionTwo: string;
-  price: string;
+  review: number | string;
 }
 
 const DescriptionProductLeft: FC<Props> = (props) => {
   const { getIdCurd } = props;
 
-  const selectedCurd: selectedCurdType | undefined = curdIndormation.find(
+  const selectedCurd: SelectedCurdType | undefined = curdIndormation.find(
     (curd) => curd.id === getIdCurd
   );
 
@@ -49,19 +56,30 @@ const DescriptionProductLeft: FC<Props> = (props) => {
     id: 1,
   });
 
+  const [handleZoom, setHandleZoom] = useState(false);
+
+  const handleZoomImage = () => {
+    setHandleZoom(true);
+  };
+
   return (
     <Container>
+      {handleZoom && (
+        <HandleZoomImage
+          defaultImage={defaultImage ? defaultImage : { img: "", id: 1 }}
+        />
+      )}
       <DescriptionProductLeftWrapper>
-        <BgPart>
+        <BgPart style={handleZoom ? { display: "none" } : {}}>
           <ImgProduct
-            src={defaultImage?.img ? defaultImage.img : ""}
+            src={defaultImage?.img ? defaultImage?.img : ""}
             alt={`this image not found ${
               defaultImage?.img ? defaultImage.img : ""
             }`}
           />
 
           <CHildPanels>
-            <ChildBtns>
+            <ChildBtns onClick={handleZoomImage}>
               <LeftBtnVector
                 src={vectorImg}
                 alt={`this image not found ${vectorImg}`}
@@ -98,3 +116,50 @@ const DescriptionProductLeft: FC<Props> = (props) => {
 };
 
 export default DescriptionProductLeft;
+
+interface HandleZoomImageProps {
+  defaultImage: { img: string; id: number };
+}
+export const HandleZoomImage: FC<HandleZoomImageProps> = (props) => {
+  const { defaultImage } = props;
+
+  if (defaultImage && defaultImage.img) {
+    return (
+      <div
+        style={{
+          top: "0",
+          left: "0",
+          right: "0",
+          bottom: "0",
+          zIndex: 100,
+          borderRadius: 0,
+          position: "fixed",
+          width: "100% !important",
+          height: "100vh !important",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          gap: "5%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+
+          userSelect: "none",
+        }}
+      >
+        <LeftBtn>
+          <ArrowBackIosNewIcon sx={{ color: "#fff", fontSize: "48px" }} />
+        </LeftBtn>
+
+        <ImgProduct
+          src={defaultImage.img}
+          alt={`this image not found ${defaultImage.img}`}
+        />
+
+        <RightBtn>
+          <ArrowForwardIosIcon sx={{ color: "#fff", fontSize: "48px" }} />
+        </RightBtn>
+      </div>
+    );
+  }
+
+  return null;
+};
