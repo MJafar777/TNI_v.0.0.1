@@ -4,10 +4,12 @@ import { MiniTitleWrapper } from "./miniTitle";
 
 interface Props {
   textTitle: string;
-  fontSize: number | string;
+  fontSize: number;
 }
+
 const MiniTitle: FC<Props> = (props) => {
   const { textTitle, fontSize } = props;
+
   return <MiniTitleWrapper fontSize={fontSize}>{textTitle}</MiniTitleWrapper>;
 };
 

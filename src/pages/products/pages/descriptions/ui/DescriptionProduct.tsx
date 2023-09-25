@@ -4,14 +4,18 @@ import { DescriptionProductWrapper } from "./descriptionProductStyle";
 import DescriptionProductLeft from "../components/descriptionProductLeft/DescriptionProductLeft";
 import DescriptionProductRight from "../components/descriptionProductRight/DescriptionProductRight";
 
-interface Props {}
+interface Props {
+  getIdCurd: number;
+}
 
-const DescriptionProduct: FC<Props> = () => {
+const DescriptionProduct: FC<Props> = (props) => {
+  const { getIdCurd } = props;
+
   return (
     <Container>
       <DescriptionProductWrapper>
-        <DescriptionProductLeft />
-        <DescriptionProductRight />
+        <DescriptionProductLeft getIdCurd={getIdCurd} />
+        <DescriptionProductRight getIdCurd={getIdCurd} />
       </DescriptionProductWrapper>
     </Container>
   );

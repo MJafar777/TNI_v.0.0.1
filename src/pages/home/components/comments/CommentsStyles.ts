@@ -8,6 +8,9 @@ export const CommentsWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 50px;
+  .slick-dots li button:before{
+    display: none;
+  }
 `;
 
 export const Subtitle = styled.div`

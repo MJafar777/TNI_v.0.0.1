@@ -54,11 +54,7 @@ const Header = () => {
         ""
       ) : (
         <HeaderWrapperSection>
-          <HeaderWrapper
-            style={{
-              display: `${scrolling ? "flex" : "none"}`,
-            }}
-          >
+          <HeaderWrapper style={{ display: `${scrolling ? "flex" : "none"}` }}>
             <Link to={"/"}>
               <MainHeaderLogo>
                 <img src={whiteLogo} alt="logo" />

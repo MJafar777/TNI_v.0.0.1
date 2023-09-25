@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { logo2 } from "../../../assets/images";
-import { burgerIcon, logo } from "../../../assets/images";
+import { logo } from "../../../assets/images";
 
 // ---------- Styled Templates ----------
 import {
@@ -17,7 +17,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Language from "../../../components/language/Language";
 
 import Navbar from "../../navbar/Navbar";
-import { BurgerIcon } from "../HeaderStyles";
+// import { BurgerIcon } from "../HeaderStyles";
 import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
 import { useButtonIsClickedStateContext } from "../../../context/useButtonIsClickedContext";
 import Burger from "../../burger/Burger";

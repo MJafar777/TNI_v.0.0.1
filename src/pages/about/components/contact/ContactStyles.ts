@@ -95,6 +95,17 @@ export const Title = styled.div`
   line-height: normal;
   letter-spacing: 1.12px;
   margin: 8px 0;
+
+  @media screen and (max-width: 576px) {
+    color: #252b42;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42.354px; /* 151.263% */
+    letter-spacing: 0.149px;
+  }
 `;
 
 export const SubTitle = styled.div`
@@ -142,6 +153,13 @@ export const WrapperInput = styled.div`
     input {
       justify-content: center;
     }
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    /* input {
+      justify-content: center;
+    } */
   }
 `;
 

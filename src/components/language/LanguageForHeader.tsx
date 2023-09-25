@@ -12,13 +12,13 @@ const data = [
   { name: "Uz", img: uz, id: "uz" },
 
   { name: "Ko", img: ko, id: "ko" },
-  
+
   { name: "Ru", img: ru, id: "ru" },
 ];
 
 const LanguageForHeader = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  
+
   const { openListOfLang, setOpenListOfLang, chooseLang, handleGetLang } =
     useContext(LanguageContext);
 
