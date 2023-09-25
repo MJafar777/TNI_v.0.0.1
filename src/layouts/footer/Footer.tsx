@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { arrowRight } from "../../assets/images";
 import {
   logoWord,
@@ -42,6 +42,12 @@ import {
 
 const Footer = () => {
   const { pathname } = useLocation();
+
+  const naviagation = useNavigate();
+
+  const handleLink = (path: string) => {
+    naviagation(path);
+  };
 
   return (
     <>
@@ -91,20 +97,20 @@ const Footer = () => {
               </TitleOfColumn>
 
               <ContainerOfLink>
-                <LinkOfColumn>
+                <LinkOfColumn onClick={() => handleLink("/")}>
                   <img src={arrowRight} alt="" /> Home
                 </LinkOfColumn>
 
-                <LinkOfColumn>
+                <LinkOfColumn onClick={() => handleLink("/about-us")}>
                   <img src={arrowRight} alt="" /> About
                 </LinkOfColumn>
 
-                <LinkOfColumn>
+                <LinkOfColumn onClick={() => handleLink("/products")}>
                   {" "}
                   <img src={arrowRight} alt="" /> Products
                 </LinkOfColumn>
 
-                <LinkOfColumn>
+                <LinkOfColumn onClick={() => handleLink("/")}>
                   {" "}
                   <img src={arrowRight} alt="" />
                   Contact Us

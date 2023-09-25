@@ -10,16 +10,13 @@ import {
   RequestContactContainer,
   RequestContactNameInput,
   RequestContactPhoneInput,
-  RequestContactFeedbackInput,
 } from "./RequestContactStyle";
 
 import CloseIcon from "@mui/icons-material/Close";
-import { useButtonIsClickedStateContext } from "../../context/useButtonIsClickedContext";
+import { useButtonIsClickedStateContext } from "../../../../context/useButtonIsClickedContext";
 
-export default function RequestContact() {
+export default function RequestContactClone() {
   const { requestOpen, setRequestOpen } = useButtonIsClickedStateContext();
-
-  console.log(requestOpen, "1111");
 
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -65,8 +62,6 @@ export default function RequestContact() {
               type="number"
               min={0}
             />
-
-            <RequestContactFeedbackInput placeholder="Your Message" />
 
             <RequestContactBtn>To Send</RequestContactBtn>
           </RequestContactContainer>

@@ -5,9 +5,40 @@ export const LangWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  z-index: 1000 !important;
 `;
 
 export const CurrentLang = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  padding: 6px 20px 6px 6px;
+  z-index: 1000 !important;
+
+  p {
+    color: #000;
+    font-family: Mazzard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &:hover {
+    p {
+      color: #27d0a5;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    margin-right: 12px;
+    p {
+      display: none;
+    }
+  }
+`;
+
+export const CurrentLangLi = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
@@ -51,9 +82,17 @@ export const CurrentLang2 = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    &:hover {
+      p {
+        color: #27d0a5;
+      }
+    }
   }
-  &:hover {
-    background: #1a1a1a;
+  @media screen and (max-width: 576px) {
+    margin-right: 12px;
+    p {
+      display: none;
+    }
   }
 `;
 

@@ -30,7 +30,7 @@ const Navbar = () => {
       </NavbarItemBox>
 
       <NavbarItemBox>
-        <Link to={"/"} onClick={handleClick}>
+        <Link to={`${location.pathname}`} onClick={handleClick}>
           <NavbarItem>Contact Us</NavbarItem>
         </Link>
       </NavbarItemBox>

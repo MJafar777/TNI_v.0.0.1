@@ -23,6 +23,7 @@ function App() {
           <ButtonContextProvider>
             <LanguageContextProvider>
               <Header />
+
               <Outlet />
               <Footer />
             </LanguageContextProvider>
