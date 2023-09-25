@@ -14,6 +14,7 @@ import {
 
 // ---------- @MUI ----------
 import SearchIcon from "@mui/icons-material/Search";
+import Language from "../../../components/language/Language";
 
 import Navbar from "../../navbar/Navbar";
 import { BurgerIcon } from "../HeaderStyles";
@@ -38,6 +39,8 @@ const MainHeader = () => {
             <NavbarItem>Login</NavbarItem>
           </Link>
         </NavbarItemBox>
+
+        <Language />
 
         <RequestBtn onClick={() => setRequestOpen(true)}>
           Request Quote

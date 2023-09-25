@@ -6,9 +6,11 @@ import { Header, Footer } from "./layouts";
 import { Loader } from "./components";
 
 import "./locales/i18n";
-import ThemeLocalization from "./locales/ThemeLocalization";
+import { LanguageContextProvider } from "./context/LanguageContext";
+// import ThemeLocalization from "./locales/ThemeLocalization";
 
 import { ButtonContextProvider } from "./context/ButtonContext";
+import ThemeLocalization from "./locales/ThemeLocalization";
 
 function App() {
   return (
@@ -16,9 +18,11 @@ function App() {
       <Theme>
         <ThemeLocalization>
           <ButtonContextProvider>
-            <Header />
-            <Outlet />
-            <Footer />
+            <LanguageContextProvider>
+              <Header />
+              <Outlet />
+              <Footer />
+            </LanguageContextProvider>
           </ButtonContextProvider>
         </ThemeLocalization>
       </Theme>

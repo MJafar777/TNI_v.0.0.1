@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { whiteLogo } from "../../assets/images";
 
 import {
   NavbarItem,
-  BurgerIcon,
   RequestBtn,
   SearchInput,
   NavbarItemBox,
@@ -15,16 +14,21 @@ import {
   HeaderWrapperSection,
 } from "./HeaderStyles";
 
-import burgerIcon from "../../assets/images/icons/burgerIcon.svg";
+// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import SearchIcon from "@mui/icons-material/Search";
+
 import { useEffect, useState } from "react";
 import { useButtonIsClickedStateContext } from "../../context/useButtonIsClickedContext";
+
+import LanguageForHeader from "../../components/language/LanguageForHeader";
 
 const Header = () => {
   const { setRequestOpen } = useButtonIsClickedStateContext();
 
   const [scrolling, setScrolling] = useState(false);
+
+  const location = useLocation();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -36,70 +40,83 @@ const Header = () => {
     });
   }, []);
 
+  const handleClick = () => {
+    const section = document.getElementById("#contact-us");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <HeaderWrapperSection>
-      <HeaderWrapper
-        style={{
-          display: `${scrolling ? "flex" : "none"}`,
-        }}
-      >
-        <Link to={"/"}>
-          <MainHeaderLogo>
-            <img src={whiteLogo} alt="logo" />
-          </MainHeaderLogo>
-        </Link>
-
-        <NavbarWrapper>
-          <NavbarItemBox>
+    <>
+      {location.pathname == "/login" ? (
+        ""
+      ) : (
+        <HeaderWrapperSection>
+          <HeaderWrapper
+            style={{
+              display: `${scrolling ? "flex" : "none"}`,
+            }}
+          >
             <Link to={"/"}>
-              <NavbarItem>Home</NavbarItem>
+              <MainHeaderLogo>
+                <img src={whiteLogo} alt="logo" />
+              </MainHeaderLogo>
             </Link>
-          </NavbarItemBox>
 
-          <NavbarItemBox>
-            <Link to={"/about-us"}>
-              <NavbarItem>About Us</NavbarItem>
-            </Link>
-          </NavbarItemBox>
+            <NavbarWrapper>
+              <NavbarItemBox>
+                <Link to={"/"}>
+                  <NavbarItem>Home</NavbarItem>
+                </Link>
+              </NavbarItemBox>
 
-          <NavbarItemBox className="navbarItemBoz-popower">
-            <Link to={"/products"}>
-              <NavbarItem>Our Products</NavbarItem>
-            </Link>
-          </NavbarItemBox>
+              <NavbarItemBox>
+                <Link to={"/about-us"}>
+                  <NavbarItem>About Us</NavbarItem>
+                </Link>
+              </NavbarItemBox>
 
-          <NavbarItemBox>
-            <Link to={"/contact-us"}>
-              <NavbarItem>Contact Us</NavbarItem>
-            </Link>
-          </NavbarItemBox>
-        </NavbarWrapper>
+              <NavbarItemBox className="navbarItemBoz-popower">
+                <Link to={"/products"}>
+                  <NavbarItem>Our Products</NavbarItem>
+                </Link>
 
-        <MainHeaderFeatures>
-          <NavbarItemBox>
-            <Link to={"/login"}>
-              <NavbarItem>Login</NavbarItem>
-            </Link>
-          </NavbarItemBox>
+                {/* <KeyboardArrowDownIcon className="keyboardArrowDownIcon" /> */}
+              </NavbarItemBox>
 
-          <RequestBtn onClick={() => setRequestOpen(true)}>
-            Request Quote{" "}
-          </RequestBtn>
+              <NavbarItemBox>
+                <Link to={"/"} onClick={() => handleClick()}>
+                  <NavbarItem>Contact Us</NavbarItem>
+                </Link>
+              </NavbarItemBox>
+            </NavbarWrapper>
 
-          <SearchInput>
-            <input type="text" placeholder="Search" />
+            <MainHeaderFeatures>
+              <NavbarItemBox>
+                <Link to={"/login"}>
+                  <NavbarItem>Login</NavbarItem>
+                </Link>
+              </NavbarItemBox>
 
-            <SearchIconBox>
-              <SearchIcon className="headerSearchIcon" />
-            </SearchIconBox>
-          </SearchInput>
+              <LanguageForHeader />
 
-          <BurgerIcon>
-            <img src={burgerIcon} alt="" />
-          </BurgerIcon>
-        </MainHeaderFeatures>
-      </HeaderWrapper>
-    </HeaderWrapperSection>
+              <RequestBtn onClick={() => setRequestOpen(true)}>
+                Request Quote
+              </RequestBtn>
+
+              <SearchInput>
+                <input type="text" placeholder="Search" />
+
+                <SearchIconBox>
+                  <SearchIcon className="headerSearchIcon" />
+                </SearchIconBox>
+              </SearchInput>
+            </MainHeaderFeatures>
+          </HeaderWrapper>
+        </HeaderWrapperSection>
+      )}
+    </>
   );
 };
 

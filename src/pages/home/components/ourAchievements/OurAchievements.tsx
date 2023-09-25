@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import CountUp from "react-countup";
 import {
   AchievementsContainer,
@@ -23,14 +22,8 @@ import {
 } from "../../../../assets/images/components/achivements";
 
 const OurAchievements = () => {
-  const countUpRef = useRef(null);
-
-  useEffect(() => {
-    if (countUpRef.current) console.log("sal,sla,");
-  }, []);
-
   return (
-    <OurAchievementsWrapper ref={countUpRef}>
+    <OurAchievementsWrapper>
       <TopContentOfDelivery>
         <TopTitle>
           {" "}

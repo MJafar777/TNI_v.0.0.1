@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const DeliveryWrapper = styled.div`
   max-width: 1366px;
+  width: 50%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -50,6 +51,7 @@ export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow-x: hidden;
   gap: 40px;
 `;
 
@@ -64,8 +66,6 @@ export const Card = styled.div`
   flex-shrink: 0;
   border-radius: 30px;
   background: #fff;
-
-  /* accentued-drop-shadow */
   box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
 `;
 
@@ -129,7 +129,6 @@ export const RightImg = styled.img`
 export const CarOfDelivery = styled.img`
   margin-top: 128px;
   ime-mode: auto;
-
   @media screen and (max-width: 1200px) {
     width: 400px;
     height: 40vh;
