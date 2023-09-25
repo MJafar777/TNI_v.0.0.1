@@ -2,17 +2,25 @@ import styled from "styled-components";
 import { bgContact } from "../../../../assets/images/about";
 
 export const ContactWrapper = styled.div`
-  max-width: 1366px;
-  margin: 0 auto;
   height: fit-content;
-  padding: 30px 0;
   display: flex;
   align-items: center;
   justify-content: start;
-  background-image: url(${bgContact});
+  /* background-image: url(${bgContact}); */
+  position: relative;
   background-size: cover;
   .my-2 {
     margin-top: 20px;
+  }
+
+  .container {
+    padding: 30px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    max-width: 1366px;
+    margin: 0 auto;
   }
 
   @media screen and (max-width: 992px) {

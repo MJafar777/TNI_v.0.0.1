@@ -7,9 +7,7 @@ export const BurgerCansel = styled.div`
 `;
 
 export const BurgerWrapper = styled.div`
-  .css-1160xiw-MuiPaper-root-MuiDrawer-paper {
-    background: "linear-gradient(145deg, #27D0A5 9.96%, #029ECF 97.44%);";
-  }
+  
 
   a {
     color: #fff;

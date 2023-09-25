@@ -22,6 +22,7 @@ import { useEffect, useState } from "react";
 import { useButtonIsClickedStateContext } from "../../context/useButtonIsClickedContext";
 
 import LanguageForHeader from "../../components/language/LanguageForHeader";
+import Burger from "../burger/Burger";
 
 const Header = () => {
   const { setRequestOpen } = useButtonIsClickedStateContext();
@@ -108,6 +109,8 @@ const Header = () => {
                   <SearchIcon className="headerSearchIcon" />
                 </SearchIconBox>
               </SearchInput>
+
+              <Burger />
             </MainHeaderFeatures>
           </HeaderWrapper>
         </HeaderWrapperSection>
