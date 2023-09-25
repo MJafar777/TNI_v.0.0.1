@@ -80,9 +80,13 @@ const Products: React.FC = () => {
                 {dataCurd.map((e: DataType) => {
                   return (
                     <CardProducts
-                      onClick={() => {
+                      onClicks={() => {
                         setGetIdCurd(e.id);
                         setRemoveContain(!removeContain);
+                        window.scrollTo({
+                          top: 0,
+                          behavior: "smooth",
+                        });
                       }}
                       id={e.id}
                       key={e.id}
@@ -126,8 +130,15 @@ const Products: React.FC = () => {
                   price={e.price}
                   productName={e.productName}
                   descriptions={e.descriptions}
-                  onClick={function (): void {
-                    throw new Error("Function not implemented.");
+                  onClicks={() => {
+                    setGetIdCurd(e.id);
+                    setRemoveContain(
+                      !removeContain ? !removeContain : removeContain
+                    );
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
                   }}
                 />
               ) : (
