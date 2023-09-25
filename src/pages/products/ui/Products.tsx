@@ -17,6 +17,7 @@ import {
   RemoveContain,
   ProductsWrapper,
 } from "./products";
+import RequestContactClone from "../components/requestContactClone/RequestContact";
 
 const dataFilter = [
   { id: 1, value: "Polypropylenes" },
@@ -45,6 +46,8 @@ const Products: React.FC = () => {
   return (
     <>
       <HeaderTop TitleHeader={"Products"} SubTitleHeader={"Our Products"} />
+
+      <RequestContactClone />
 
       <Container>
         <ProductsWrapper>

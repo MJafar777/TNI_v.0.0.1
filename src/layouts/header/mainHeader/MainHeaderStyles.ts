@@ -60,10 +60,6 @@ export const MainHeaderFeatures = styled.div`
   position: relative;
 
   @media ${(props) => props.theme.breakpoints.xl} {
-    gap: 10px;
-  }
-
-  @media screen and (max-width: 400px) {
     gap: 0px;
   }
 `;
@@ -161,9 +157,6 @@ export const SearchInput = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
-  }
-
-  @media screen and (max-width: 400px) {
     display: none;
   }
 `;

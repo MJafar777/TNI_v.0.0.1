@@ -7,11 +7,9 @@ const About = () => {
       <Header />
 
       <AboutWrapper>
-
         <ShortInfo />
 
         <Contact />
-        
       </AboutWrapper>
     </>
   );
