@@ -25,7 +25,6 @@ import CountdownCircle from "../../../../components/countdownCircle/CountdownCir
 import { useState, useEffect } from "react";
 
 import { mainBack } from "../../../../assets/images";
-import { RequestBtn } from "../../../../layouts/header/HeaderStyles";
 import { useButtonIsClickedStateContext } from "../../../../context/useButtonIsClickedContext";
 
 const images = [`url(${mainBack})`, `url(${mainBack})`, `url(${mainBack})`];
@@ -94,10 +93,8 @@ const MainSection = () => {
                 <ButtonComp buttonText={"Read more"} />
               </div>
 
-              <div className="requestBtn">
-                <RequestBtn onClick={() => setRequestOpen(true)}>
-                  Request Quote
-                </RequestBtn>
+              <div className="requestBtn" onClick={() => setRequestOpen(true)}>
+                Request Quote
               </div>
             </div>
           </div>
