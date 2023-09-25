@@ -20,11 +20,32 @@ import {
 
 import ButtonComp from "../../../../components/buttons/ButtonComp";
 import MainHeader from "../../../../layouts/header/mainHeader/MainHeader";
+import CountdownCircle from "../../../../components/countdownCircle/CountdownCircle";
+
+import { useState, useEffect } from "react";
+
+import { mainBack } from "../../../../assets/images";
+
+const images = [`url(${mainBack})`, `url(${mainBack})`, `url(${mainBack})`];
 
 const MainSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [images]);
+
   return (
     <Section>
-      <MainSectionWrapper>
+      <MainSectionWrapper
+        style={{ backgroundImage: images[currentImageIndex] }}
+      >
         <MainHeader />
 
         <MainSectionLeft>
@@ -72,8 +93,8 @@ const MainSection = () => {
         </MainSectionLeft>
 
         <MainSectionNumbers>
-          <p>01</p>
-          <p className="active-number">02</p>
+          <CountdownCircle secondNumber={"01"} />
+          <p>02</p>
           <p>03</p>
         </MainSectionNumbers>
       </MainSectionWrapper>
