@@ -44,34 +44,41 @@ const Delivery = () => {
       </TopContentOfDelivery>
 
       <CardContainer>
-        <Card data-aos-duration="1000" data-aos="fade-left">
-          <CardImg
-            data-aos="zoom-in-left"
-            data-aos-delay="500"
-            data-aos-duration="2000"
-            src={track}
-          ></CardImg>
-          <CardTitle>GROUND DELIVERY</CardTitle>
-          <CardText>
-            The standard webpage maximum width dimensions for desktop screens
-            are 1440 pixels. It's a common practice restrict the maxium width
-            dimension for your site
-          </CardText>
-        </Card>
-        <Card data-aos-duration="1000" data-aos="fade-right">
-          <CardImg
-            data-aos="zoom-in-left"
-            data-aos-delay="500"
-            data-aos-duration="2000"
-            src={train}
-          ></CardImg>
-          <CardTitle>RAIN DELIVERY</CardTitle>
-          <CardText>
-            The standard webpage maximum width dimensions for desktop screens
-            are 1440 pixels. It's a common practice restrict the maxium width
-            dimension for your site
-          </CardText>
-        </Card>
+        <div>
+          <Card data-aos-duration="1000" data-aos="fade-left">
+            <CardImg
+              data-aos="zoom-in-left"
+              data-aos-delay="500"
+              data-aos-duration="2000"
+              src={track}
+            ></CardImg>
+            <CardTitle>GROUND DELIVERY</CardTitle>
+            <CardText>
+              The standard webpage maximum width dimensions for desktop screens
+              are 1440 pixels. It's a common practice restrict the maxium width
+              dimension for your site
+            </CardText>
+          </Card>
+        </div>
+
+        <div>
+          {" "}
+          <Card data-aos-duration="1000" data-aos="fade-right">
+            <CardImg
+              data-aos="zoom-in-left"
+              data-aos-delay="500"
+              data-aos-duration="2000"
+              src={train}
+            ></CardImg>
+            <CardTitle>RAIN DELIVERY</CardTitle>
+            <CardText>
+              The standard webpage maximum width dimensions for desktop screens
+              are 1440 pixels. It's a common practice restrict the maxium width
+              dimension for your site
+            </CardText>
+          </Card>
+        </div>
+
         <div data-aos-duration="1000" data-aos="fade-up">
           <Card data-aos-duration="1000" data-aos="fade-left">
             <CardImg
@@ -88,28 +95,30 @@ const Delivery = () => {
             </CardText>
           </Card>
         </div>
-        <Card data-aos-duration="1000" data-aos="fade-right">
-          <CardImg
-            data-aos="zoom-in-left"
-            data-aos-delay="500"
-            data-aos-duration="2000"
-            src={ship}
-          ></CardImg>
-          <CardTitle>SEA DELIVERY</CardTitle>
-          <CardText>
-            The standard webpage maximum width dimensions for desktop screens
-            are 1440 pixels. It's a common practice restrict the maxium width
-            dimension for your site
-          </CardText>
-        </Card>
+        <div>
+          <Card data-aos-duration="1000" data-aos="fade-right">
+            <CardImg
+              data-aos="zoom-in-left"
+              data-aos-delay="500"
+              data-aos-duration="2000"
+              src={ship}
+            ></CardImg>
+            <CardTitle>SEA DELIVERY</CardTitle>
+            <CardText>
+              The standard webpage maximum width dimensions for desktop screens
+              are 1440 pixels. It's a common practice restrict the maxium width
+              dimension for your site
+            </CardText>
+          </Card>
+        </div>
       </CardContainer>
-
       <ContainerBottonOfDelivery>
         <LeftImg
           data-aos="fade-right"
           data-aos-duration="2000"
           src={leftWorld}
         ></LeftImg>
+
         <RightImg
           data-aos="fade-left"
           data-aos-duration="2000"

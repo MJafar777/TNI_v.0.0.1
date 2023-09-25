@@ -8,7 +8,14 @@ export const DeliveryWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+   
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 1200px) {
+    overflow-x: hidden;
+  }
 `;
 
 export const TopContentOfDelivery = styled.div``;
@@ -29,6 +36,7 @@ export const TopTitle = styled.div`
   align-items: center;
   gap: 20px;
   margin-bottom: 9px;
+  text-align: center;
 
   span {
     width: 70px;
@@ -45,6 +53,17 @@ export const Title = styled.div`
   font-weight: 700;
   line-height: 57px; /* 142.5% */
   letter-spacing: 0.2px;
+
+  @media screen and (max-width: 576px) {
+    color: #252b42;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42.354px; /* 151.263% */
+    letter-spacing: 0.149px;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -53,22 +72,28 @@ export const CardContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
+
+  div {
+    width: 430px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Card = styled.div`
   display: flex;
-  width: 430px;
-  height: 350px;
-  padding: 50px 53.5px 67px 53.5px;
+
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 36.856px;
-  flex-shrink: 0;
+
+  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
   border-radius: 30px;
   background: #fff;
-
-  /* accentued-drop-shadow */
-  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+  padding: 50px 53.5px 67px 53.5px;
 `;
 
 export const CardImg = styled.img``;
@@ -97,7 +122,7 @@ export const CardText = styled.div`
 export const ContainerBottonOfDelivery = styled.div`
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: fit-content;
   display: flex;
   justify-content: end;
 `;
@@ -135,5 +160,10 @@ export const CarOfDelivery = styled.img`
     width: 400px;
     height: 40vh;
     background-size: contain;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 300px;
+    height: 20vh;
   }
 `;
