@@ -11,7 +11,17 @@ export const FilterAllProjectsWrapper = styled.div<Props>`
   border-radius: 100px;
 
   margin-top: ${(e) => (e.marginTop ? e.marginTop : 10)}px;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
 `;
+
 export const ButtonsFilter = styled.div`
   gap: 24px;
   height: 48px;

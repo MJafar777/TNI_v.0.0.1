@@ -30,6 +30,14 @@ export const MainHeaderFeatures = styled.div`
   gap: 20px;
 
   position: relative;
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: 0px;
+  }
 `;
 
 const colorCycle = keyframes`
@@ -67,6 +75,10 @@ export const RequestBtn = styled.div`
     margin-right: 60px;
     font-size: 14px;
     padding: 8px 18px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
   }
 
   @media screen and (max-width: 400px) {

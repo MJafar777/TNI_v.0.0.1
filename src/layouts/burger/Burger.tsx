@@ -22,6 +22,12 @@ export default function SwipeableTemporaryDrawer() {
     right: false,
   });
 
+  const handleClick = () => {
+    const section = document.getElementById("#contact-us");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -155,7 +161,9 @@ export default function SwipeableTemporaryDrawer() {
                 </svg>
               </ListItemIcon>
               <ListItemText>
-                <Link to={"/contact"}>Contact Us</Link>
+                <Link to={"/"} onClick={() => handleClick()}>
+                  Contact Us
+                </Link>
               </ListItemText>
             </ListItemButton>
           </ListItem>

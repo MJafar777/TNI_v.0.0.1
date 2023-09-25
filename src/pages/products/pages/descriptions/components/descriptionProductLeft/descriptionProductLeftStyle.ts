@@ -27,6 +27,9 @@ export const BgPart = styled.div`
 `;
 
 export const ImgProduct = styled.img<PropsImg>`
+  max-width: 320px;
+  width: 100%;
+
   flex-shrink: 0;
 
   border-radius: 8px;
@@ -99,4 +102,26 @@ export const SliderBtnImages = styled.div`
 
 export const ImgMini = styled.img<PropsImg>`
   width: 57px;
+`;
+
+export const LeftBtn = styled.button`
+  color: #fff;
+  border: none;
+  font-size: 36px;
+  border-radius: 8px;
+  background-color: transparent;
+
+  cursor: pointer;
+  user-select: none;
+`;
+
+export const RightBtn = styled.button`
+  color: #fff;
+  border: none;
+  font-size: 36px;
+  border-radius: 8px;
+  background-color: transparent;
+
+  cursor: pointer;
+  user-select: none;
 `;

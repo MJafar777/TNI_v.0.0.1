@@ -2,19 +2,23 @@ import styled from "styled-components";
 import { bgContact } from "../../assets/images/about";
 
 export const ContactWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  padding: 30px 0;
+  max-width: 1366px;
+  margin: 0 auto;
   height: fit-content;
+  padding: 30px 0;
+  display: flex;
   align-items: center;
   justify-content: start;
-  background-size: cover;
   background-image: url(${bgContact});
+  background-size: cover;
+  .my-2 {
+    margin-top: 20px;
+  }
 
   @media screen and (max-width: 992px) {
-    padding: 0 80px;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    padding: 0 80px;
   }
 
   @media screen and (max-width: 768px) {
@@ -34,11 +38,11 @@ export const Img = styled.img`
 `;
 
 export const FormContainer = styled.div`
-  gap: 25px;
   display: flex;
-  align-items: start;
   flex-direction: column;
+  align-items: start;
   justify-content: start;
+  gap: 25px;
 
   @media screen and (max-width: 768px) {
     margin-top: 50px;
@@ -51,10 +55,9 @@ export const TopOfForm = styled.div`
   }
   @media screen and (max-width: 768px) {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-
     .rightBorder {
       display: block;
     }
@@ -63,76 +66,80 @@ export const TopOfForm = styled.div`
 
 export const TopTitle = styled.div`
   display: flex;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
   align-items: center;
-  line-height: normal;
-  background-clip: text;
-  letter-spacing: 4.24px;
-  -webkit-background-clip: text;
-  font-family: "MazzardM-Regular";
-  -webkit-text-fill-color: transparent;
   background: linear-gradient(90deg, #029ecf -0.96%, #27d0a5 99.04%);
-
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "MazzardM-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.24px;
   span {
     height: 1px;
     width: 36px;
     margin: 0 12px;
-    background-clip: text;
     background: linear-gradient(90deg, #029ecf -0.96%, #27d0a5 99.04%);
+    background-clip: text;
   }
 `;
 
 export const Title = styled.div`
   color: #000;
+  font-family: "MazzardM-Bold";
   font-size: 56px;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   line-height: normal;
-  font-family: Mazzard;
   letter-spacing: 1.12px;
+  margin: 8px 0;
 `;
 
 export const SubTitle = styled.div`
   color: #000;
+  font-family: "MazzardM-Regular";
   font-size: 16px;
-  font-weight: 400;
   font-style: normal;
-  font-family: Mazzard;
-  letter-spacing: 1.12px;
+  font-weight: 400;
   line-height: 108%; /* 17.28px */
+  letter-spacing: 1.12px;
 `;
 
 export const Form = styled.div`
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: space-between;
   @media screen and (max-width: 992px) {
-    margin: 0 auto;
     justify-content: space-between;
+    margin: 0 auto;
   }
 `;
 
 export const WrapperInput = styled.div`
-  width: 45%;
+  width: 48%;
   display: flex;
-  margin: 10px 0;
-  align-items: start;
   flex-direction: column;
+  align-items: start;
+  margin: 10px 0;
+  label {
+    font-size: 14px;
+  }
 
   input {
-    border: none;
+    width: 98%;
     outline: none;
-    margin-top: 10px;
-    padding: 12px 20px;
+    border: none;
     border-radius: 22px;
     background: #eaeaea;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    margin-top: 7px;
   }
 
   @media screen and (max-width: 992px) {
     input {
-      width: 100%;
       justify-content: center;
     }
   }
@@ -140,20 +147,22 @@ export const WrapperInput = styled.div`
 
 export const WrapperTextarea = styled.div`
   width: 100%;
-  resize: none;
   display: flex;
   flex-direction: column;
-
+  resize: none;
+  label {
+    font-size: 14px;
+  }
   textarea {
-    width: 80%;
-    resize: none;
-    border: none;
-    outline: none;
-    height: 200px;
-    padding: 20px;
     margin-top: 10px;
+    width: 99%;
+    resize: none;
+    height: 200px;
     border-radius: 15px;
     background: #eaeaea;
+    border: none;
+    outline: none;
+    padding: 20px;
   }
 
   @media screen and (max-width: 992px) {
@@ -164,30 +173,30 @@ export const WrapperTextarea = styled.div`
 `;
 
 export const Button = styled.button`
-  gap: 12px;
-  color: #fff;
-  border: none;
-  display: flex;
-  outline: none;
-  font-size: 16px;
-  margin-top: 10px;
-  font-weight: 500;
-  font-style: normal;
   border-radius: 27px;
-  align-items: center;
-  line-height: normal;
-  font-family: Mazzard;
-  padding: 4px 4px 4px 20px;
-  justify-content: space-between;
   background: linear-gradient(270deg, #029ecf 0%, #27d0a5 100%);
+  outline: none;
+  border: none;
+  margin-top: 10px;
+  color: #fff;
+  font-family: Mazzard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 4px 4px 4px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
 
   div {
     width: 48px;
     height: 48px;
     display: flex;
-    border-radius: 50%;
+    justify-content: center;
     align-items: center;
     background-color: #fff;
-    justify-content: center;
+    border-radius: 50%;
   }
 `;

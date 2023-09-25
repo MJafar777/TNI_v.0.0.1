@@ -3,6 +3,7 @@ import Description from "../descriptionInfo/Description";
 import { BtnCurd } from "../../../../../../components/BtnCurd";
 import { Container } from "../../../../../../components/container";
 import { Paragraph } from "../../../../../../components/Paragraph";
+import curdIndormation from "../../../../../../api/curds/cardsInfo";
 import { arrowRight, buyCard } from "../../../../../../assets/images";
 
 import {
@@ -12,22 +13,38 @@ import {
   MarginTopAndBottom,
   DescriptionProductRightWrapper,
 } from "./descriptionProductRightStyle";
-import { ButtonDecAndRev } from "../../../../components";
 import { ReviewProduct } from "../../../reviews";
+import { ButtonDecAndRev } from "../../../../components";
 
-interface DescriptionProductRightProps {}
+interface DescriptionProductRightProps {
+  getIdCurd: number;
+}
 
-const descriptionTextOne =
-  "The defibrillator/monitor is intended for use by a trained junior or mid-career healthcare professional, doctor, nurse or health care professional in emergency medical situations, both outdoors and indoors, including ambulances and aircraft, within specified environmental conditions. The modes of manual and automated external defibrillation, external pacing, and diagnostic electrocardiography are intended for use on adult and pediatric patients.";
-const descriptionTextTwo =
-  "The defibrillator/monitor is intended for use by a trained junior or mid-career healthcare professional, doctor, nurse or health care professional in emergency medical situations, both outdoors and indoors, including ambulances and aircraft, within specified environmental conditions. The modes of manual and automated external defibrillation, external pacing, and diagnostic electrocardiography are intended for use on adult and pediatric patients.";
+interface SelectedCurdType {
+  id: number;
+  img: string;
+  star: string;
+  price: string;
+  productName: string;
+  imgProduct: string[];
+  descriptions: string;
+  descriptionOne: string;
+  descriptionTwo: string;
+  review: number | string;
+}
 
-const DescriptionProductRight: FC<DescriptionProductRightProps> = () => {
+const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
+  const { getIdCurd } = props;
+
+  const selectedCurd: SelectedCurdType | undefined = curdIndormation.find(
+    (curd) => curd.id === getIdCurd
+  );
+
   const [changeSectionButton, setChangeSectionButton] = useState<boolean>(true);
 
   const [changeSectionButtonSecond, setChangeSectionButtonSecond] =
     useState<boolean>(false);
-
+  selectedCurd?.descriptionOne;
   return (
     <Container>
       <DescriptionProductRightWrapper>
@@ -41,7 +58,9 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = () => {
           text={"Monitor D500"}
           letterSpacing={"2px"}
           margin={"0 0 15px 0"}
-          fontFamily={"Mazzard"}
+          fontFamily={
+            selectedCurd?.productName ? selectedCurd?.productName : ""
+          }
         />
 
         <PricePanel>
@@ -49,7 +68,7 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = () => {
             width={""}
             margin={""}
             fontSize={"16"}
-            text={"$200.00"}
+            text={"$436.00"}
             fontWeight={"400"}
             letterSpacing={""}
             color={"#9D9EA2"}
@@ -62,20 +81,20 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = () => {
             width={""}
             margin={""}
             fontSize={"16"}
-            text={"$120.00"}
             letterSpacing={""}
             fontWeight={"600"}
             color={"#EB2606"}
             lineHeight={"150%"}
             textDecoration={""}
             fontFamily={"Lexend"}
+            text={selectedCurd?.price ? selectedCurd?.price : ""}
           />
 
           <Paragraph
             width={""}
             margin={""}
             fontSize={"16"}
-            text={"⭐ 4.6/5"}
+            text={`⭐ ${selectedCurd?.star.length}/5`}
             letterSpacing={""}
             fontWeight={"400"}
             color={"#060709"}
@@ -88,7 +107,6 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = () => {
           <Paragraph
             width={""}
             margin={""}
-            text={"135"}
             fontSize={"16"}
             letterSpacing={""}
             fontWeight={"400"}
@@ -96,6 +114,7 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = () => {
             textDecoration={""}
             color={"#060709"}
             fontFamily={"Lexend"}
+            text={selectedCurd?.review ? selectedCurd?.review : "0"}
           />
 
           <Paragraph
@@ -146,11 +165,16 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = () => {
 
         {changeSectionButton ? (
           <Description
-            descriptionTextOne={descriptionTextOne}
-            descriptionTextTwo={descriptionTextTwo}
+            descriptionTextOne={
+              selectedCurd?.descriptionOne ? selectedCurd?.descriptionOne : ""
+            }
+            descriptionTextTwo={
+              selectedCurd?.descriptionTwo ? selectedCurd?.descriptionTwo : ""
+            }
           />
         ) : (
           <ReviewProduct />
+          
         )}
       </DescriptionProductRightWrapper>
     </Container>
