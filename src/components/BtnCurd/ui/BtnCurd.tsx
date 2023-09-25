@@ -6,6 +6,7 @@ interface Props {
   id: string | number;
   iconHover: string;
   iconDefault: string;
+  onClick: () => void;
 }
 
 const BtnCurd: FC<Props> = (props) => {
@@ -26,7 +27,11 @@ const BtnCurd: FC<Props> = (props) => {
       <BtnBuy
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onClick={() => setHandleBtnCurd(() => !handleBtnCurd)}
+        onClick={(e) => {
+          setHandleBtnCurd(() => !handleBtnCurd);
+          e.stopPropagation();
+          props.onClick();
+        }}
       >
         <BtnRacktangle handleBtnCurd={handleBtnCurd}>
           <Circle handleBtnCurd={handleBtnCurd}>
@@ -42,7 +47,7 @@ const BtnCurd: FC<Props> = (props) => {
             />
           </Circle>
           <TextBtn handleBtnCurd={handleBtnCurd}>
-            {handleBtnCurd ? "Add to Card" : btnName}
+            {handleBtnCurd ? btnName : btnName}
           </TextBtn>
         </BtnRacktangle>
       </BtnBuy>

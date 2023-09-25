@@ -1,10 +1,8 @@
 import { FC, useState } from "react";
 import Description from "../descriptionInfo/Description";
-import { BtnCurd } from "../../../../../../components/BtnCurd";
 import { Container } from "../../../../../../components/container";
 import { Paragraph } from "../../../../../../components/Paragraph";
 import curdIndormation from "../../../../../../api/curds/cardsInfo";
-import { arrowRight, buyCard } from "../../../../../../assets/images";
 
 import {
   Hr,
@@ -130,12 +128,7 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
             fontFamily={"Lexend"}
           />
 
-          <BtnCurd
-            id={""}
-            iconHover={buyCard}
-            btnName={"Add to Cart"}
-            iconDefault={arrowRight}
-          />
+          
         </PricePanel>
 
         <MarginTopAndBottom />
@@ -174,7 +167,6 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
           />
         ) : (
           <ReviewProduct />
-          
         )}
       </DescriptionProductRightWrapper>
     </Container>

@@ -4,12 +4,13 @@ import { bgOfFooter } from "../../assets/images/footer";
 export const FooterWrapper = styled.div`
   width: 100%;
   height: fit-content;
-  padding-top: 200px;
+  padding-top: 300px;
   background-image: url(${bgOfFooter});
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
+
   flex-direction: column;
   align-items: center;
   @media screen and (max-width: 992px) {

@@ -8,8 +8,12 @@ export const DeliveryWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  overflow-x: hidden;
   &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
     display: none;
   }
 
@@ -151,7 +155,8 @@ export const RightImg = styled.img`
 `;
 export const CarOfDelivery = styled.img`
   margin-top: 128px;
-  ime-mode: auto;
+  display: flex;
+  justify-content: center;
   @media screen and (max-width: 1200px) {
     width: 400px;
     height: 40vh;
