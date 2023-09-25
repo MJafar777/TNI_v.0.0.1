@@ -12,6 +12,8 @@ import { LanguageContextProvider } from "./context/LanguageContext";
 import { ButtonContextProvider } from "./context/ButtonContext";
 import ThemeLocalization from "./locales/ThemeLocalization";
 import "./index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

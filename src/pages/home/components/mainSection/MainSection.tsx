@@ -16,6 +16,7 @@ import {
   MainSectionShareText,
   MainSectionWelcomeRow,
   MainSectionWelcomeText,
+  MainSectionWrapperBack,
 } from "./MainSectionStyles";
 
 import ButtonComp from "../../../../components/buttons/ButtonComp";
@@ -24,14 +25,48 @@ import CountdownCircle from "../../../../components/countdownCircle/CountdownCir
 
 import { useState, useEffect } from "react";
 
-import { mainBack } from "../../../../assets/images";
+import {
+  mainBack,
+  mainBack1,
+  mainBack2,
+  mainBack3,
+} from "../../../../assets/images";
 import { useButtonIsClickedStateContext } from "../../../../context/useButtonIsClickedContext";
 
-const images = [`url(${mainBack})`, `url(${mainBack})`, `url(${mainBack})`];
+const images = [`url(${mainBack})`, `url(${mainBack2})`, `url(${mainBack3})`];
 
 const MainSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { setRequestOpen } = useButtonIsClickedStateContext();
+
+  const [animState1, setAnimState1] = useState(false);
+  const [animState2, setAnimState2] = useState(false);
+  const [animState3, setAnimState3] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIsAnimating((prevIsAnimating) => !prevIsAnimating);
+    }, 2500);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  useEffect(() => {
+    setTimeout(function () {
+      setAnimState1(true);
+    }, 0);
+
+    setTimeout(function () {
+      setAnimState2(true);
+    }, 5000);
+
+    setTimeout(function () {
+      setAnimState3(true);
+    }, 10000);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,9 +80,13 @@ const MainSection = () => {
 
   return (
     <Section>
-      <MainSectionWrapper
-        style={{ backgroundImage: images[currentImageIndex] }}
-      >
+      <MainSectionWrapper>
+        <MainSectionWrapperBack
+          style={{
+            backgroundImage: images[currentImageIndex],
+          }}
+          isAnimCheck={isAnimating}
+        />
         <MainHeader />
 
         <MainSectionLeft>
@@ -101,9 +140,21 @@ const MainSection = () => {
         </MainSectionLeft>
 
         <MainSectionNumbers>
-          <CountdownCircle secondNumber={"01"} />
-          <p>02</p>
-          <p>03</p>
+          <CountdownCircle
+            secondNumber={"01"}
+            repeatAnimationDelay={10}
+            isPlay={animState1}
+          />
+          <CountdownCircle
+            secondNumber={"02"}
+            repeatAnimationDelay={10}
+            isPlay={animState2}
+          />
+          <CountdownCircle
+            secondNumber={"03"}
+            repeatAnimationDelay={10}
+            isPlay={animState3}
+          />
         </MainSectionNumbers>
       </MainSectionWrapper>
     </Section>
