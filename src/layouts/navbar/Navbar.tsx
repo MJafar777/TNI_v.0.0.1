@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import { NavbarItem, NavbarItemBox, NavbarWrapper } from "./navbarStyles";
-// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Navbar = () => {
+  const handleClick = () => {
+    const section = document.getElementById("#contact-us");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <NavbarWrapper>
       <NavbarItemBox>
@@ -21,12 +27,10 @@ const Navbar = () => {
         <Link to={"/products"}>
           <NavbarItem>Our Products</NavbarItem>
         </Link>
-
-        {/* <KeyboardArrowDownIcon className="keyboardArrowDownIcon" /> */}
       </NavbarItemBox>
 
       <NavbarItemBox>
-        <Link to={"/contact-us"}>
+        <Link to={"/"} onClick={handleClick}>
           <NavbarItem>Contact Us</NavbarItem>
         </Link>
       </NavbarItemBox>

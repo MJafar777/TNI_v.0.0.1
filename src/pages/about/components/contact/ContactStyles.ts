@@ -95,6 +95,17 @@ export const Title = styled.div`
   line-height: normal;
   letter-spacing: 1.12px;
   margin: 8px 0;
+
+  @media screen and (max-width: 576px) {
+    color: #252b42;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42.354px; /* 151.263% */
+    letter-spacing: 0.149px;
+  }
 `;
 
 export const SubTitle = styled.div`
@@ -110,6 +121,7 @@ export const SubTitle = styled.div`
 export const Form = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   @media screen and (max-width: 992px) {
     justify-content: space-between;
     margin: 0 auto;
@@ -117,7 +129,7 @@ export const Form = styled.div`
 `;
 
 export const WrapperInput = styled.div`
-  width: 50%;
+  width: 48%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -127,7 +139,7 @@ export const WrapperInput = styled.div`
   }
 
   input {
-    width: 90%;
+    width: 98%;
     outline: none;
     border: none;
     border-radius: 22px;
@@ -140,8 +152,14 @@ export const WrapperInput = styled.div`
   @media screen and (max-width: 992px) {
     input {
       justify-content: center;
-      width: 100%;
     }
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    /* input {
+      justify-content: center;
+    } */
   }
 `;
 
@@ -155,7 +173,7 @@ export const WrapperTextarea = styled.div`
   }
   textarea {
     margin-top: 10px;
-    width: 95%;
+    width: 99%;
     resize: none;
     height: 200px;
     border-radius: 15px;

@@ -59,4 +59,8 @@ export const NavbarItem = styled.p`
     font-size: 12px;
     font-weight: 500;
   }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
+  }
 `;

@@ -66,11 +66,11 @@ export const ButtonCompWrapper = styled.div`
 
     .buttonArrow,
     .linerArrow {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     img {
-      width: 10px;
+      width: 12px;
     }
   }
 
@@ -92,7 +92,7 @@ export const ButtonCompText = styled.p`
 
   @media ${(props) => props.theme.breakpoints.xxl} {
     margin: 0 18px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { logo } from "../../../assets/images";
-import Navbar from "../../navbar/Navbar";
-import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
+import { logo2 } from "../../../assets/images";
+import { burgerIcon, logo } from "../../../assets/images";
 
 // ---------- Styled Templates ----------
 import {
@@ -15,12 +14,19 @@ import {
 
 // ---------- @MUI ----------
 import SearchIcon from "@mui/icons-material/Search";
+import Language from "../../../components/language/Language";
+
+import Navbar from "../../navbar/Navbar";
+import { BurgerIcon } from "../HeaderStyles";
+import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
 
 const MainHeader = () => {
+  
   return (
     <MainHeaderWrapper>
       <MainHeaderLogo>
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" className="desctopLogo" />
+        <img src={logo2} alt="log2" className="mobileLogo" />
       </MainHeaderLogo>
 
       <Navbar />
@@ -31,6 +37,8 @@ const MainHeader = () => {
             <NavbarItem>Login</NavbarItem>
           </Link>
         </NavbarItemBox>
+        
+        <Language/>
 
         <RequestBtn>Request Quote</RequestBtn>
 
@@ -41,6 +49,10 @@ const MainHeader = () => {
             <SearchIcon className="headerSearchIcon" />
           </SearchIconBox>
         </SearchInput>
+
+        <BurgerIcon>
+          <img src={burgerIcon} alt="" />
+        </BurgerIcon>
       </MainHeaderFeatures>
     </MainHeaderWrapper>
   );

@@ -1,4 +1,5 @@
 export { default as logo } from "./logo.svg";
+export { default as logo2 } from "./logo2.svg";
 export { default as Ellipse } from "./Ellipse.svg";
 export { default as mainBack } from "./mainBack.jpg";
 export { default as whiteLogo } from "./whiteLogo.svg";
@@ -9,6 +10,7 @@ export { default as WhatWeDoBack } from "./whatWeDoBack.svg";
 export { default as instagram } from "./icons/instagram.svg";
 export { default as PolymerBack2 } from "./polymerBack2.svg";
 export { default as section2Back } from "./section2-back.svg";
+export { default as burgerIcon } from "./icons/burgerIcon.svg";
 export { default as linerArrow } from "./icons/linerArrow.svg";
 export { default as ourProductsBack } from "./ourProductsBack.svg";
 export { default as imgProduct1 } from "./pages/Products/img1.png";

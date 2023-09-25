@@ -1,13 +1,20 @@
+import { HomePageContainer } from "./HomeStyles";
+
+// ----------- Sections  -----------
+import {
+  Comments,
+  WhatWeDo,
+  Delivery,
+  MainSection,
+  OurProducts,
+  OurAchievements,
+} from "./components";
 import { Contact } from "../about/components";
-import { Comments, Delivery, OurAchievements } from "./components";
-import MainSection from "./components/mainSection/MainSection";
-import OurProducts from "./components/ourProducts/OurProducts";
 import UniversalPolymer from "./components/universalPolymer/UniversalPolymer";
-import WhatWeDo from "./components/whatWeDo/WhatWeDo";
 
 const Home = () => {
   return (
-    <>
+    <HomePageContainer>
       <MainSection />
 
       <UniversalPolymer />
@@ -15,6 +22,7 @@ const Home = () => {
       <OurProducts />
 
       <WhatWeDo />
+
       <Delivery />
 
       <OurAchievements />
@@ -22,7 +30,7 @@ const Home = () => {
       <Comments />
 
       <Contact />
-    </>
+    </HomePageContainer>
   );
 };
 

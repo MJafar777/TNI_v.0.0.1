@@ -3,13 +3,17 @@ import { Header, Contact, ShortInfo } from "./components";
 
 const About = () => {
   return (
-    <AboutWrapper>
+    <>
       <Header />
 
-      <ShortInfo />
+      <AboutWrapper>
 
-      <Contact />
-    </AboutWrapper>
+        <ShortInfo />
+
+        <Contact />
+        
+      </AboutWrapper>
+    </>
   );
 };
 

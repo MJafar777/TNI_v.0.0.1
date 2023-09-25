@@ -1,7 +1,7 @@
 import App from "../App";
 import { createBrowserRouter } from "react-router-dom";
 
-import { HomeAsync, AboutAsync, ProductsAsync } from "../pages";
+import { HomeAsync, AboutAsync, ProductsAsync, LoginAsync } from "../pages";
 
 const router = createBrowserRouter([
   {
@@ -10,8 +10,9 @@ const router = createBrowserRouter([
     errorElement: <h1>Error</h1>,
     children: [
       { path: "/", element: <HomeAsync /> },
-      { path: "/products", element: <ProductsAsync /> },
+      { path: "/login", element: <LoginAsync /> },
       { path: "/about-us", element: <AboutAsync /> },
+      { path: "/products", element: <ProductsAsync /> },
     ],
   },
 ]);
