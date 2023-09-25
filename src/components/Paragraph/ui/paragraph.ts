@@ -22,4 +22,28 @@ export const ParagraphWrapper = styled.p<Props>`
   line-height: ${(e) => (e.lineHeight ? e.lineHeight : "")};
   letter-spacing: ${(e) => (e.letterSpacing ? e.letterSpacing : "")};
   text-decoration: ${(e) => (e.textDecoration ? e.textDecoration : "")};
+
+  @media only screen and (max-width: 1200px) {
+    font-size: ${(e) => (e.fontSize ? Number(e.fontSize) - 2 : 32)}px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    font-size: ${(e) => (e.fontSize ? Number(e.fontSize) - 2 : 32)}px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: ${(e) => (e.fontSize ? Number(e.fontSize) - 2 : 32)}px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    font-size: ${(e) => (e.fontSize ? Number(e.fontSize) - 2 : 32)}px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: ${(e) => (e.fontSize ? Number(e.fontSize) - 4 : 32)}px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    font-size: ${(e) => (e.fontSize ? Number(e.fontSize) - 4 : 32)}px;
+  }
 `;

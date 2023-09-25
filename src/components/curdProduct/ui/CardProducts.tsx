@@ -21,13 +21,16 @@ interface Props {
   id: number | string;
   productName: string;
   descriptions: string;
-  star: number; // maximum star numbers "5"
+  star: string; // maximum star numbers "5"
+
+  onClick: () => void;
 }
 
 const CardProducts: FC<Props> = (props) => {
-  const { productName, descriptions, price, img, id } = props;
+  const { productName, descriptions, price, img, id, star } = props;
+
   return (
-    <CardProductsWrapper>
+    <CardProductsWrapper onClick={() => props.onClick()}>
       <BgImgProduct bgRactangle={bgRactangle}>
         <ImgProduct src={img} alt={`this image not found ${img}`} />
       </BgImgProduct>
@@ -46,7 +49,7 @@ const CardProducts: FC<Props> = (props) => {
             fontFamily={"Mazzard"}
             letterSpacing={"0.64px"}
           />
-          ⭐⭐⭐⭐⭐
+          {star}
         </TitleAndStar>
         <Paragraph
           margin={""}

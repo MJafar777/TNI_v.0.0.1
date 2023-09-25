@@ -3,7 +3,7 @@ import { FC } from "react";
 import { ParagraphWrapper } from "./paragraph";
 
 interface Props {
-  text: string;
+  text: string | number;
   color: string;
   fontFamily: string;
   lineHeight: string;

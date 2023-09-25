@@ -20,6 +20,11 @@ export const CardProductsWrapper = styled.div`
   &:hover {
     transform: scale(1.02);
   }
+
+  @media only screen and (max-width: 1060px) {
+    max-width: 100%;
+    margin: 10px auto;
+  }
 `;
 export const BgImgProduct = styled.div<Props>`
   width: 100%;
@@ -39,11 +44,19 @@ export const BgImgProduct = styled.div<Props>`
   justify-content: center;
 
   border-radius: 10px 10px 0px 0px;
+
+  @media only screen and (max-width: 1060px) {
+    max-width: 100%;
+
+    height: auto;
+    margin: 0 auto;
+  }
 `;
 
 export const ImgProduct = styled.img<PropsImg>`
-  width: 320px;
-  height: 320px;
+  width: 220px;
+  height: 220px;
+  transform: scale(0.7);
 `;
 
 export const ProductMain = styled.div`
@@ -55,6 +68,16 @@ export const TitleAndStar = styled.div`
   font-size: 16px;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+
+  @media only screen and (max-width: 650px) {
+    flex-direction: row;
+  }
 `;
 
 export const PriceAndBtn = styled.div`
@@ -63,5 +86,3 @@ export const PriceAndBtn = styled.div`
   justify-content: space-between;
   margin-top: 16px;
 `;
-
-
