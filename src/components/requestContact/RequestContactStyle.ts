@@ -131,4 +131,9 @@ export const RequestContactBtn = styled.button`
   outline: none;
   cursor: pointer;
   background: linear-gradient(#27d0a5, #029ecf);
+  border-radius: 2px;
+
+  &:hover {
+    background: linear-gradient(#029ecf, #27d0a5);
+  }
 `;

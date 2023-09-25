@@ -4,8 +4,8 @@ import { burgerIcon, logo } from "../../../assets/images";
 
 // ---------- Styled Templates ----------
 import {
-  SearchInput,
   RequestBtn,
+  SearchInput,
   SearchIconBox,
   MainHeaderLogo,
   MainHeaderWrapper,
