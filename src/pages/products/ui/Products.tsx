@@ -99,6 +99,7 @@ const Products: React.FC = () => {
               <MarginBottom />
             </RemoveContain>
           )}
+
           <BrLine />
 
           <Paragraph
@@ -113,6 +114,7 @@ const Products: React.FC = () => {
             text={"Featured Product"}
             margin={"70px auto 50px auto"}
           />
+
           <GridsCards>
             {dataCurd.map((e: DataType) => {
               return e.id < 4 ? (
