@@ -59,6 +59,10 @@ export const RequestBtn = styled.div`
 
   margin-right: 75px;
 
+  &:hover {
+    background: linear-gradient(270deg, #27d0a5 0%, #029ecf 100%);
+  }
+
   @media ${(props) => props.theme.breakpoints.xxl} {
     margin-right: 60px;
     font-size: 14px;

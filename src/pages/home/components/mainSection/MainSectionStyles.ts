@@ -51,6 +51,10 @@ export const MainSectionLeft = styled.div`
   display: flex;
   gap: 20px;
 
+  .requestBtn {
+    display: none;
+  }
+
   @media ${(props) => props.theme.breakpoints.xxl} {
     padding: 10px 0;
     margin: 30px auto;
@@ -70,6 +74,14 @@ export const MainSectionLeft = styled.div`
       margin: 40px;
       display: flex;
       justify-content: center;
+    }
+
+    .buttonCompButton {
+      display: none;
+    }
+
+    .requestBtn {
+      display: flex;
     }
   }
 `;

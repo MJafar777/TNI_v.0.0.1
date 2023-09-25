@@ -72,28 +72,24 @@ export const CardContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-
-  div {
-    width: 430px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 `;
 
 export const Card = styled.div`
-  display: flex;
-
+  width: 430px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 36.856px;
-
   box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
   border-radius: 30px;
   background: #fff;
   padding: 50px 53.5px 67px 53.5px;
+
+  @media screen and (max-width: 576px) {
+    width: 400px;
+    /* height: 200px; */
+  }
 `;
 
 export const CardImg = styled.img``;

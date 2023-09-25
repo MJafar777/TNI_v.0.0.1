@@ -91,9 +91,6 @@ const Header = () => {
                 </Link>
               </NavbarItemBox>
             </NavbarWrapper>
-          <RequestBtn onClick={() => setRequestOpen(true)}>
-            Request Quote{" "}
-          </RequestBtn>
 
             <MainHeaderFeatures>
               <NavbarItemBox>
@@ -104,7 +101,9 @@ const Header = () => {
 
               <LanguageForHeader />
 
-              <RequestBtn>Request Quote</RequestBtn>
+              <RequestBtn onClick={() => setRequestOpen(true)}>
+                Request Quote
+              </RequestBtn>
 
               <SearchInput>
                 <input type="text" placeholder="Search" />

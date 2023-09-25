@@ -10,21 +10,22 @@ import { LanguageContextProvider } from "./context/LanguageContext";
 // import ThemeLocalization from "./locales/ThemeLocalization";
 
 import { ButtonContextProvider } from "./context/ButtonContext";
+import ThemeLocalization from "./locales/ThemeLocalization";
 
 function App() {
   return (
     <Suspense fallback={<Loader />}>
-      <ButtonContextProvider>
-        <LanguageContextProvider>
-          <Theme>
-            {/* <ThemeLocalization> */}
-            <Header />
-            <Outlet />
-            <Footer />
-            {/* </ThemeLocalization>lineheight */}
-          </Theme>
-        </LanguageContextProvider>
-      </ButtonContextProvider>
+      <Theme>
+        <ThemeLocalization>
+          <ButtonContextProvider>
+            <LanguageContextProvider>
+              <Header />
+              <Outlet />
+              <Footer />
+            </LanguageContextProvider>
+          </ButtonContextProvider>
+        </ThemeLocalization>
+      </Theme>
     </Suspense>
   );
 }
