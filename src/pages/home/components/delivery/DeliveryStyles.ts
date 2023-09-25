@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const DeliveryWrapper = styled.div`
   max-width: 1366px;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 `;
 
 export const TopContentOfDelivery = styled.div``;
@@ -51,7 +52,6 @@ export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow-x: hidden;
   gap: 40px;
 `;
 
@@ -66,6 +66,8 @@ export const Card = styled.div`
   flex-shrink: 0;
   border-radius: 30px;
   background: #fff;
+
+  /* accentued-drop-shadow */
   box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
 `;
 
