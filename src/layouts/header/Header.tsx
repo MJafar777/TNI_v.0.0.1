@@ -53,11 +53,7 @@ const Header = () => {
         ""
       ) : (
         <HeaderWrapperSection>
-          <HeaderWrapper
-            style={{
-              display: `${scrolling ? "flex" : "none"}`,
-            }}
-          >
+          <HeaderWrapper style={{ display: `${scrolling ? "flex" : "none"}` }}>
             <Link to={"/"}>
               <MainHeaderLogo>
                 <img src={whiteLogo} alt="logo" />
@@ -85,18 +81,12 @@ const Header = () => {
                 {/* <KeyboardArrowDownIcon className="keyboardArrowDownIcon" /> */}
               </NavbarItemBox>
 
-<<<<<<< HEAD
               <NavbarItemBox>
                 <Link to={"/"} onClick={() => handleClick()}>
                   <NavbarItem>Contact Us</NavbarItem>
                 </Link>
               </NavbarItemBox>
             </NavbarWrapper>
-=======
-          <RequestBtn onClick={() => setRequestOpen(true)}>
-            Request Quote{" "}
-          </RequestBtn>
->>>>>>> f43ce6eaf278cbd4d56ea033b140fdd438e2b958
 
             <MainHeaderFeatures>
               <NavbarItemBox>
@@ -107,7 +97,9 @@ const Header = () => {
 
               <LanguageForHeader />
 
-              <RequestBtn>Request Quote</RequestBtn>
+              <RequestBtn onClick={() => setRequestOpen(true)}>
+                Request Quote
+              </RequestBtn>
 
               <SearchInput>
                 <input type="text" placeholder="Search" />

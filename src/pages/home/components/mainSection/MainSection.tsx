@@ -25,11 +25,14 @@ import CountdownCircle from "../../../../components/countdownCircle/CountdownCir
 import { useState, useEffect } from "react";
 
 import { mainBack } from "../../../../assets/images";
+import { RequestBtn } from "../../../../layouts/header/HeaderStyles";
+import { useButtonIsClickedStateContext } from "../../../../context/useButtonIsClickedContext";
 
 const images = [`url(${mainBack})`, `url(${mainBack})`, `url(${mainBack})`];
 
 const MainSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { setRequestOpen } = useButtonIsClickedStateContext();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -87,7 +90,15 @@ const MainSection = () => {
             </MainSectionDesc>
 
             <div className="buttonComp">
-              <ButtonComp buttonText={"Read more"} />
+              <div className="buttonCompButton">
+                <ButtonComp buttonText={"Read more"} />
+              </div>
+
+              <div className="requestBtn">
+                <RequestBtn onClick={() => setRequestOpen(true)}>
+                  Request Quote
+                </RequestBtn>
+              </div>
             </div>
           </div>
         </MainSectionLeft>
