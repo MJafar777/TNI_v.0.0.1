@@ -6,6 +6,7 @@ interface Props {
   id: string | number;
   iconHover: string;
   iconDefault: string;
+  onClick: () => void;
 }
 
 const BtnCurd: FC<Props> = (props) => {
@@ -21,19 +22,15 @@ const BtnCurd: FC<Props> = (props) => {
     setHandleBtnCurd(false);
   };
 
-  const BtnBuyHandleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
-  };
-
   return (
     <>
       <BtnBuy
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onClick={() => {
+        onClick={(e) => {
           setHandleBtnCurd(() => !handleBtnCurd);
-          BtnBuyHandleClick;
-          alert("Click");
+          e.stopPropagation();
+          props.onClick();
         }}
       >
         <BtnRacktangle handleBtnCurd={handleBtnCurd}>
@@ -50,7 +47,7 @@ const BtnCurd: FC<Props> = (props) => {
             />
           </Circle>
           <TextBtn handleBtnCurd={handleBtnCurd}>
-            {handleBtnCurd ? "Add to Card" : btnName}
+            {handleBtnCurd ? btnName : btnName}
           </TextBtn>
         </BtnRacktangle>
       </BtnBuy>
