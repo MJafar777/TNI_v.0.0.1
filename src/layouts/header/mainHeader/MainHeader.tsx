@@ -20,6 +20,7 @@ import Navbar from "../../navbar/Navbar";
 import { BurgerIcon } from "../HeaderStyles";
 import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
 import { useButtonIsClickedStateContext } from "../../../context/useButtonIsClickedContext";
+import Burger from "../../burger/Burger";
 
 const MainHeader = () => {
   const { setRequestOpen } = useButtonIsClickedStateContext();
@@ -54,9 +55,7 @@ const MainHeader = () => {
           </SearchIconBox>
         </SearchInput>
 
-        <BurgerIcon>
-          <img src={burgerIcon} alt="" />
-        </BurgerIcon>
+        <Burger />
       </MainHeaderFeatures>
     </MainHeaderWrapper>
   );

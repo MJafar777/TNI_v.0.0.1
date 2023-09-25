@@ -58,6 +58,14 @@ export const MainHeaderFeatures = styled.div`
   gap: 20px;
 
   position: relative;
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: 0px;
+  }
 `;
 
 export const RequestBtn = styled.div`
@@ -76,6 +84,10 @@ export const RequestBtn = styled.div`
 
   margin-right: 75px;
 
+  &:hover {
+    background: linear-gradient(270deg, #27d0a5 0%, #029ecf 100%);
+  }
+
   @media ${(props) => props.theme.breakpoints.xxl} {
     font-size: 12px;
     font-weight: 500;
@@ -84,6 +96,7 @@ export const RequestBtn = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
   }
 
   @media screen and (max-width: 400px) {
