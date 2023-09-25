@@ -8,13 +8,13 @@ export const DeliveryWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-   
+
   &::-webkit-scrollbar {
     display: none;
   }
 
   @media screen and (max-width: 1200px) {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
 `;
 

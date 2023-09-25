@@ -11,11 +11,14 @@ import {
 } from "./components";
 import { Contact } from "../about/components";
 import UniversalPolymer from "./components/universalPolymer/UniversalPolymer";
+import { RequestContact } from "../../components";
 
 const Home = () => {
   return (
     <HomePageContainer>
       <MainSection />
+
+      <RequestContact />
 
       <UniversalPolymer />
 

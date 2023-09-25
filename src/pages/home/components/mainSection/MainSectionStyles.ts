@@ -1,5 +1,15 @@
-import { styled } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { mainBack } from "../../../../assets/images";
+
+// Animatsiya keyframes
+const slideAnimation = keyframes`
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
 
 export const MainSectionWrapper = styled.section`
   width: 100%;
@@ -9,10 +19,15 @@ export const MainSectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
 
-  background-image: url(${mainBack});
+  /* background-image: url(${mainBack}); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  animation: ${slideAnimation} 1s ease-in-out;
+  animation-fill-mode: forwards;
+
+  &:hover {
+  }
 
   @media ${(props) => props.theme.breakpoints.xxl} {
     height: auto;
@@ -261,7 +276,6 @@ export const MainSectionNumbers = styled.div`
     font-size: 16px;
     font-weight: 400;
 
-    padding: 6px 5px 4px 5px;
     border-radius: 50px;
     display: flex;
     align-items: center;

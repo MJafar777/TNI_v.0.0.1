@@ -19,10 +19,13 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 
 import { useEffect, useState } from "react";
+import { useButtonIsClickedStateContext } from "../../context/useButtonIsClickedContext";
 
 import LanguageForHeader from "../../components/language/LanguageForHeader";
 
 const Header = () => {
+  const { setRequestOpen } = useButtonIsClickedStateContext();
+
   const [scrolling, setScrolling] = useState(false);
 
   const location = useLocation();
@@ -88,6 +91,9 @@ const Header = () => {
                 </Link>
               </NavbarItemBox>
             </NavbarWrapper>
+          <RequestBtn onClick={() => setRequestOpen(true)}>
+            Request Quote{" "}
+          </RequestBtn>
 
             <MainHeaderFeatures>
               <NavbarItemBox>

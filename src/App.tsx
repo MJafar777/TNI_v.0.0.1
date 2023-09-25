@@ -9,18 +9,22 @@ import "./locales/i18n";
 import { LanguageContextProvider } from "./context/LanguageContext";
 // import ThemeLocalization from "./locales/ThemeLocalization";
 
+import { ButtonContextProvider } from "./context/ButtonContext";
+
 function App() {
   return (
     <Suspense fallback={<Loader />}>
-      <LanguageContextProvider>
-        <Theme>
-          {/* <ThemeLocalization> */}
-          <Header />
-          <Outlet />
-          <Footer />
-          {/* </ThemeLocalization>lineheight */}
-        </Theme>
-      </LanguageContextProvider>
+      <ButtonContextProvider>
+        <LanguageContextProvider>
+          <Theme>
+            {/* <ThemeLocalization> */}
+            <Header />
+            <Outlet />
+            <Footer />
+            {/* </ThemeLocalization>lineheight */}
+          </Theme>
+        </LanguageContextProvider>
+      </ButtonContextProvider>
     </Suspense>
   );
 }

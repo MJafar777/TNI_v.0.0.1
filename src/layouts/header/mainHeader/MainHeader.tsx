@@ -4,8 +4,8 @@ import { burgerIcon, logo } from "../../../assets/images";
 
 // ---------- Styled Templates ----------
 import {
-  SearchInput,
   RequestBtn,
+  SearchInput,
   SearchIconBox,
   MainHeaderLogo,
   MainHeaderWrapper,
@@ -19,9 +19,11 @@ import Language from "../../../components/language/Language";
 import Navbar from "../../navbar/Navbar";
 import { BurgerIcon } from "../HeaderStyles";
 import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
+import { useButtonIsClickedStateContext } from "../../../context/useButtonIsClickedContext";
 
 const MainHeader = () => {
-  
+  const { setRequestOpen } = useButtonIsClickedStateContext();
+
   return (
     <MainHeaderWrapper>
       <MainHeaderLogo>
@@ -40,7 +42,9 @@ const MainHeader = () => {
         
         <Language/>
 
-        <RequestBtn>Request Quote</RequestBtn>
+        <RequestBtn onClick={() => setRequestOpen(true)}>
+          Request Quote
+        </RequestBtn>
 
         <SearchInput>
           <input type="text" placeholder="Search" />
