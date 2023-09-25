@@ -13,8 +13,19 @@ import {
 
 import { Section } from "../../../../styles";
 import backVideo from "../../../../assets/v.mp4";
+import { useRef } from "react";
 
 const WhatWeDo = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const handleVideoEnded = () => {
+    // When the video ends, reset it to the beginning and play it again.
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    }
+  };
+
   return (
     <Section>
       <WhatWeDoWrapper>
@@ -39,7 +50,14 @@ const WhatWeDo = () => {
         </WhatWeDoLeft>
 
         <WhatWeDoRight>
-          <video width="300%" height="auto" loop autoPlay controls>
+          <video
+            width="300%"
+            height="auto"
+            ref={videoRef}
+            onEnded={handleVideoEnded}
+            autoPlay
+            loop
+          >
             <source src={backVideo} />
           </video>
         </WhatWeDoRight>

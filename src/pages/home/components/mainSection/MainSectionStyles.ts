@@ -82,6 +82,16 @@ export const MainSectionLeft = styled.div`
 
     .requestBtn {
       display: flex;
+
+      border-radius: 50px;
+      background: linear-gradient(270deg, #029ecf 0%, #27d0a5 100%);
+      padding: 14px 25px;
+      color: #fff;
+      font-family: Mazzard;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
     }
   }
 `;
