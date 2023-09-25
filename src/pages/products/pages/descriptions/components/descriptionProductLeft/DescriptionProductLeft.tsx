@@ -66,6 +66,7 @@ const DescriptionProductLeft: FC<Props> = (props) => {
     <Container>
       {handleZoom && (
         <HandleZoomImage
+          onClick={() => setHandleZoom(false)}
           defaultImage={defaultImage ? defaultImage : { img: "", id: 1 }}
         />
       )}
@@ -118,8 +119,10 @@ const DescriptionProductLeft: FC<Props> = (props) => {
 export default DescriptionProductLeft;
 
 interface HandleZoomImageProps {
-  defaultImage: { img: string; id: number };
+  onClick: () => void;
+  defaultImage: { img: string | undefined; id: number };
 }
+
 export const HandleZoomImage: FC<HandleZoomImageProps> = (props) => {
   const { defaultImage } = props;
 
@@ -137,6 +140,7 @@ export const HandleZoomImage: FC<HandleZoomImageProps> = (props) => {
           width: "100% !important",
           height: "100vh !important",
           backgroundColor: "rgba(0, 0, 0, 0.7)",
+
           gap: "5%",
           display: "flex",
           alignItems: "center",
@@ -144,17 +148,19 @@ export const HandleZoomImage: FC<HandleZoomImageProps> = (props) => {
 
           userSelect: "none",
         }}
+        onClick={() => props.onClick()}
       >
-        <LeftBtn>
+        <LeftBtn onClick={(e) => e.stopPropagation()}>
           <ArrowBackIosNewIcon sx={{ color: "#fff", fontSize: "48px" }} />
         </LeftBtn>
 
         <ImgProduct
           src={defaultImage.img}
+          onClick={(e) => e.stopPropagation()}
           alt={`this image not found ${defaultImage.img}`}
         />
 
-        <RightBtn>
+        <RightBtn onClick={(e) => e.stopPropagation()}>
           <ArrowForwardIosIcon sx={{ color: "#fff", fontSize: "48px" }} />
         </RightBtn>
       </div>

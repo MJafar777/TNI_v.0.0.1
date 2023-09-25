@@ -21,6 +21,9 @@ export const CardProductsWrapper = styled.div`
     transform: scale(1.02);
   }
 
+  cursor: pointer;
+  user-select: none;
+
   @media only screen and (max-width: 1060px) {
     max-width: 100%;
     margin: 10px auto;

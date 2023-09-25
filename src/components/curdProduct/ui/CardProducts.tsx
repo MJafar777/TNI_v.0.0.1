@@ -1,7 +1,5 @@
 import { FC } from "react";
-
 import { Paragraph } from "../../Paragraph";
-
 import { arrowRight, bgRactangle, buyCard } from "../../../assets/images";
 
 import {
@@ -12,7 +10,6 @@ import {
   BgImgProduct,
   CardProductsWrapper,
 } from "./cardProducts";
-
 import { BtnCurd } from "../../BtnCurd";
 
 interface Props {
@@ -22,15 +19,14 @@ interface Props {
   productName: string;
   descriptions: string;
   star: string; // maximum star numbers "5"
-
-  onClick: () => void;
+  onClicks?: () => void;
 }
 
 const CardProducts: FC<Props> = (props) => {
   const { productName, descriptions, price, img, id, star } = props;
 
   return (
-    <CardProductsWrapper onClick={() => props.onClick()}>
+    <CardProductsWrapper key={id} onClick={props.onClicks}>
       <BgImgProduct bgRactangle={bgRactangle}>
         <ImgProduct src={img} alt={`this image not found ${img}`} />
       </BgImgProduct>
@@ -51,6 +47,7 @@ const CardProducts: FC<Props> = (props) => {
           />
           {star}
         </TitleAndStar>
+
         <Paragraph
           margin={""}
           width={"275px"}
@@ -66,10 +63,10 @@ const CardProducts: FC<Props> = (props) => {
 
         <PriceAndBtn>
           <BtnCurd
-            id={id}
             btnName={"Add to Cart"}
             iconHover={buyCard}
             iconDefault={arrowRight}
+            id={""}
           />
 
           <Paragraph

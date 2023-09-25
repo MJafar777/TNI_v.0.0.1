@@ -21,12 +21,20 @@ const BtnCurd: FC<Props> = (props) => {
     setHandleBtnCurd(false);
   };
 
+  const BtnBuyHandleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+  };
+
   return (
     <>
       <BtnBuy
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onClick={() => setHandleBtnCurd(() => !handleBtnCurd)}
+        onClick={() => {
+          setHandleBtnCurd(() => !handleBtnCurd);
+          BtnBuyHandleClick;
+          alert("Click");
+        }}
       >
         <BtnRacktangle handleBtnCurd={handleBtnCurd}>
           <Circle handleBtnCurd={handleBtnCurd}>
