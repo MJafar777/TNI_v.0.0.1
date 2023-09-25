@@ -11,6 +11,7 @@ import { LanguageContextProvider } from "./context/LanguageContext";
 
 import { ButtonContextProvider } from "./context/ButtonContext";
 import ThemeLocalization from "./locales/ThemeLocalization";
+import "./index.css";
 
 function App() {
   return (

@@ -65,7 +65,7 @@ export const RequestBtn = styled.div`
 
   animation: ${colorCycle} 5s infinite alternate;
 
-  margin-right: 75px;
+  margin-right: 50px;
 
   &:hover {
     background: linear-gradient(270deg, #27d0a5 0%, #029ecf 100%);
