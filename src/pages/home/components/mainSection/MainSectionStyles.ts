@@ -11,6 +11,10 @@ const slideAnimation = keyframes`
   }
 `;
 
+interface AnimProps {
+  isAnimCheck: boolean;
+}
+
 export const MainSectionWrapper = styled.section`
   width: 100%;
   height: auto;
@@ -18,16 +22,11 @@ export const MainSectionWrapper = styled.section`
   padding: 0 10px;
   display: flex;
   flex-direction: column;
-
-  /* background-image: url(${mainBack}); */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   animation: ${slideAnimation} 1s ease-in-out;
   animation-fill-mode: forwards;
+  overflow: hidden;
 
-  &:hover {
-  }
+  position: relative;
 
   @media ${(props) => props.theme.breakpoints.xxl} {
     height: auto;
@@ -38,6 +37,22 @@ export const MainSectionWrapper = styled.section`
   @media ${(props) => props.theme.breakpoints.xl} {
     min-height: 330px;
   }
+`;
+
+export const MainSectionWrapperBack = styled.section<AnimProps>`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* animation: ${({ isAnimCheck }) =>
+    isAnimCheck ? slideAnimation : "none"} 1s
+    ease-in-out;
+  animation-fill-mode: forwards; */
 `;
 
 export const MainSectionMain = styled.div`
