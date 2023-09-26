@@ -160,7 +160,11 @@ const HandleZoomImage: FC<HandleZoomImageProps> = (props) => {
         }}
         onClick={() => props.onClick()}
       >
-        <LeftBtn onClick={(e) => e.stopPropagation()}>
+        <LeftBtn
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           <ArrowBackIosNewIcon sx={{ color: "#fff", fontSize: "48px" }} />
         </LeftBtn>
 
