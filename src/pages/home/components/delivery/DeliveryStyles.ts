@@ -80,7 +80,7 @@ export const CardContainer = styled.div`
 
 export const Card = styled.div`
   width: 430px;
-  height: 350px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +92,14 @@ export const Card = styled.div`
 
   @media screen and (max-width: 576px) {
     width: 400px;
-    /* height: 200px; */
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: 360px) {
+    width: 330px;
   }
 `;
 

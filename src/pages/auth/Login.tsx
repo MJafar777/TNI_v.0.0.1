@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { bgOfLogin, facebook, google } from "../../assets/login";
+import { useEffect, useState } from "react";
+import { bgOfLogin } from "../../assets/login";
 import {
   BgImg,
   Button,
@@ -16,9 +16,29 @@ import {
   TopTile,
 } from "./LoginStyles";
 import { Link } from "react-router-dom";
+import LogIn from "../../components/auth/LoginWithGoogle";
+
+import { gapi } from "gapi-script";
+import FacebookAuth from "../../components/auth/LoginWithFacebook";
+const clientId =
+  " 966236271264-dhuq7jd7lcuv232rsp67rvlpf6o16og9.apps.googleusercontent.com"; //client id
+
+//  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  //client secret
 
 const Login = () => {
   const [openLogin, setOpenLogin] = useState(false);
+
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: clientId,
+        scope: "",
+      });
+    }
+    gapi.load("client:auth2", start);
+  }, []);
+  const accesToken = gapi?.auth?.getToken()?.access_token;
+  console.log(accesToken);
 
   return (
     <>
@@ -30,10 +50,12 @@ const Login = () => {
             <TopTile>Sign In</TopTile>
             <ContainerSocial>
               <SocialIcon>
-                <img src={google} alt="" />
+                <LogIn />
+                {/* <img src={google} alt="" /> */}
               </SocialIcon>
               <SocialIcon>
-                <img src={facebook} alt="" />
+                <FacebookAuth />
+                {/* <img src={facebook} alt="" /> */}
               </SocialIcon>
             </ContainerSocial>
             <Subtitle>or</Subtitle>
@@ -61,10 +83,12 @@ const Login = () => {
             <TopTile>Sign Up</TopTile>
             <ContainerSocial>
               <SocialIcon>
-                <img src={google} alt="" />
+                <LogIn />
+                {/* <img src={google} alt="" /> */}
               </SocialIcon>
               <SocialIcon>
-                <img src={facebook} alt="" />
+                <FacebookAuth />
+                {/* <img src={facebook} alt="" /> */}
               </SocialIcon>
             </ContainerSocial>
             <Subtitle>or</Subtitle>

@@ -163,9 +163,7 @@ export const WrapperInput = styled.div`
 
   @media screen and (max-width: 576px) {
     width: 100%;
-    /* input {
-      justify-content: center;
-    } */
+    margin: 0;
   }
 `;
 

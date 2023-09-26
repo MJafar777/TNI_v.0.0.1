@@ -41,6 +41,10 @@ export const TopTile = styled.div`
 
 export const ContainerSocial = styled.div`
   display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  width: 250px;
   gap: 12px;
   cursor: pointer;
 `;
@@ -48,10 +52,12 @@ export const ContainerSocial = styled.div`
 export const SocialIcon = styled.div`
   display: flex;
   padding: 10px;
-  align-items: flex-start;
+  justify-content: center;
+  align-self: center;
   gap: 8px;
   border-radius: 8px;
   border: 1px solid #ced4da;
+  width: 100%;
 `;
 
 export const Subtitle = styled.div`
@@ -205,6 +211,4 @@ export const ContentLogin = styled.div`
   @media screen and (max-width: 576px) {
     width: 300px;
   }
-
-  
 `;
