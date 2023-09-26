@@ -40,9 +40,9 @@ const CardProducts: FC<Props> = (props) => {
             <Paragraph
               width={""}
               margin={""}
-              fontSize={"28"}
+              fontSize={"26"}
               color={"#000"}
-              fontWeight={"700"}
+              fontWeight={"600"}
               text={productName}
               textDecoration={""}
               lineHeight={"normal"}

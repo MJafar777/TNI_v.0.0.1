@@ -1,14 +1,49 @@
 import { createGlobalStyle } from "styled-components";
+
+import LexandMedium from "../assets/fonts/Lexend-Medium.ttf";
+import LexandRegular from "../assets/fonts/Lexend-Regular.ttf";
+
 import MazzardMBold from "../assets/fonts/MazzardM-Bold.ttf";
-import MazzardMRegular from "../assets/fonts/MazzardM-Regular.ttf";
 import MazzardMMedium from "../assets/fonts/MazzardM-Medium.ttf";
+import MazzardMRegular from "../assets/fonts/MazzardM-Regular.ttf";
 import MazzardMLightItalic from "../assets/fonts/MazzardM-LightItalic.ttf";
-import LexandRegular from "../assets/fonts/LexandRegular.ttf";
-import LexandMedium from "../assets/fonts/LexandMedium.ttf";
+
 const GlobalStyles = createGlobalStyle`
+
   @font-face {
   font-family: Mazzard;
   src: url(${MazzardMRegular}) format("truetype");
+
+  @font-face {
+    font-family: "Lexand-Regular";
+    src: url(${LexandRegular}) format("truetype"); 
+  }
+
+  @font-face {
+    font-family: "Lexand-Medium";
+    src: url(${LexandMedium}) format("truetype");
+  }
+
+  @font-face {
+    font-family: "MazzardM-Bold";
+    src: url(${MazzardMBold}) format("truetype");
+  }
+
+  @font-face {
+    font-family: "MazzardM-LigthItalic";
+    src: url(${MazzardMLightItalic}) format("truetype");
+  }
+
+  @font-face {
+    font-family:'MazzardM-Regular' ;
+    src: url(${MazzardMRegular}) format("truetype");
+  }
+
+  @font-face {
+    font-family:'MazzardM-Medium' ;
+    src: url(${MazzardMMedium}) format("truetype");
+  }
+
 }
 
   * {
@@ -27,39 +62,6 @@ const GlobalStyles = createGlobalStyle`
     cursor: default;
   }
 
-  
-  @font-face {
-    font-family: "Lexand-Regular";
-    src: url(${LexandRegular}) format("truetype");
-  
-  }
-  @font-face {
-    font-family: "Lexand-Medium";
-    src: url(${LexandMedium}) format("truetype");
-  
-  }
-
-  @font-face {
-    font-family: "MazzardM-Bold";
-    src: url(${MazzardMBold}) format("truetype");
-  
-  }
-
-  @font-face {
-    font-family: "MazzardM-LigthItalic";
-    src: url(${MazzardMLightItalic}) format("truetype");
-  }
-
-  @font-face {
-    font-family:'MazzardM-Regular' ;
-    src: url(${MazzardMRegular}) format("truetype");
-  }
-
-  @font-face {
-    font-family:'MazzardM-Medium' ;
-    src: url(${MazzardMMedium}) format("truetype");
-  }
-
   a {
     text-decoration: none;
   }
@@ -67,9 +69,6 @@ const GlobalStyles = createGlobalStyle`
   li{
     list-style: none;
   }
-
-  
-
 `;
 
 export default GlobalStyles;
