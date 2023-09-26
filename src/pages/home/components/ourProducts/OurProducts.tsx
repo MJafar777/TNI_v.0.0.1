@@ -1,18 +1,18 @@
+import { Section } from "../../../../styles";
+import dataCurd from "../../../../api/curds/cardsInfo";
 import { ourProductsBack } from "../../../../assets/images";
 import { CardProducts } from "../../../../components/curdProduct";
-import { Section } from "../../../../styles";
+import ButtonComp from "../../../../components/buttons/ButtonComp";
+
 import {
-  OurProductsCards,
   OurProductsDesc,
   OurProductsTitle,
+  OurProductsCards,
   OurProductsWelcome,
+  OurProductsWrapper,
   OurProductsWelcomeRow,
   OurProductsWelcomeText,
-  OurProductsWrapper,
 } from "./OurProductsStyles";
-
-import dataCurd from "../../../../api/curds/cardsInfo";
-import ButtonComp from "../../../../components/buttons/ButtonComp";
 
 type DataType = {
   id: number;
@@ -35,7 +35,9 @@ const OurProducts = () => {
 
         <OurProductsWelcome>
           <OurProductsWelcomeRow />
+
           <OurProductsWelcomeText>Our Products</OurProductsWelcomeText>
+
           <OurProductsWelcomeRow />
         </OurProductsWelcome>
 

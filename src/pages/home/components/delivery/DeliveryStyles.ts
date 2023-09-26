@@ -2,11 +2,24 @@ import styled from "styled-components";
 
 export const DeliveryWrapper = styled.div`
   max-width: 1366px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 1200px) {
+    overflow-x: hidden !important;
+  }
 `;
 
 export const TopContentOfDelivery = styled.div``;
@@ -27,6 +40,7 @@ export const TopTitle = styled.div`
   align-items: center;
   gap: 20px;
   margin-bottom: 9px;
+  text-align: center;
 
   span {
     width: 70px;
@@ -43,6 +57,17 @@ export const Title = styled.div`
   font-weight: 700;
   line-height: 57px; /* 142.5% */
   letter-spacing: 0.2px;
+
+  @media screen and (max-width: 576px) {
+    color: #252b42;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42.354px; /* 151.263% */
+    letter-spacing: 0.149px;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -54,19 +79,28 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  display: flex;
   width: 430px;
-  height: 350px;
-  padding: 50px 53.5px 67px 53.5px;
+  height: fit-content;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 36.856px;
-  flex-shrink: 0;
+  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
   border-radius: 30px;
   background: #fff;
+  padding: 50px 53.5px 67px 53.5px;
 
-  /* accentued-drop-shadow */
-  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+  @media screen and (max-width: 576px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: 360px) {
+    width: 330px;
+  }
 `;
 
 export const CardImg = styled.img``;
@@ -95,7 +129,7 @@ export const CardText = styled.div`
 export const ContainerBottonOfDelivery = styled.div`
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: fit-content;
   display: flex;
   justify-content: end;
 `;
@@ -104,7 +138,7 @@ export const LeftImg = styled.img`
   top: -20%;
   left: 8%;
   z-index: -1;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     display: none;
   }
 `;
@@ -113,12 +147,31 @@ export const RightImg = styled.img`
   top: -20%;
   right: 8%;
   z-index: -1;
+  @media screen and (max-width: 1200px) {
+    top: -20%;
+    /* left: 20%; */
+    z-index: -1;
+    width: 90%;
+  }
+
   @media screen and (max-width: 768px) {
     top: -20%;
-    left: 0%;
+    left: 10%;
     z-index: -1;
   }
 `;
 export const CarOfDelivery = styled.img`
   margin-top: 128px;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 1200px) {
+    width: 400px;
+    height: 40vh;
+    background-size: contain;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 300px;
+    height: 20vh;
+  }
 `;

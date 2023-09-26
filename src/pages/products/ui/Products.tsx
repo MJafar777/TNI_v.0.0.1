@@ -17,6 +17,7 @@ import {
   RemoveContain,
   ProductsWrapper,
 } from "./products";
+import RequestContactClone from "../components/requestContactClone/RequestContact";
 
 const dataFilter = [
   { id: 1, value: "Polypropylenes" },
@@ -45,6 +46,8 @@ const Products: React.FC = () => {
   return (
     <>
       <HeaderTop TitleHeader={"Products"} SubTitleHeader={"Our Products"} />
+
+      <RequestContactClone />
 
       <Container>
         <ProductsWrapper>
@@ -80,9 +83,13 @@ const Products: React.FC = () => {
                 {dataCurd.map((e: DataType) => {
                   return (
                     <CardProducts
-                      onClick={() => {
+                      onClicks={() => {
                         setGetIdCurd(e.id);
                         setRemoveContain(!removeContain);
+                        window.scrollTo({
+                          top: 0,
+                          behavior: "smooth",
+                        });
                       }}
                       id={e.id}
                       key={e.id}
@@ -109,16 +116,26 @@ const Products: React.FC = () => {
             color={"#1A1E26"}
             lineHeight={"150%"}
             textDecoration={""}
-            fontFamily={"Lexend"}
             letterSpacing={"-0.5px"}
             text={"Featured Product"}
             margin={"70px auto 50px auto"}
+            fontFamily={"Lexand-Regular , sans-serif"}
           />
 
           <GridsCards>
             {dataCurd.map((e: DataType) => {
               return e.id < 4 ? (
                 <CardProducts
+                  onClicks={() => {
+                    setGetIdCurd(e.id);
+                    setRemoveContain(
+                      !removeContain ? !removeContain : removeContain
+                    );
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
                   id={e.id}
                   key={e.id}
                   img={e.img}
@@ -126,9 +143,6 @@ const Products: React.FC = () => {
                   price={e.price}
                   productName={e.productName}
                   descriptions={e.descriptions}
-                  onClick={function (): void {
-                    throw new Error("Function not implemented.");
-                  }}
                 />
               ) : (
                 ""

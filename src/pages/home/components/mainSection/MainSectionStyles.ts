@@ -1,19 +1,32 @@
-import { styled } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { mainBack } from "../../../../assets/images";
+
+// Animatsiya keyframes
+const slideAnimation = keyframes`
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+interface AnimProps {
+  isAnimCheck: boolean;
+}
 
 export const MainSectionWrapper = styled.section`
   width: 100%;
   height: auto;
   min-height: 793px;
   padding: 0 10px;
-
   display: flex;
   flex-direction: column;
+  animation: ${slideAnimation} 1s ease-in-out;
+  animation-fill-mode: forwards;
+  overflow: hidden;
 
-  background-image: url(${mainBack});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
 
   @media ${(props) => props.theme.breakpoints.xxl} {
     height: auto;
@@ -22,7 +35,24 @@ export const MainSectionWrapper = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    min-height: 330px;
   }
+`;
+
+export const MainSectionWrapperBack = styled.section<AnimProps>`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* animation: ${({ isAnimCheck }) =>
+    isAnimCheck ? slideAnimation : "none"} 1s
+    ease-in-out;
+  animation-fill-mode: forwards; */
 `;
 
 export const MainSectionMain = styled.div`
@@ -36,6 +66,10 @@ export const MainSectionLeft = styled.div`
   display: flex;
   gap: 20px;
 
+  .requestBtn {
+    display: none;
+  }
+
   @media ${(props) => props.theme.breakpoints.xxl} {
     padding: 10px 0;
     margin: 30px auto;
@@ -44,6 +78,36 @@ export const MainSectionLeft = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    padding: 10px 0;
+    margin: 10px auto;
+    gap: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    width: auto;
+
+    .buttonComp {
+      margin: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .buttonCompButton {
+      display: none;
+    }
+
+    .requestBtn {
+      display: flex;
+
+      border-radius: 50px;
+      background: linear-gradient(270deg, #029ecf 0%, #27d0a5 100%);
+      padding: 14px 25px;
+      color: #fff;
+      font-family: Mazzard;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
   }
 `;
 
@@ -57,6 +121,8 @@ export const MainSectionWelcome = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    justify-content: center;
+    margin-bottom: 10px;
   }
 `;
 
@@ -126,6 +192,7 @@ export const MainSectionSubTitle = styled.h3`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    font-size: 16px;
   }
 `;
 
@@ -147,6 +214,7 @@ export const MainSectionDesc = styled.p`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
   }
 `;
 
@@ -161,6 +229,7 @@ export const MainSectionShare = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
   }
 `;
 
@@ -244,7 +313,6 @@ export const MainSectionNumbers = styled.div`
     font-size: 16px;
     font-weight: 400;
 
-    padding: 6px 5px 4px 5px;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -274,5 +342,6 @@ export const MainSectionNumbers = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
   }
 `;

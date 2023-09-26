@@ -13,13 +13,13 @@ import {
   UniversalPolymerLeft,
   UniversalPolymerRight,
   UniversalPolymerTitle,
+  UniversalPolymerWelcome,
+  UniversalPolymerWrapper,
+  UniversalPolymerWelcomeRow,
+  UniversalPolymerWelcomeText,
   UniversalPolymerTitleHerBox,
   UniversalPolymerTitleHerBoxDesc,
   UniversalPolymerTitleHerBoxTitle,
-  UniversalPolymerWelcome,
-  UniversalPolymerWelcomeRow,
-  UniversalPolymerWelcomeText,
-  UniversalPolymerWrapper,
 } from "./UniversalPolymerStyles";
 
 const UniversalPolymer = () => {
@@ -38,6 +38,8 @@ const UniversalPolymer = () => {
           <UniversalPolymerWelcome>
             <UniversalPolymerWelcomeRow />
             <UniversalPolymerWelcomeText>About Us</UniversalPolymerWelcomeText>
+
+            <UniversalPolymerWelcomeRow className="mobileRow" />
           </UniversalPolymerWelcome>
 
           <UniversalPolymerTitle>Universal Polymer</UniversalPolymerTitle>

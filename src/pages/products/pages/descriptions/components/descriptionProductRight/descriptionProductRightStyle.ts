@@ -1,15 +1,26 @@
 import styled from "styled-components";
 
-export const DescriptionProductRightWrapper = styled.div``;
+export const DescriptionProductRightWrapper = styled.div`
+  @media only screen and (max-width: 1100px) {
+  }
+`;
 
 export const PricePanel = styled.div`
   width: 100%;
   max-width: 533px;
   margin-top: 20px;
 
+  gap: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+`;
+
+export const FlexBtns = styled.div`
+  gap: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 `;
 
 export const MarginTopAndBottom = styled.div`
@@ -18,13 +29,6 @@ export const MarginTopAndBottom = styled.div`
 
   margin: 40px auto;
   background: #c8c9cb;
-`;
-
-export const FlexBtns = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  gap: 25px;
 `;
 
 export const Hr = styled.div`

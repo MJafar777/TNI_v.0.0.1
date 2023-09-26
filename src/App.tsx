@@ -1,15 +1,34 @@
 import { Suspense } from "react";
-import Theme from "./styles/theme";
 import { Outlet } from "react-router-dom";
+
+import Theme from "./styles/theme";
 import { Header, Footer } from "./layouts";
+import { Loader } from "./components";
+
+import "./locales/i18n";
+import { LanguageContextProvider } from "./context/LanguageContext";
+// import ThemeLocalization from "./locales/ThemeLocalization";
+
+import { ButtonContextProvider } from "./context/ButtonContext";
+import ThemeLocalization from "./locales/ThemeLocalization";
+import "./index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
-    <Suspense fallback={<h1>Loading</h1>}>
+    <Suspense fallback={<Loader />}>
       <Theme>
-        {/* <Header /> */}
-        <Outlet />
-        <Footer />
+        <ThemeLocalization>
+          <ButtonContextProvider>
+            <LanguageContextProvider>
+              <Header />
+
+              <Outlet />
+              <Footer />
+            </LanguageContextProvider>
+          </ButtonContextProvider>
+        </ThemeLocalization>
       </Theme>
     </Suspense>
   );

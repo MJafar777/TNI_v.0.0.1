@@ -1,15 +1,8 @@
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-  airPlane,
-  deliveryCar,
-  leftWorld,
-  rightWorld,
-  ship,
-  track,
-  train,
-} from "../../../../assets/images/components/delivery";
+
+import { useEffect } from "react";
+
 import {
   CarOfDelivery,
   Card,
@@ -26,6 +19,16 @@ import {
   TopTitle,
 } from "./DeliveryStyles";
 
+import {
+  airPlane,
+  deliveryCar,
+  leftWorld,
+  rightWorld,
+  ship,
+  track,
+  train,
+} from "../../../../assets/images/components/delivery";
+
 const Delivery = () => {
   useEffect(() => {
     AOS.init();
@@ -39,6 +42,7 @@ const Delivery = () => {
         </TopTitle>
         <Title>Delivery</Title>
       </TopContentOfDelivery>
+
       <CardContainer>
         <Card data-aos-duration="1000" data-aos="fade-left">
           <CardImg
@@ -69,6 +73,7 @@ const Delivery = () => {
             dimension for your site
           </CardText>
         </Card>
+
         <div data-aos-duration="1000" data-aos="fade-up">
           <Card data-aos-duration="1000" data-aos="fade-left">
             <CardImg
@@ -85,7 +90,6 @@ const Delivery = () => {
             </CardText>
           </Card>
         </div>
-
         <Card data-aos-duration="1000" data-aos="fade-right">
           <CardImg
             data-aos="zoom-in-left"
@@ -107,6 +111,7 @@ const Delivery = () => {
           data-aos-duration="2000"
           src={leftWorld}
         ></LeftImg>
+
         <RightImg
           data-aos="fade-left"
           data-aos-duration="2000"

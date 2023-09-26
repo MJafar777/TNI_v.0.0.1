@@ -12,7 +12,7 @@ export const MiniTitleWrapper = styled.p<Props>`
   line-height: 120%;
   font-style: normal;
   letter-spacing: 2px;
-  font-family: Mazzard;
+  font-family: MazzardM-Bold, sans-serif;
 
   @media only screen and (max-width: 1200px) {
     font-size: ${(e) => (e.fontSize ? Number(e.fontSize) - 2 : 36)}px;

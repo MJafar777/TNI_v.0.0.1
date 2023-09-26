@@ -1,10 +1,8 @@
 import { FC, useState } from "react";
 import Description from "../descriptionInfo/Description";
-import { BtnCurd } from "../../../../../../components/BtnCurd";
 import { Container } from "../../../../../../components/container";
 import { Paragraph } from "../../../../../../components/Paragraph";
 import curdIndormation from "../../../../../../api/curds/cardsInfo";
-import { arrowRight, buyCard } from "../../../../../../assets/images";
 
 import {
   Hr,
@@ -55,12 +53,10 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
           color={"#060709"}
           lineHeight={"120%"}
           textDecoration={""}
-          text={"Monitor D500"}
           letterSpacing={"2px"}
           margin={"0 0 15px 0"}
-          fontFamily={
-            selectedCurd?.productName ? selectedCurd?.productName : ""
-          }
+          text={`${selectedCurd?.productName}`}
+          fontFamily={"MazzardM-Bold, san-serif"}
         />
 
         <PricePanel>
@@ -73,7 +69,7 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
             letterSpacing={""}
             color={"#9D9EA2"}
             lineHeight={"150%"}
-            fontFamily={"Lexend"}
+            fontFamily={"Lexand-Regular"}
             textDecoration={"line-through"}
           />
 
@@ -86,7 +82,7 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
             color={"#EB2606"}
             lineHeight={"150%"}
             textDecoration={""}
-            fontFamily={"Lexend"}
+            fontFamily={"Lexand-Medium"}
             text={selectedCurd?.price ? selectedCurd?.price : ""}
           />
 
@@ -96,11 +92,11 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
             fontSize={"16"}
             text={`⭐ ${selectedCurd?.star.length}/5`}
             letterSpacing={""}
-            fontWeight={"400"}
+            fontWeight={"600"}
             color={"#060709"}
             lineHeight={"150%"}
             textDecoration={""}
-            fontFamily={"Lexend"}
+            fontFamily={"Lexand-Regular"}
           />
           <span>|</span>
 
@@ -109,11 +105,11 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
             margin={""}
             fontSize={"16"}
             letterSpacing={""}
-            fontWeight={"400"}
+            fontWeight={"600"}
             lineHeight={"150%"}
             textDecoration={""}
             color={"#060709"}
-            fontFamily={"Lexend"}
+            fontFamily={"Lexand-Regular"}
             text={selectedCurd?.review ? selectedCurd?.review : "0"}
           />
 
@@ -127,14 +123,7 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
             color={"#9D9EA2"}
             textDecoration={""}
             lineHeight={"150%"}
-            fontFamily={"Lexend"}
-          />
-
-          <BtnCurd
-            id={""}
-            iconHover={buyCard}
-            btnName={"Add to Cart"}
-            iconDefault={arrowRight}
+            fontFamily={"Lexand-Regular"}
           />
         </PricePanel>
 
@@ -174,7 +163,6 @@ const DescriptionProductRight: FC<DescriptionProductRightProps> = (props) => {
           />
         ) : (
           <ReviewProduct />
-          
         )}
       </DescriptionProductRightWrapper>
     </Container>

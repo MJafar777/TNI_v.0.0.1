@@ -5,26 +5,88 @@ import { Section } from "../../../../styles";
 import {
   MainSectionDesc,
   MainSectionLeft,
-  MainSectionNumbers,
-  MainSectionShare,
-  MainSectionShareItem,
-  MainSectionShareRow,
-  MainSectionShareText,
-  MainSectionSubTitle,
   MainSectionTitle,
+  MainSectionShare,
   MainSectionWelcome,
+  MainSectionNumbers,
+  MainSectionWrapper,
+  MainSectionSubTitle,
+  MainSectionShareRow,
+  MainSectionShareItem,
+  MainSectionShareText,
   MainSectionWelcomeRow,
   MainSectionWelcomeText,
-  MainSectionWrapper,
+  MainSectionWrapperBack,
 } from "./MainSectionStyles";
 
-import MainHeader from "../../../../layouts/header/mainHeader/MainHeader";
 import ButtonComp from "../../../../components/buttons/ButtonComp";
+import MainHeader from "../../../../layouts/header/mainHeader/MainHeader";
+import CountdownCircle from "../../../../components/countdownCircle/CountdownCircle";
+
+import { useState, useEffect } from "react";
+
+import {
+  mainBack,
+  mainBack1,
+  mainBack2,
+  mainBack3,
+} from "../../../../assets/images";
+import { useButtonIsClickedStateContext } from "../../../../context/useButtonIsClickedContext";
+
+const images = [`url(${mainBack})`, `url(${mainBack2})`, `url(${mainBack3})`];
 
 const MainSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { setRequestOpen } = useButtonIsClickedStateContext();
+
+  const [animState1, setAnimState1] = useState(false);
+  const [animState2, setAnimState2] = useState(false);
+  const [animState3, setAnimState3] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIsAnimating((prevIsAnimating) => !prevIsAnimating);
+    }, 2500);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  useEffect(() => {
+    setTimeout(function () {
+      setAnimState1(true);
+    }, 0);
+
+    setTimeout(function () {
+      setAnimState2(true);
+    }, 5000);
+
+    setTimeout(function () {
+      setAnimState3(true);
+    }, 10000);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [images]);
+
   return (
     <Section>
       <MainSectionWrapper>
+        <MainSectionWrapperBack
+          style={{
+            backgroundImage: images[currentImageIndex],
+          }}
+          isAnimCheck={isAnimating}
+        />
         <MainHeader />
 
         <MainSectionLeft>
@@ -49,7 +111,10 @@ const MainSection = () => {
           <div>
             <MainSectionWelcome>
               <MainSectionWelcomeRow />
+
               <MainSectionWelcomeText>Welcome To</MainSectionWelcomeText>
+
+              <MainSectionWelcomeRow className="mobileRow" />
             </MainSectionWelcome>
 
             <MainSectionTitle>Universal Polymer</MainSectionTitle>
@@ -62,14 +127,34 @@ const MainSection = () => {
               dimension for your site
             </MainSectionDesc>
 
-            <ButtonComp buttonText={"Read more"} />
+            <div className="buttonComp">
+              <div className="buttonCompButton">
+                <ButtonComp buttonText={"Read more"} />
+              </div>
+
+              <div className="requestBtn" onClick={() => setRequestOpen(true)}>
+                Request Quote
+              </div>
+            </div>
           </div>
         </MainSectionLeft>
 
         <MainSectionNumbers>
-          <p>01</p>
-          <p className="active-number">02</p>
-          <p>03</p>
+          <CountdownCircle
+            secondNumber={"01"}
+            repeatAnimationDelay={10}
+            isPlay={animState1}
+          />
+          <CountdownCircle
+            secondNumber={"02"}
+            repeatAnimationDelay={10}
+            isPlay={animState2}
+          />
+          <CountdownCircle
+            secondNumber={"03"}
+            repeatAnimationDelay={10}
+            isPlay={animState3}
+          />
         </MainSectionNumbers>
       </MainSectionWrapper>
     </Section>

@@ -28,6 +28,16 @@ export const ButtonDecAndRevWrapper = styled.div<Props>`
   user-select: none;
 
   transition: all 0.2s ease-in-out !important;
+
+  @media only screen and (max-width: 900px) {
+    max-width: 180px;
+  }
+  @media only screen and (max-width: 800px) {
+    max-width: 160px;
+  }
+  @media only screen and (max-width: 730px) {
+    max-width: 150px;
+  }
 `;
 
 export const BgColor = styled.div<Props>`
@@ -50,7 +60,7 @@ export const ButtonDecAndRevChild = styled.div<Props>`
   font-weight: 500;
   line-height: 150%;
   font-style: normal;
-  font-family: Lexend, sans-serif;
+  font-family: MazzardM-Bold, sans-serif;
 
   background: linear-gradient(
     180deg,

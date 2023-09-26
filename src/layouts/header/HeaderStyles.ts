@@ -30,6 +30,10 @@ export const MainHeaderFeatures = styled.div`
   gap: 20px;
 
   position: relative;
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    gap: 0px;
+  }
 `;
 
 const colorCycle = keyframes`
@@ -57,7 +61,26 @@ export const RequestBtn = styled.div`
 
   animation: ${colorCycle} 5s infinite alternate;
 
-  margin-right: 75px;
+  margin-right: 50px;
+
+  &:hover {
+    background: linear-gradient(270deg, #27d0a5 0%, #029ecf 100%);
+  }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    margin-right: 60px;
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-right: 0px;
+    text-align: center;
+  }
 `;
 
 export const SearchInput = styled.div`
@@ -105,6 +128,20 @@ export const SearchInput = styled.div`
       opacity: 1;
     }
   }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    height: 38px;
+    width: 40px;
+    margin-right: 45px;
+
+    input {
+      font-size: 14px;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
+  }
 `;
 
 export const SearchIconBox = styled.div`
@@ -120,6 +157,15 @@ export const SearchIconBox = styled.div`
     color: white;
     font-size: 26px;
   }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    width: 30.5px;
+    height: 30.5px;
+
+    .headerSearchIcon {
+      font-size: 22px;
+    }
+  }
 `;
 
 //------------------------------
@@ -134,6 +180,10 @@ export const NavbarWrapper = styled.nav`
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    display: none;
   }
 `;
 
@@ -177,4 +227,23 @@ export const NavbarItem = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    font-size: 14px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    display: none;
+  }
+`;
+
+export const BurgerIcon = styled.div`
+  display: none;
+
+  @media ${(props) => props.theme.breakpoints.xxl} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 `;

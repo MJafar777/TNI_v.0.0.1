@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
+import { logo2 } from "../../../assets/images";
 import { logo } from "../../../assets/images";
-import Navbar from "../../navbar/Navbar";
-import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
 
 // ---------- Styled Templates ----------
 import {
-  SearchInput,
   RequestBtn,
+  SearchInput,
   SearchIconBox,
   MainHeaderLogo,
   MainHeaderWrapper,
@@ -15,12 +14,22 @@ import {
 
 // ---------- @MUI ----------
 import SearchIcon from "@mui/icons-material/Search";
+import Language from "../../../components/language/Language";
+
+import Navbar from "../../navbar/Navbar";
+// import { BurgerIcon } from "../HeaderStyles";
+import { NavbarItemBox, NavbarItem } from "../../navbar/navbarStyles";
+import { useButtonIsClickedStateContext } from "../../../context/useButtonIsClickedContext";
+import Burger from "../../burger/Burger";
 
 const MainHeader = () => {
+  const { setRequestOpen } = useButtonIsClickedStateContext();
+
   return (
     <MainHeaderWrapper>
       <MainHeaderLogo>
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" className="desctopLogo" />
+        <img src={logo2} alt="log2" className="mobileLogo" />
       </MainHeaderLogo>
 
       <Navbar />
@@ -32,7 +41,11 @@ const MainHeader = () => {
           </Link>
         </NavbarItemBox>
 
-        <RequestBtn>Request Quote</RequestBtn>
+        <Language />
+
+        <RequestBtn onClick={() => setRequestOpen(true)}>
+          Request Quote
+        </RequestBtn>
 
         <SearchInput>
           <input type="text" placeholder="Search" />
@@ -41,6 +54,8 @@ const MainHeader = () => {
             <SearchIcon className="headerSearchIcon" />
           </SearchIconBox>
         </SearchInput>
+
+        <Burger />
       </MainHeaderFeatures>
     </MainHeaderWrapper>
   );
