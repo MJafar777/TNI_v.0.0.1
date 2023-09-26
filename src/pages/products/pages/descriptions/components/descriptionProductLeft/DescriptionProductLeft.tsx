@@ -1,6 +1,6 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Container } from "../../../../../../components/container";
-import curdIndormation from "../../../../../../api/curds/cardsInfo";
+import curdInformation from "../../../../../../api/curds/cardsInfo";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
@@ -31,13 +31,11 @@ interface Props {
 
 interface SelectedCurdType {
   id: number;
-
   img: string;
   star: string;
   price: string;
   productName: string;
   imgProduct: string[];
-
   descriptions: string;
   descriptionOne: string;
   descriptionTwo: string;
@@ -47,14 +45,28 @@ interface SelectedCurdType {
 const DescriptionProductLeft: FC<Props> = (props) => {
   const { getIdCurd } = props;
 
-  const selectedCurd: SelectedCurdType | undefined = curdIndormation.find(
+  const selectedCurd: SelectedCurdType | undefined = curdInformation.find(
     (curd) => curd.id === getIdCurd
   );
 
-  const [defaultImage, setDefaultImage] = useState({
+  const [defaultImage, setDefaultImage] = useState<{
+    img: string | undefined;
+    id: number;
+  }>({
     img: selectedCurd?.imgProduct[0],
     id: 1,
   });
+
+  let imageAsosiy = defaultImage.img;
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    imageAsosiy = selectedCurd?.img;
+    setDefaultImage({
+      img: selectedCurd?.imgProduct[0],
+      id: selectedCurd?.id || 1,
+    });
+  }, [getIdCurd]);
 
   const [handleZoom, setHandleZoom] = useState(false);
 
@@ -67,16 +79,14 @@ const DescriptionProductLeft: FC<Props> = (props) => {
       {handleZoom && (
         <HandleZoomImage
           onClick={() => setHandleZoom(false)}
-          defaultImage={defaultImage ? defaultImage : { img: "", id: 1 }}
+          defaultImage={defaultImage || { img: "", id: 1 }}
         />
       )}
       <DescriptionProductLeftWrapper>
         <BgPart style={handleZoom ? { display: "none" } : {}}>
           <ImgProduct
-            src={defaultImage?.img ? defaultImage?.img : ""}
-            alt={`this image not found ${
-              defaultImage?.img ? defaultImage.img : ""
-            }`}
+            src={imageAsosiy ? `${imageAsosiy}` : ""}
+            alt={`this image not found ${defaultImage.img || ""}`}
           />
 
           <CHildPanels>
@@ -123,7 +133,7 @@ interface HandleZoomImageProps {
   defaultImage: { img: string | undefined; id: number };
 }
 
-export const HandleZoomImage: FC<HandleZoomImageProps> = (props) => {
+const HandleZoomImage: FC<HandleZoomImageProps> = (props) => {
   const { defaultImage } = props;
 
   if (defaultImage && defaultImage.img) {
@@ -150,7 +160,11 @@ export const HandleZoomImage: FC<HandleZoomImageProps> = (props) => {
         }}
         onClick={() => props.onClick()}
       >
-        <LeftBtn onClick={(e) => e.stopPropagation()}>
+        <LeftBtn
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           <ArrowBackIosNewIcon sx={{ color: "#fff", fontSize: "48px" }} />
         </LeftBtn>
 

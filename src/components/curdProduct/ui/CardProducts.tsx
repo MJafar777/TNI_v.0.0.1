@@ -26,7 +26,7 @@ interface Props {
 const CardProducts: FC<Props> = (props) => {
   const { productName, descriptions, price, img, id, star } = props;
 
-  const { setRequestOpen } = useButtonIsClickedStateContext();
+  const { setRequestOpenSecond } = useButtonIsClickedStateContext();
 
   return (
     <>
@@ -46,8 +46,8 @@ const CardProducts: FC<Props> = (props) => {
               text={productName}
               textDecoration={""}
               lineHeight={"normal"}
-              fontFamily={"Mazzard"}
               letterSpacing={"0.64px"}
+              fontFamily={"MazzardM-Bold , sans-serif"}
             />
             {star}
           </TitleAndStar>
@@ -61,8 +61,8 @@ const CardProducts: FC<Props> = (props) => {
             text={descriptions}
             lineHeight={"150%"}
             textDecoration={""}
-            fontFamily={"Mazzard"}
             letterSpacing={"0.98px"}
+            fontFamily={"MazzardM-Regular , sans-serif"}
           />
 
           <PriceAndBtn>
@@ -71,7 +71,7 @@ const CardProducts: FC<Props> = (props) => {
               iconHover={buyCard}
               iconDefault={arrowRight}
               id={""} // You can provide the actual ID here
-              onClick={() => setRequestOpen(true)}
+              onClick={() => setRequestOpenSecond(true)}
             />
 
             <Paragraph
@@ -83,8 +83,8 @@ const CardProducts: FC<Props> = (props) => {
               fontWeight={"700"}
               textDecoration={""}
               lineHeight={"normal"}
-              fontFamily={"Mazzard"}
               letterSpacing={"0.44px"}
+              fontFamily={"MazzardM-Bold , sans-serif"}
             />
           </PriceAndBtn>
         </ProductMain>

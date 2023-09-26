@@ -13,7 +13,7 @@ interface Props {
 const Description: FC<Props> = (props) => {
   const { descriptionTextOne, descriptionTextTwo } = props;
 
-  const { setRequestOpen } = useButtonIsClickedStateContext();
+  const { setRequestOpenSecond } = useButtonIsClickedStateContext();
 
   return (
     <DescriptionWrapper>
@@ -27,7 +27,7 @@ const Description: FC<Props> = (props) => {
         color={"#46494F"}
         lineHeight={"150%"}
         textDecoration={""}
-        fontFamily={"Mazzard"}
+        fontFamily={"MazzardM-Medium"}
       />
       <Paragraph
         text={descriptionTextTwo}
@@ -39,14 +39,14 @@ const Description: FC<Props> = (props) => {
         color={"#46494F"}
         lineHeight={"150%"}
         textDecoration={""}
-        fontFamily={"Mazzard"}
+        fontFamily={"MazzardM-Medium"}
       />
       <BtnCurd
         id={""}
         iconHover={buyCard}
         btnName={"Add to Cart"}
         iconDefault={arrowRight}
-        onClick={() => setRequestOpen(true)}
+        onClick={() => setRequestOpenSecond(true)}
       />
     </DescriptionWrapper>
   );

@@ -1,9 +1,9 @@
 // import { useState } from "react";
 
-import { buyCard, arrowRight, linerArrow } from "../../assets/images";
+import { arrowRight, linerArrow } from "../../assets/images";
 import { contactImg } from "../../assets/images/about";
 import { BtnCurd } from "../BtnCurd";
-import ButtonComp from "../buttons/ButtonComp";
+
 import {
   Img,
   Form,

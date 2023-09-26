@@ -50,7 +50,7 @@ export const TextBtn = styled.p<Props>`
   font-style: normal;
   line-height: normal;
   background: #029fcf;
-  font-family: Mazzard;
+  font-family: MazzardM-Medium, sans-serif;
   background: linear-gradient(to right, #029fcf 0%, #24cca8 100%);
   background-clip: padding-box;
   -webkit-background-clip: text;

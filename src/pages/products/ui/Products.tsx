@@ -116,23 +116,16 @@ const Products: React.FC = () => {
             color={"#1A1E26"}
             lineHeight={"150%"}
             textDecoration={""}
-            fontFamily={"Lexend"}
             letterSpacing={"-0.5px"}
             text={"Featured Product"}
             margin={"70px auto 50px auto"}
+            fontFamily={"Lexand-Regular , sans-serif"}
           />
 
           <GridsCards>
             {dataCurd.map((e: DataType) => {
               return e.id < 4 ? (
                 <CardProducts
-                  id={e.id}
-                  key={e.id}
-                  img={e.img}
-                  star={e.star}
-                  price={e.price}
-                  productName={e.productName}
-                  descriptions={e.descriptions}
                   onClicks={() => {
                     setGetIdCurd(e.id);
                     setRemoveContain(
@@ -143,6 +136,13 @@ const Products: React.FC = () => {
                       behavior: "smooth",
                     });
                   }}
+                  id={e.id}
+                  key={e.id}
+                  img={e.img}
+                  star={e.star}
+                  price={e.price}
+                  productName={e.productName}
+                  descriptions={e.descriptions}
                 />
               ) : (
                 ""

@@ -5,13 +5,20 @@ interface PropsImg {
   alt: string;
 }
 
-export const DescriptionProductLeftWrapper = styled.div``;
+export const DescriptionProductLeftWrapper = styled.div`
+  @media only screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 
 export const BgPart = styled.div`
   display: flex;
-  flex-direction: column;
   gap: 7.092px;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 
   width: 100%;
@@ -27,12 +34,16 @@ export const BgPart = styled.div`
 `;
 
 export const ImgProduct = styled.img<PropsImg>`
-  max-width: 320px;
+  max-width: 300px;
   width: 100%;
+
+  max-height: 300px;
 
   flex-shrink: 0;
 
   border-radius: 8px;
+
+  overflow: hidden;
 `;
 
 export const ChildBtns = styled.button`
@@ -98,6 +109,8 @@ export const SliderBtnImages = styled.div`
   background: #f4f4f4;
 
   cursor: pointer;
+
+  overflow: hidden;
 `;
 
 export const ImgMini = styled.img<PropsImg>`
