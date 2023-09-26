@@ -126,13 +126,6 @@ const Products: React.FC = () => {
             {dataCurd.map((e: DataType) => {
               return e.id < 4 ? (
                 <CardProducts
-                  id={e.id}
-                  key={e.id}
-                  img={e.img}
-                  star={e.star}
-                  price={e.price}
-                  productName={e.productName}
-                  descriptions={e.descriptions}
                   onClicks={() => {
                     setGetIdCurd(e.id);
                     setRemoveContain(
@@ -143,6 +136,13 @@ const Products: React.FC = () => {
                       behavior: "smooth",
                     });
                   }}
+                  id={e.id}
+                  key={e.id}
+                  img={e.img}
+                  star={e.star}
+                  price={e.price}
+                  productName={e.productName}
+                  descriptions={e.descriptions}
                 />
               ) : (
                 ""

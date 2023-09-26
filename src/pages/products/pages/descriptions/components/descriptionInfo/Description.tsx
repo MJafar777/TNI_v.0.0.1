@@ -13,7 +13,7 @@ interface Props {
 const Description: FC<Props> = (props) => {
   const { descriptionTextOne, descriptionTextTwo } = props;
 
-  const { setRequestOpen } = useButtonIsClickedStateContext();
+  const { setRequestOpenSecond } = useButtonIsClickedStateContext();
 
   return (
     <DescriptionWrapper>
@@ -46,7 +46,7 @@ const Description: FC<Props> = (props) => {
         iconHover={buyCard}
         btnName={"Add to Cart"}
         iconDefault={arrowRight}
-        onClick={() => setRequestOpen(true)}
+        onClick={() => setRequestOpenSecond(true)}
       />
     </DescriptionWrapper>
   );

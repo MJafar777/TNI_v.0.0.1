@@ -26,7 +26,7 @@ interface Props {
 const CardProducts: FC<Props> = (props) => {
   const { productName, descriptions, price, img, id, star } = props;
 
-  const { setRequestOpen } = useButtonIsClickedStateContext();
+  const { setRequestOpenSecond } = useButtonIsClickedStateContext();
 
   return (
     <>
@@ -71,7 +71,7 @@ const CardProducts: FC<Props> = (props) => {
               iconHover={buyCard}
               iconDefault={arrowRight}
               id={""} // You can provide the actual ID here
-              onClick={() => setRequestOpen(true)}
+              onClick={() => setRequestOpenSecond(true)}
             />
 
             <Paragraph

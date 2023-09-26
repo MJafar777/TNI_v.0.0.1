@@ -16,20 +16,21 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useButtonIsClickedStateContext } from "../../../../context/useButtonIsClickedContext";
 
 export default function RequestContactClone() {
-  const { requestOpen, setRequestOpen } = useButtonIsClickedStateContext();
+  const { requestOpenSecond, setRequestOpenSecond } =
+    useButtonIsClickedStateContext();
 
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleClose = () => {
-    setRequestOpen(false);
+    setRequestOpenSecond(false);
   };
 
   return (
     <div>
       <Dialog
         fullScreen={fullScreen}
-        open={requestOpen}
+        open={requestOpenSecond}
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
       >
