@@ -32,6 +32,10 @@ export const ContainerOfContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 480px) {
+    width: 300px;
+  }
 `;
 
 export const StarsContainer = styled.div`
@@ -81,8 +85,8 @@ export const UserImg = styled.div`
   img {
     width: 65px;
     position: absolute;
-    top: -30%;
-    left: -5%;
+    top: -8%;
+    left: -2%;
   }
 `;
 
