@@ -116,10 +116,10 @@ const Products: React.FC = () => {
             color={"#1A1E26"}
             lineHeight={"150%"}
             textDecoration={""}
-            fontFamily={"Lexend"}
             letterSpacing={"-0.5px"}
             text={"Featured Product"}
             margin={"70px auto 50px auto"}
+            fontFamily={"Lexand-Regular , sans-serif"}
           />
 
           <GridsCards>

@@ -27,7 +27,7 @@ const Description: FC<Props> = (props) => {
         color={"#46494F"}
         lineHeight={"150%"}
         textDecoration={""}
-        fontFamily={"Mazzard"}
+        fontFamily={"MazzardM-Medium"}
       />
       <Paragraph
         text={descriptionTextTwo}
@@ -39,7 +39,7 @@ const Description: FC<Props> = (props) => {
         color={"#46494F"}
         lineHeight={"150%"}
         textDecoration={""}
-        fontFamily={"Mazzard"}
+        fontFamily={"MazzardM-Medium"}
       />
       <BtnCurd
         id={""}

@@ -41,7 +41,7 @@ export const ButtonsFilter = styled.div`
   font-weight: 500;
   line-height: 150%;
   font-style: normal;
-  font-family: Mazzard;
+  font-family: MazzardM-Medium, sans-serif;
 
   cursor: pointer;
 

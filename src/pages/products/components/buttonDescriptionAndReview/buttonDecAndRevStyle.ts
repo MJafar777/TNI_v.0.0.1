@@ -60,7 +60,7 @@ export const ButtonDecAndRevChild = styled.div<Props>`
   font-weight: 500;
   line-height: 150%;
   font-style: normal;
-  font-family: Lexend, sans-serif;
+  font-family: MazzardM-Bold, sans-serif;
 
   background: linear-gradient(
     180deg,
